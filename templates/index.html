@@ -6,7 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>OI</h1>
-    <p>fijnaif</p>
+    <form action="{{ url_for("main")}}" method="post">
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>{{text}}</p>
+    <p>{{cenas}}</p>
 </body>
 </html>
