@@ -14,9 +14,9 @@ def TTRMedio(File) -> float:
         soma += ttr
     return soma/1000
 
-print(f"TTR Biden: {TTRMedio('biden.txt'):.5f}")
-print(f"TTR Trump: {TTRMedio('trump.txt'):.5f}")
-print(f"TTR Obama: {TTRMedio('obama.txt'):.5f}")
+print(f"TTR Biden: {TTRMedio('Textos/biden.txt'):.5f}")
+print(f"TTR Trump: {TTRMedio('Textos/trump.txt'):.5f}")
+print(f"TTR Obama: {TTRMedio('Textos/obama.txt'):.5f}")
 
-print(f"TTR The_Mother: {TTRMedio('The_Mother.txt'):.5f}")
-print(f"TTR Men_Withour_Women: {TTRMedio('Men_Without_Women.txt'):.5f}")
+print(f"TTR The_Mother: {TTRMedio('Textos/The_Mother.txt'):.5f}")
+print(f"TTR Men_Withour_Women: {TTRMedio('Textos/Men_Without_Women.txt'):.5f}")
