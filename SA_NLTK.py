@@ -1,21 +1,32 @@
-import nltk
+import random
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-from nltk.tokenize import word_tokenize
 
-nltk.download('all')
-
-#Amostras em paragrafos/numero de palavras maximo
-
-def Sentiment(File) -> float:
+def File(File):
     with open(File, "r", encoding='utf-8', errors='ignore') as file:
-        sentence = file.read().replace("\n", " ")
-    
-    tokens = word_tokenize(sentence.lower())
-    
-    analyzer = SentimentIntensityAnalyzer()
-    
-    scores = analyzer.polarity_scores(tokens)
-    
-    return scores
+        content = file.read()
+        sentence = content.split('\n\n')
+    return sentence
 
-print(Sentiment("Textos/biden.txt"))
+def Sentiment(File):
+    neg = 0
+    neu = 0
+    pos = 0
+    compound = 0
+     
+    for _ in range(10):
+        Paragrafo = random.sample(File,10)
+        analyzer = SentimentIntensityAnalyzer()
+        scores = analyzer.polarity_scores(Paragrafo[_])
+        neg += scores['neg']
+        neu += scores['neu']
+        pos += scores['pos']
+        compound += scores['compound']
+    
+    return neg/10, neu/10, pos/10, compound/10
+
+Sentence = File("Textos/biden.txt")
+
+print(f"Sentiment negative: {Sentiment(Sentence)[0]:.5f}")
+print(f"Sentiment neutral: {Sentiment(Sentence)[1]:.5f}")
+print(f"Sentiment positive: {Sentiment(Sentence)[2]:.5f}")
+print(f"Compound: {Sentiment(Sentence)[3]:.5f}")

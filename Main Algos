@@ -6,12 +6,11 @@ These metrics assess the readability of text, considering factors such as senten
 -Coleman-Liau Index; X
 -ARI. X
 
-Sentiment Analysis:
-Sentiment analysis determines the sentiment expressed in a piece of text, whether it's positive, negative, or neutral. Algorithms can range from simple lexicon-based methods to more complex machine learning approaches. NLTK and spaCy both provide tools for sentiment analysis.
+Sentiment Analysis X
 
 Text Similarity:
 Text similarity algorithms assess how similar two or more pieces of text are. Techniques such as Cosine Similarity, Jaccard Similarity, and Levenshtein Distance can be used to measure the similarity between texts.
--Cosine Similarity;
+-Cosine Similarity; X
 -Jaccard Similarity;
 -Levenshtein Distance.
 
@@ -32,11 +31,9 @@ Topic modeling algorithms such as Latent Dirichlet Allocation (LDA) and Non-nega
 Text Classification:
 Text classification algorithms categorize text into predefined classes or categories. This can be useful for tasks such as spam detection, sentiment analysis, or topic classification.
 
-Text Summarization:
-Text summarization algorithms generate concise summaries of longer texts. This can be useful for assessing the relevance and coherence of the text, as well as for extracting key information.
+Text Summarization X
 
-Grammar Checking:
-Grammar checking algorithms identify and correct grammatical errors in the text, such as spelling mistakes, punctuation errors, and syntax errors.
+Grammar Checking X
 
 Text Complexity Measures:
 -TTR; X

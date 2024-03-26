@@ -6,8 +6,7 @@ nlp = spacy.load("en_core_web_sm")
 
 def File(File):
     with open(File, "r", encoding='utf-8', errors='ignore') as file:
-        sentence = file.read()
-        
+        sentence = file.read()  
     return sentence
 
 # Process the input texts
