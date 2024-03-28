@@ -1,106 +1,150 @@
 #Text Complexity Measures
-import spacy, random, string
+import spacy, random, string, time
 
 nlp = spacy.load('en_core_web_sm')
 
+#Funções auxiliares
 def File(File):
     with open(File, "r", encoding='utf-8', errors='ignore') as file:
-        sentence = file.read().replace("\n", " ")
+        sentence = file.read()
     return sentence
 
+def Amostras(Texto, NumParagrafos):
+    doc = nlp(Texto.lower())
+    
+    Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
+    Paragrafos = Texto.split("\n\n") # Separa cada paragrafo 
+    
+    Paragrafos = random.sample(Paragrafos, NumParagrafos)
+    
+    #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
+    Samples = []
+    for _ in range(100):
+        Sample = random.sample(Palavras,100)
+        Samples.append(Sample)
+    
+    return Samples, Paragrafos # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 paragrafos de um texto
+#--------------------------------------------------------
+
+# Funções com o texto completo
 def SentenceLength(text):
+    t = time.process_time()
     doc = nlp(text)
     sentences = [sent.text for sent in doc.sents]
-    total_words = sum(len(sent.split()) for sent in sentences)
-    avg_sentence_length = total_words / len(sentences)
-    return avg_sentence_length
+    TotalWords = sum(len(sent.split()) for sent in sentences)
+    SentenceL = TotalWords / len(sentences)
+    return SentenceL, time.process_time() - t
 
 def WordLength(text):
+    t = time.process_time()
     doc = nlp(text.lower())
-    tokens = [token.text for token in doc if token.is_alpha]  # Filter out non-alpha tokens
-    total_chars = sum(len(token) for token in tokens)  # Calculate total characters
-    avg_word_length = total_chars / len(tokens)
-    return avg_word_length
+    tokens = [token.text for token in doc if token.is_alpha]
+    TotalChars = sum(len(token) for token in tokens)
+    WordL = TotalChars / len(tokens)
+    return WordL, time.process_time() - t
 
-def LexicalDensity(text): #  numero de palavras lexicais / Numero total de palavras
+def LexicalDensity(text): # Numero de palavras lexicais / Numero total de palavras
+    t = time.process_time()
     doc = nlp(text.lower())
-    content_words = []
+    LexicalWords = []
     for token in doc:
         if token.pos_ == "ADP" or token.pos_ == "AUX" or token.pos_ == "PART" or token.pos_ == "CCONJ" or token.pos_ == "NOUN" or token.pos_ == "INTJ" or token.pos_ == "PROPN" or token.pos_ == "ADJ":
-            content_words.append(token)
-    lexical_density = len(content_words) / len(doc)
-    return lexical_density
+            LexicalWords.append(token)
+    LDensity = len(LexicalWords) / len(doc)
+    return LDensity, time.process_time() - t
 
-def LexicalDiversity(text): # numero de palavras diferentes / Numero total de palavras
+def LexicalDiversity(text): # Numero de palavras diferentes / Numero total de palavras
+    t = time.process_time()
     doc = nlp(text.lower())
-    content_words = [token.text for token in doc if token.is_alpha]
-    diff_words = list(dict.fromkeys(content_words))
-    lexical_diversity = len(diff_words) / len(content_words) 
-    return lexical_diversity
+    AlphaWords = [token.text for token in doc if token.is_alpha]
+    DiffWords = list(dict.fromkeys(AlphaWords))
+    LDiversity = len(DiffWords) / len(AlphaWords)
+    return LDiversity, time.process_time() - t
+#--------------------------------------------------------
 
-def Amostras(Texto):
-    Texto = Texto.split()
-    Samples = []
-    Texto = random.sample(Texto,1000)
-    for _ in range(100): #100 samples são estudadas para o resultado final
-        Sample = random.sample(Texto,10) #Escolhe 10 palavras random do texto
-        Samples.append(Sample)
-    return Samples, Texto      
-
-def LexicalDesnsityA(Samples):
-    soma = 0
+#Funções com amostras
+def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de palavras
+    t = time.process_time()
+    Soma = 0
     for Sample in Samples:
-        for Amostra in Sample:
-            doc = nlp(Amostra)
-            for token in doc:
-                if token.pos_ == "ADP" or token.pos_ == "AUX" or token.pos_ == "PART" or token.pos_ == "CCONJ" or token.pos_ == "NOUN" or token.pos_ == "INTJ" or token.pos_ == "PROPN" or token.pos_ == "ADJ":
-                    soma += 1
-    return soma/1000
+        doc = nlp(str(Sample))
+        for token in doc:
+            if token.pos_ == "ADP" or token.pos_ == "AUX" or token.pos_ == "PART" or token.pos_ == "CCONJ" or token.pos_ == "NOUN" or token.pos_ == "INTJ" or token.pos_ == "PROPN" or token.pos_ == "ADJ":
+                Soma += 1
+    return Soma/10000, time.process_time() - t
 
-def LexicalDiversityA(Samples):
-    DiffWords = list(dict.fromkeys(Samples))
-    return len(DiffWords)/1000
+def LexicalDiversityA(Samples): # Numero de palavras diferentes / Numero total de palavras
+    t = time.process_time()
+    Soma = 0
+    for Sample in Samples:
+        DiffWords = list(dict.fromkeys(Sample))
+        Soma += len(DiffWords)
+    return Soma/10000, time.process_time() - t
 
 def WordLengthA(Samples):
-    WordLength = sum(len(Sample) for Sample in Samples)
-    return WordLength/1000
+    t = time.process_time()
+    Soma = 0
+    for Sample in Samples:
+        WordLength = sum(len(Amostra) for Amostra in Sample)
+        Soma += WordLength
+    return Soma/10000, time.process_time() - t
 
-def TTRMedio(File) -> float:
-    with open(File, "r", encoding='utf-8', errors='ignore') as file:
-        sentence = file.read().replace("\n", " ")
-        sentence = sentence.translate(str.maketrans('','', string.punctuation)) #Limpar a pontuação do texto
-    
-    Text = sentence.split() #Colocar o texto numa lista
+def SentenceLengthA(Samples):
+    t = time.process_time()
+    SentenceLength = 0
+    for i in range(len(Samples)):
+        doc = nlp(Samples[i])
+        sentences = [sent.text for sent in doc.sents]
+        TotalWords = sum(len(sent.split()) for sent in sentences)
+        SentenceLength += TotalWords / len(sentences)
+    return SentenceLength/10, time.process_time() - t
 
-    soma = 0
-    for _ in range(1000): #1000 samples são estudadas para o resultado final
-        Sample = random.sample(Text,500) #Escolhe 500 palavras random do texto
-        ttr = len(set(Sample))/len(Sample) #Divisão entre a sample limpa(Palavras não repetidas) e o tamanho total da sample
-        soma += ttr
-    return soma/1000
+#def TTRMedio(Samples):
+#    Soma = 0
+#    for Sample in Samples: #1000 samples são estudadas para o resultado final
+#        Soma += len(set(Sample))/len(Sample) #Divisão entre a sample limpa(Palavras não repetidas) e o tamanho total da sample
+#    return Soma/100
+#--------------------------------------------------------
 
-print(f"TTR Biden: {TTRMedio('Textos/biden.txt'):.5f}")
-print(f"TTR Trump: {TTRMedio('Textos/trump.txt'):.5f}")
-print(f"TTR Obama: {TTRMedio('Textos/obama.txt'):.5f}")
-
-print(f"TTR The_Mother: {TTRMedio('Textos/The_Mother.txt'):.5f}")
-print(f"TTR Men_Withour_Women: {TTRMedio('Textos/Men_Without_Women.txt'):.5f}")
+#print(f"TTR Biden: {TTRMedio('Textos/biden.txt'):.5f}")
+#print(f"TTR Trump: {TTRMedio('Textos/trump.txt'):.5f}")
+#print(f"TTR Obama: {TTRMedio('Textos/obama.txt'):.5f}")
+#print(f"TTR The_Mother: {TTRMedio('Textos/The_Mother.txt'):.5f}")
+#print(f"TTR Men_Withour_Women: {TTRMedio('Textos/Men_Without_Women.txt'):.5f}")
 
 text = File("Textos/The_Mother.txt")
+Samples = Amostras(text, 10)
 
-print("Average Sentence Length:", SentenceLength(text))
+SentenceL = SentenceLength(text) 
+SentenceLA = SentenceLengthA(Samples[1])
 
-print("--------------------------------------------")
-
-print("Average Word Length:", WordLength(text))
-print("Average Word Length:", WordLengthA(Amostras(text)[1]))
-
-print("--------------------------------------------")
-
-print("Lexical Density:", LexicalDensity(text))
-print("Lexical Density Amostras:", LexicalDesnsityA(Amostras(text)[0]))
+print("Average Sentence Length:", SentenceL[0], "Time:", SentenceL[1])
+print("Average Sentence Length Amostras:", SentenceLA[0], "Time:", SentenceLA[1])
 
 print("--------------------------------------------")
 
-print("Lexical Diversity:", LexicalDiversity(text))
-print("Lexical Diversity Amostras:", LexicalDiversityA(Amostras(text)[1]))
+WordL = WordLength(text)
+WordLA = WordLengthA(Samples[0])
+
+print("Average Word Length:", WordL[0], "Time:", WordL[1])
+print("Average Word Length Amostras:", WordLA[0], "Time:", WordLA[1])
+
+print("--------------------------------------------")
+
+LDensity = LexicalDensity(text)
+LDensityA = LexicalDensityA(Samples[0])
+
+print("Lexical Density:", LDensity[0], "Time:", LDensity[1])
+print("Lexical Density Amostras:", LDensityA[0], "Time:", LDensityA[1])
+
+print("--------------------------------------------")
+
+LDiversity = LexicalDiversity(text)
+LDiversityA = LexicalDiversityA(Samples[0])
+
+print("Lexical Diversity:", LDiversity[0], "Time:", LDiversity[1])
+print("Lexical Diversity Amostras:", LDiversityA[0], "Time:", LDiversityA[1])
+
+print("--------------------------------------------")
+
+#print("TTR:", TTRMedio(Samples[0]))

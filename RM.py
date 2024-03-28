@@ -1,3 +1,4 @@
+# Readability Metrics
 import spacy
 from spacy_readability import Readability
 
@@ -20,7 +21,7 @@ def Readability_Spacy(File):
     print(doc._.forcast)
     print("----------------------------------------------")
     
-def ARI(File) -> float:
+def ARI(File):
     with open(File, "r", encoding='utf-8', errors='ignore') as file:
         sentence = file.read().replace("\n", " ")
     

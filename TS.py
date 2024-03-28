@@ -28,6 +28,6 @@ def TextSummarization(text):
     summary = ' '.join(summary_sentences)
     return summary
 
-text = File("Textos/obama.txt")
+text = File("Textos/The_Mother.txt")
 
 print(TextSummarization(text))

@@ -1,5 +1,5 @@
 #Grammar Checking
-import requests
+import requests,spacy
 
 def File(File):
     with open(File, "r", encoding='utf-8', errors='ignore') as file:
@@ -36,6 +36,27 @@ def check_grammar(text):
     except requests.RequestException as e:
         print(f"Error: {e}")
 
+nlp = spacy.load('en_core_web_sm')
 text = File("Textos/obama.txt")
+doc = nlp(text.lower())
+Palavras = [token.text for token in doc if token.is_alpha]
+#check_grammar(text)
 
-check_grammar(text)
+from spellchecker import SpellChecker
+
+spell_checker = SpellChecker(language='en')  # Specify the language ('en' for English)
+
+def check_grammar(text):
+    # Get misspelled words
+    misspelled = spell_checker.unknown(text)
+
+    return misspelled
+
+errors = check_grammar(Palavras)
+
+if errors:
+    print("Grammar errors found:")
+    for error in errors:
+        print(f"- {error}")
+else:
+    print("No grammar errors found.")

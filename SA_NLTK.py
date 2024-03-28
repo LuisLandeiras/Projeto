@@ -12,11 +12,11 @@ def Sentiment(File):
     neu = 0
     pos = 0
     compound = 0
-     
-    for _ in range(10):
-        Paragrafo = random.sample(File,10)
+    Paragrafo = random.sample(File,10)
+    
+    for i in range(10):
         analyzer = SentimentIntensityAnalyzer()
-        scores = analyzer.polarity_scores(Paragrafo[_])
+        scores = analyzer.polarity_scores(Paragrafo[i])
         neg += scores['neg']
         neu += scores['neu']
         pos += scores['pos']
