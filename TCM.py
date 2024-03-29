@@ -1,30 +1,7 @@
 #Text Complexity Measures
-import spacy, random, string, time
+import spacy, time, AuxFun
 
 nlp = spacy.load('en_core_web_sm')
-
-#Funções auxiliares
-def File(File):
-    with open(File, "r", encoding='utf-8', errors='ignore') as file:
-        sentence = file.read()
-    return sentence
-
-def Amostras(Texto, NumParagrafos):
-    doc = nlp(Texto.lower())
-    
-    Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
-    Paragrafos = Texto.split("\n\n") # Separa cada paragrafo 
-    
-    Paragrafos = random.sample(Paragrafos, NumParagrafos)
-    
-    #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
-    Samples = []
-    for _ in range(100):
-        Sample = random.sample(Palavras,100)
-        Samples.append(Sample)
-    
-    return Samples, Paragrafos # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 paragrafos de um texto
-#--------------------------------------------------------
 
 # Funções com o texto completo
 def SentenceLength(text):
@@ -106,14 +83,8 @@ def SentenceLengthA(Samples):
 #    return Soma/100
 #--------------------------------------------------------
 
-#print(f"TTR Biden: {TTRMedio('Textos/biden.txt'):.5f}")
-#print(f"TTR Trump: {TTRMedio('Textos/trump.txt'):.5f}")
-#print(f"TTR Obama: {TTRMedio('Textos/obama.txt'):.5f}")
-#print(f"TTR The_Mother: {TTRMedio('Textos/The_Mother.txt'):.5f}")
-#print(f"TTR Men_Withour_Women: {TTRMedio('Textos/Men_Without_Women.txt'):.5f}")
-
-text = File("Textos/The_Mother.txt")
-Samples = Amostras(text, 10)
+text = AuxFun.File("Textos/The_Mother.txt")
+Samples = AuxFun.Amostras(text, 10)
 
 SentenceL = SentenceLength(text) 
 SentenceLA = SentenceLengthA(Samples[1])

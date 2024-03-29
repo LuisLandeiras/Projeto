@@ -1,23 +1,65 @@
-import spacy
+import spacy, time, AuxFun
 
-def get_max_depth(token, depth=0):
-    # Base case: If token has no children, return the current depth
-    if not list(token.children):
-        return depth
-    # Recursive case: Calculate depth for each child
-    else:
-        return max(get_max_depth(child, depth + 1) for child in token.children)
-
-# Load English tokenizer, tagger, parser, NER, and word vectors
 nlp = spacy.load("en_core_web_sm")
 
-# Sample text
-text = "The quick brown fox jumps over the lazy dog."
+def MaxDepth(token, depth=1):
+    if not list(token.children):
+        return depth
+    else:
+        return max(MaxDepth(child, depth + 1) for child in token.children)
 
-# Process the text with SpaCy
-doc = nlp(text)
+def Depth(Sample):
+    t = time.process_time()
+    doc = nlp(Sample)
+    
+    max_depth = max(MaxDepth(sent.root) for sent in doc.sents)
+    return max_depth, time.process_time() - t
 
-# Get the maximum depth of the dependency tree
-max_depth = max(get_max_depth(sent.root) for sent in doc.sents)
+def DepthA(Samples):
+    t = time.process_time()
+    Depth = 0
+    for Sample in Samples:
+        doc = nlp(Sample)
+        max_depth = max(MaxDepth(sent.root) for sent in doc.sents)
+        if max_depth > Depth:
+            Depth = max_depth
+    return Depth, time.process_time() - t
+        
+text = AuxFun.File("Textos/The_Mother.txt")
+amostra = AuxFun.Amostras(text,40)
 
-print("Maximum depth of the dependency tree:", max_depth)
+BestD = DepthA(amostra[1])
+
+print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+
+print("--------------------------------------------")
+
+text = AuxFun.File("Textos/obama.txt")
+amostra = AuxFun.Amostras(text,15)
+
+BestD = DepthA(amostra[1])
+
+print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+
+print("--------------------------------------------")
+
+text = AuxFun.File("Textos/biden.txt")
+amostra = AuxFun.Amostras(text,15)
+
+BestD = DepthA(amostra[1])
+
+print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+
+print("--------------------------------------------")
+
+text = AuxFun.File("Textos/Men_Without_Women.txt")
+amostra = AuxFun.Amostras(text,40)
+
+BestD = DepthA(amostra[1])
+
+print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+

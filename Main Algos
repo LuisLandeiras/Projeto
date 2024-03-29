@@ -1,5 +1,4 @@
 Readability Metrics:
-These metrics assess the readability of text, considering factors such as sentence length, word complexity, and overall text structure. Common metrics include Flesch Reading Ease, Flesch-Kincaid Grade Level, Gunning Fog Index, Coleman-Liau Index, and Automated Readability Index (ARI).
 -Flesch Reading Ease; X
 -Flesch-Kincaid Grade Level; X
 -Gunning Fog Index;
@@ -9,8 +8,7 @@ These metrics assess the readability of text, considering factors such as senten
 Sentiment Analysis X
 
 Text Similarity:
-Text similarity algorithms assess how similar two or more pieces of text are. Techniques such as Cosine Similarity, Jaccard Similarity, and Levenshtein Distance can be used to measure the similarity between texts.
--Cosine Similarity; X
+-Cosine Similarity;
 -Jaccard Similarity;
 -Levenshtein Distance.
 
@@ -20,8 +18,8 @@ NER algorithms identify and classify named entities (e.g., people, organizations
 Part-of-Speech (POS) Tagging:
 POS tagging assigns a grammatical category to each word in the text, such as noun, verb, adjective, etc. This can be useful for assessing the grammatical structure and complexity of the text.
 
-Dependency Parsing:
-Dependency parsing analyzes the grammatical structure of sentences to determine the relationships between words. It can be useful for assessing the coherence and syntactic complexity of the text.
+Dependency Parsing X
+Dependency parsing analyzes the grammatical structure of sentences to determine the relationships between words.
 
 Topic Modeling:
 Topic modeling algorithms such as Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF) can be used to identify the underlying topics or themes in a corpus of text. This can help assess the relevance and coherence of the text.
@@ -41,7 +39,3 @@ Text Complexity Measures:
 -Average Word Length; X
 -Lexical Density; X
 -Lexical Diversity. X
-
-Style Analysis:
-Analyze writing style attributes such as tone, formality, clarity, and coherence.
-Compare against known style benchmarks or style guides.
