@@ -45,20 +45,20 @@ def ARIA(Samples):
         ari += 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 #Formula usada para calcular o ARI
     return ari/len(Samples)
 
-Text = AuxFun.File("Textos/biden.txt")
-Sample = AuxFun.Amostras(Text,10)
-
-print("ARI Amostra:", ARIA(Sample[1]))
-print("ARI:", ARI(Text))
-
-print("------------------------------------")
-
-print("Flesch Grade:", Flesch(Text)[0])
-print("Flesch Grade Amostra:", FleschA(Sample)[0])
-
-print("------------------------------------")
-
-print("Flesch Reading:", Flesch(Text)[1])
-print("Flesch Reading Amostra:", FleschA(Sample)[1])
+#Text = AuxFun.File("Textos/biden.txt")
+#Sample = AuxFun.Amostras(Text,10)
+#
+#print("ARI Amostra:", ARIA(Sample[1]))
+#print("ARI:", ARI(Text))
+#
+#print("------------------------------------")
+#
+#print("Flesch Grade:", Flesch(Text)[0])
+#print("Flesch Grade Amostra:", FleschA(Sample)[0])
+#
+#print("------------------------------------")
+#
+#print("Flesch Reading:", Flesch(Text)[1])
+#print("Flesch Reading Amostra:", FleschA(Sample)[1])
 
 

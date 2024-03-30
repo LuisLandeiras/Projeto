@@ -1,5 +1,5 @@
 #Text Summarization
-import nltk
+import nltk, time
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
@@ -11,6 +11,7 @@ def File(File):
     return sentence
 
 def TextSummarization(text):
+    t = time.process_time()
     # Tokenize the text into sentences
     sentences = sent_tokenize(text)
 
@@ -26,8 +27,8 @@ def TextSummarization(text):
 
     # Combine the top sentences to form the summary
     summary = ' '.join(summary_sentences)
-    return summary
+    return summary, time.process_time() - t 
 
-text = File("Textos/The_Mother.txt")
-
-print(TextSummarization(text))
+#text = File("Textos/The_Mother.txt")
+#
+#print(TextSummarization(text))

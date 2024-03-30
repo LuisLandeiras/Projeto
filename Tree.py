@@ -25,41 +25,41 @@ def DepthA(Samples):
             Depth = max_depth
     return Depth, time.process_time() - t
         
-text = AuxFun.File("Textos/The_Mother.txt")
-amostra = AuxFun.Amostras(text,40)
-
-BestD = DepthA(amostra[1])
-
-print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
-print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
-
-print("--------------------------------------------")
-
-text = AuxFun.File("Textos/obama.txt")
-amostra = AuxFun.Amostras(text,15)
-
-BestD = DepthA(amostra[1])
-
-print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
-print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
-
-print("--------------------------------------------")
-
-text = AuxFun.File("Textos/biden.txt")
-amostra = AuxFun.Amostras(text,15)
-
-BestD = DepthA(amostra[1])
-
-print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
-print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
-
-print("--------------------------------------------")
-
-text = AuxFun.File("Textos/Men_Without_Women.txt")
-amostra = AuxFun.Amostras(text,40)
-
-BestD = DepthA(amostra[1])
-
-print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
-print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+#text = AuxFun.File("Textos/The_Mother.txt")
+#amostra = AuxFun.Amostras(text,40)
+#
+#BestD = DepthA(amostra[1])
+#
+#print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+#print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+#
+#print("--------------------------------------------")
+#
+#text = AuxFun.File("Textos/obama.txt")
+#amostra = AuxFun.Amostras(text,15)
+#
+#BestD = DepthA(amostra[1])
+#
+#print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+#print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+#
+#print("--------------------------------------------")
+#
+#text = AuxFun.File("Textos/biden.txt")
+#amostra = AuxFun.Amostras(text,15)
+#
+#BestD = DepthA(amostra[1])
+#
+#print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+#print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
+#
+#print("--------------------------------------------")
+#
+#text = AuxFun.File("Textos/Men_Without_Women.txt")
+#amostra = AuxFun.Amostras(text,40)
+#
+#BestD = DepthA(amostra[1])
+#
+#print("Best Depth:", Depth(text)[0], "Time:", Depth(text)[1])
+#print("Best Depth Amostra:", BestD[0], "Time:", BestD[1])
 

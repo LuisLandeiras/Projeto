@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Analysis Results</title>
+</head>
+<body>
+    <h1>NLP Analysis Results</h1>
+    <h1>OverAll Time: {{Time}}</h1>
+    
+    <h2>Sentence Length Analysis</h2>
+    <p>Sentence Length Amostras: {{ Amostras.SentenceLength[0] }} Time: {{ Amostras.SentenceLength[1] }}</p>
+    <p>Sentence Length: {{ Completo.SentenceLength[0] }} Time: {{ Completo.SentenceLength[1] }}</p>
+
+    <h2>Word Length Analysis</h2>
+    <p>Word Length Amostras: {{ Amostras.WordLength[0] }} Time: {{ Amostras.WordLength[1] }}</p>
+    <p>Word Length: {{ Completo.WordLength[0] }} Time: {{ Completo.WordLength[1] }}</p>
+
+    <h2>Lexical Density Analysis</h2>
+    <p>Lexical Density Amostras: {{ Amostras.LexicalDensity[0] }} Time: {{ Amostras.LexicalDensity[1] }}</p>
+    <p>Lexical Density: {{ Completo.LexicalDensity[0] }} Time: {{ Completo.LexicalDensity[1] }}</p>
+
+    <h2>Lexical Diversity Analysis</h2>
+    <p>Lexical Diversity Amostras: {{ Amostras.LexicalDiversity[0] }} Time: {{ Amostras.LexicalDiversity[1] }}</p>
+    <p>Lexical Diversity: {{ Completo.LexicalDiversity[0] }} Time: {{ Completo.LexicalDiversity[1] }}</p>
+
+    <h2>Tree Analysis</h2>
+    <p>Tree Depth Amostras: {{ Amostras.Tree[0] }} Time: {{ Amostras.Tree[1] }}</p>
+    <p>Tree Depth: {{ Completo.Tree[0] }} Time: {{ Completo.Tree[1] }}</p>
+
+    <h2>Sentiment Analysis</h2>
+    <p>Sentiment Score Amostras: Neg: {{ Amostras.Sentiment[0] }} Neu: {{ Amostras.Sentiment[1] }} Pos: {{ Amostras.Sentiment[2] }} Compound: {{ Amostras.Sentiment[3] }} Time: {{ Amostras.Sentiment[4] }}</p>
+    <p>Sentiment Score: {{ Completo.Sentiment[0] }} Time: {{ Completo.Sentiment[1]}}</p>
+
+    <h2>Text Summarization</h2>
+    <p>Time: {{ Completo.Summarization[1] }}</p>
+    <p>Summary: {{ Completo.Summarization[0] }}</p>
+    
+    <h2>Grammar Check</h2>
+    <p>Time: {{ Completo.Grammar[1] }}</p>
+    <table>
+        {% for Erros in Completo.Grammar[0] %}
+            <tr>
+                <td>Type: {{Erros.category}} Sentence: {{Erros.sentence}} Replacements: {{Erros.replacements}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

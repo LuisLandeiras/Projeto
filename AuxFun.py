@@ -7,13 +7,16 @@ def File(File):
         sentence = file.read()
     return sentence
 
-def Amostras(Texto, NumParagrafos):
+def Amostras(Texto, type):
     doc = nlp(Texto.lower())
     
     Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
-    Paragrafos = Texto.split("\n\n") # Separa cada paragrafo 
-    
-    Paragrafos = random.sample(Paragrafos, NumParagrafos)
+    if type == 1:
+        Paragrafos = Texto.split("\r\n\r\n") # Separa cada paragrafo 
+    elif type == 2:
+        Paragrafos = Texto.split("\n\n") # Separa cada paragrafo 
+
+    Paragrafos = random.sample(Paragrafos, 10)
     
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []

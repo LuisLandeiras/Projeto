@@ -1,23 +1,19 @@
 #Grammar Checking
-import language_tool_python, AuxFun
+import language_tool_python, AuxFun, time
 
 def Grammar(text):
+    t = time.process_time()
     tool = language_tool_python.LanguageTool('en-US')
     matches = tool.check(text)
     
-    print(len(matches))
+    Resultados = []
     
     #match atributtes:
     #ruleId,message,replacements,offsetInContext,context,offset,errorLength,category,ruleIssueType,sentence
     for match in matches:
-        print("Error:", match.message)
-        print("Error Type:", match.ruleIssueType)
-        print("Sentence:", match.sentence)
-        print("Context:", match.context)
-        print("Possible Replacements:", match.replacements)
-        print("Possible Correction:", tool.correct(match.sentence))
-        print("------------------------------------")
-    
-text = AuxFun.File("Textos/obama.txt")
+        Resultados.append(match)
 
-Grammar(text)
+    return Resultados, time.process_time() - t
+#text = AuxFun.File("Textos/obama.txt")
+
+#Grammar(text)

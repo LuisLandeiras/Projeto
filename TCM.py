@@ -83,39 +83,39 @@ def SentenceLengthA(Samples):
 #    return Soma/100
 #--------------------------------------------------------
 
-text = AuxFun.File("Textos/The_Mother.txt")
-Samples = AuxFun.Amostras(text, 10)
-
-SentenceL = SentenceLength(text) 
-SentenceLA = SentenceLengthA(Samples[1])
-
-print("Average Sentence Length:", SentenceL[0], "Time:", SentenceL[1])
-print("Average Sentence Length Amostras:", SentenceLA[0], "Time:", SentenceLA[1])
-
-print("--------------------------------------------")
-
-WordL = WordLength(text)
-WordLA = WordLengthA(Samples[0])
-
-print("Average Word Length:", WordL[0], "Time:", WordL[1])
-print("Average Word Length Amostras:", WordLA[0], "Time:", WordLA[1])
-
-print("--------------------------------------------")
-
-LDensity = LexicalDensity(text)
-LDensityA = LexicalDensityA(Samples[0])
-
-print("Lexical Density:", LDensity[0], "Time:", LDensity[1])
-print("Lexical Density Amostras:", LDensityA[0], "Time:", LDensityA[1])
-
-print("--------------------------------------------")
-
-LDiversity = LexicalDiversity(text)
-LDiversityA = LexicalDiversityA(Samples[0])
-
-print("Lexical Diversity:", LDiversity[0], "Time:", LDiversity[1])
-print("Lexical Diversity Amostras:", LDiversityA[0], "Time:", LDiversityA[1])
-
-print("--------------------------------------------")
-
+#text = AuxFun.File("Textos/The_Mother.txt")
+#Samples = AuxFun.Amostras(text,2)
+#
+#SentenceL = SentenceLength(text) 
+#SentenceLA = SentenceLengthA(Samples[1])
+#
+#print("Average Sentence Length:", SentenceL[0], "Time:", SentenceL[1])
+#print("Average Sentence Length Amostras:", SentenceLA[0], "Time:", SentenceLA[1])
+#
+#print("--------------------------------------------")
+#
+#WordL = WordLength(text)
+#WordLA = WordLengthA(Samples[0])
+#
+#print("Average Word Length:", WordL[0], "Time:", WordL[1])
+#print("Average Word Length Amostras:", WordLA[0], "Time:", WordLA[1])
+#
+#print("--------------------------------------------")
+#
+#LDensity = LexicalDensity(text)
+#LDensityA = LexicalDensityA(Samples[0])
+#
+#print("Lexical Density:", LDensity[0], "Time:", LDensity[1])
+#print("Lexical Density Amostras:", LDensityA[0], "Time:", LDensityA[1])
+#
+#print("--------------------------------------------")
+#
+#LDiversity = LexicalDiversity(text)
+#LDiversityA = LexicalDiversityA(Samples[0])
+#
+#print("Lexical Diversity:", LDiversity[0], "Time:", LDiversity[1])
+#print("Lexical Diversity Amostras:", LDiversityA[0], "Time:", LDiversityA[1])
+#
+#print("--------------------------------------------")
+#
 #print("TTR:", TTRMedio(Samples[0]))
