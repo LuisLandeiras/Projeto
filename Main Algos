@@ -1,7 +1,7 @@
 Readability Metrics:
 -Flesch Reading Ease; X
 -Flesch-Kincaid Grade Level; X
--Gunning Fog Index;
+-SMOG Index; X
 -Coleman-Liau Index; X
 -ARI. X
 
@@ -16,7 +16,6 @@ Named Entity Recognition (NER):
 NER algorithms identify and classify named entities (e.g., people, organizations, locations) mentioned in the text. spaCy's NER capabilities are quite advanced and can be used for this purpose.
 
 Part-of-Speech (POS) Tagging:
-POS tagging assigns a grammatical category to each word in the text, such as noun, verb, adjective, etc. This can be useful for assessing the grammatical structure and complexity of the text.
 
 Dependency Parsing X
 Dependency parsing analyzes the grammatical structure of sentences to determine the relationships between words.
@@ -24,10 +23,9 @@ Dependency parsing analyzes the grammatical structure of sentences to determine 
 Topic Modeling:
 Topic modeling algorithms such as Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF) can be used to identify the underlying topics or themes in a corpus of text. This can help assess the relevance and coherence of the text.
 -Latent Dirichlet Allocation (LDA);
--Non-negative Matrix Factorization (NMF).
+-Non-negative Matrix Factorization (NMF). X
 
-Text Classification:
-Text classification algorithms categorize text into predefined classes or categories. This can be useful for tasks such as spam detection, sentiment analysis, or topic classification.
+Text Classification X
 
 Text Summarization X
 

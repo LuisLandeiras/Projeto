@@ -1,14 +1,9 @@
 #Text Summarization
-import nltk, time
+import nltk, time, AuxFun
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from heapq import nlargest
-
-def File(File):
-    with open(File, "r", encoding='utf-8', errors='ignore') as file:
-        sentence = file.read()  
-    return sentence
 
 def TextSummarization(text):
     t = time.process_time()
@@ -29,6 +24,6 @@ def TextSummarization(text):
     summary = ' '.join(summary_sentences)
     return summary, time.process_time() - t 
 
-#text = File("Textos/The_Mother.txt")
+#text = AuxFun.File("Textos/The_Mother.txt")
 #
 #print(TextSummarization(text))

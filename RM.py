@@ -1,64 +1,144 @@
 # Readability Metrics
-import spacy, AuxFun
+import spacy, AuxFun, syllapy, math, re
 from spacy_readability import Readability
 
 nlp = spacy.load('en_core_web_sm')
 nlp.add_pipe(Readability())
 
-def Flesch(File): 
+def Read(File): 
     doc = nlp(File)
 
-    #Ano escolar tendo em conta a compelxidade do texto
     fleschg = doc._.flesch_kincaid_grade_level
     fleschr = doc._.flesch_kincaid_reading_ease
-    #print(doc._.dale_chall)
-    #print(doc._.smog)
-    #print(doc._.coleman_liau_index)
-    #print(doc._.automated_readability_index)
-    #print(doc._.forcast)
+    ari = doc._.automated_readability_index
+    coleman = doc._.coleman_liau_index
+    smog = doc._.smog
     
-    return fleschg, fleschr
+    return fleschg, fleschr, ari, coleman, smog
 
-# Fazer á manete(Resultados muito imprecisos)
-def FleschA(Samples):
-    fleschg = 0
-    fleschr = 0
+#0-50
+#51-100
+#101-150
+#151-200
+#201-300
+#301-500
+def SMOGA(Samples):
+    Soma = 0
     for Sample in Samples:
-        doc = nlp(str(Sample))
-        fleschg += doc._.flesch_kincaid_grade_level
-        fleschr += doc._.flesch_kincaid_reading_ease
-    return fleschg/10, fleschr/10
+        doc = nlp(Sample)
+        
+        sentences = len(list(doc.sents)) # Conta o número de frases
+        
+        ComplexWords = sum(1 for word in Sample.split() if syllapy.count(word) >= 3) # Conta o numero de palavras com mais de 3 silabas
+        
+        Soma += 1.043 * math.sqrt((ComplexWords * (30 / sentences))) + 3.1291 # Formula para calcular SMOG
+    return Soma/len(Samples)
 
-def ARI(Sample):
-    words = len(Sample.split())
-    sentences = Sample.count('.') + Sample.count('!') + Sample.count('?') #Conta o número de frases tendo em conta as pontuações
-    characters = len(Sample.replace(" ", "")) #Retira os espaços para contar o número de letras usadas
-    ari = 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 #Formula usada para calcular o ARI
-    return ari
+#0-1.9  Preschool
+#2.0-3.9  Kindergarten-1st Grade
+#4.0-5.9  2nd-3rd Grade
+#6.0-7.9  4th-5th Grade
+#8.0-9.9  6th-7th Grade
+#10.0-11.9  8th-9th Grade
+#12.0-13.9  10th-12th Grade (High School)
+#14.0-15.9  College
+#16.0+  College Graduate or Beyond
+def ColemanA(Samples):
+    Soma = 0
+    for Sample in Samples:
+        doc = nlp(Sample.lower())
+        
+        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
+        words = len(Palavras) # Numero de Palavras
+        
+        sentences = len(list(doc.sents)) # Conta o número de frases
+        
+        characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Sample)) # Retira os espaços para contar o número de letras usadas
+        
+        L = (characters/words) * 100
+        S = (sentences/words) * 100
+        Soma += 0.0588 * L - 0.296 * S - 15.8 # Formula para calcular Coleman
+    return Soma/len(Samples)
+
+#0-5
+#6-8
+#9-12
+#13-16: College level and above
+def FleschGradeA(Samples):
+    Soma = 0
+    for Sample in Samples:
+        doc = nlp(Sample.lower())
+        
+        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
+        words = len(Palavras) # Numero de Palavras
+        
+        syllables = sum(syllapy.count(word) for word in Sample.split())
+        
+        sentences = len(list(doc.sents)) # Conta o número de frases
+        
+        Soma += 0.39 * (words/sentences) + 11.8 * (syllables/words) - 15.59 # Formula para calcular Flesch Grade
+    return Soma/len(Samples)
+
+#90-100
+#80-89
+#70-79
+#60-69
+#50-59
+#30-49
+#0-29
+def FleschReadingA(Samples):
+    Soma = 0
+    for Sample in Samples:
+        doc = nlp(Sample.lower())
+        
+        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
+        words = len(Palavras) # Numero de Palavras
+        
+        syllables = sum(syllapy.count(word) for word in Sample.split())
+        
+        sentences = len(list(doc.sents)) # Conta o número de frases
+        
+        Soma += 206.835 - 1.015 * (words/sentences) - 84.6 * (syllables/words) # Formula para calcular Flesch Reading
+    return Soma/len(Samples)
 
 def ARIA(Samples):
     ari = 0
-    for Sample in Samples: 
-        words = len(Sample.split())
-        sentences = Sample.count('.') + Sample.count('!') + Sample.count('?') #Conta o número de frases tendo em conta as pontuações
-        characters = len(Sample.replace(" ", "")) #Retira os espaços para contar o número de letras usadas
-        ari += 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 #Formula usada para calcular o ARI
+    for Sample in Samples:
+        doc = nlp(Sample.lower())
+        
+        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
+        words = len(Palavras) # Numero de Palavras
+        
+        sentences = len(list(doc.sents)) # Conta o número de frases
+
+        characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Sample)) # Retira os espaços para contar o número de letras usadas
+
+        ari += 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 # Formula para calcular o ARI
     return ari/len(Samples)
 
-#Text = AuxFun.File("Textos/biden.txt")
-#Sample = AuxFun.Amostras(Text,10)
+#Text = AuxFun.File("Textos/The_Mother.txt")
+#Sample = AuxFun.Amostras(Text,2)
 #
 #print("ARI Amostra:", ARIA(Sample[1]))
-#print("ARI:", ARI(Text))
+#print("ARI:", Read(Text)[2])
 #
 #print("------------------------------------")
 #
-#print("Flesch Grade:", Flesch(Text)[0])
-#print("Flesch Grade Amostra:", FleschA(Sample)[0])
+#print("Flesch Grade:", Read(Text)[0])
+#print("Flesch Grade Amostra:", FleschGradeA(Sample[1]))
 #
 #print("------------------------------------")
 #
-#print("Flesch Reading:", Flesch(Text)[1])
-#print("Flesch Reading Amostra:", FleschA(Sample)[1])
-
+#print("Flesch Reading:", Read(Text)[1])
+#print("Flesch Reading Amostra:", FleschReadingA(Sample[1]))
+#
+#print("------------------------------------")
+#
+#print("Coleman:", Read(Text)[3])
+#print("Coleman Amostras:", ColemanA(Sample[1]))
+#
+#print("------------------------------------")
+#
+#print("SMOG:", Read(Text)[4])
+#print("SMOG Amostras:", SMOGA(Sample[1]))
 

@@ -2,6 +2,8 @@ import spacy, time, AuxFun
 
 nlp = spacy.load("en_core_web_sm")
 
+# Procurar melhor maneira de pesquisar a arvore(Amostras é muito impreciso)
+
 def MaxDepth(token, depth=1):
     if not list(token.children):
         return depth
