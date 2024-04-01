@@ -16,7 +16,16 @@ def sub():
     ResultadosA = {}
     Resultados = {}
     
-    Samples = AuxFun.Amostras(Texto,1)
+    Samples = AuxFun.Amostras(Texto)
+    
+    #RM Amostras
+    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples[1])
+    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples[1])
+    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples[1])
+    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples[1])
+    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples[1])
+    #RM
+    def TRead(): Resultados['Read'] = RM.Read(Texto)
     
     #TCM Amostras
     def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1])
@@ -60,7 +69,13 @@ def sub():
         threading.Thread(target=TTree),
         threading.Thread(target=TSentiment),
         threading.Thread(target=TTextSum),
-        threading.Thread(target=TGrammar)
+        threading.Thread(target=TGrammar),
+        threading.Thread(target=TGradeA),
+        threading.Thread(target=TSMOGA),
+        threading.Thread(target=TColemanA),
+        threading.Thread(target=TReadingA),
+        threading.Thread(target=TARIA),
+        threading.Thread(target=TRead)
     ]
     
     # Start threads

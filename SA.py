@@ -21,7 +21,7 @@ def SentimentA(Samples):
         pos += scores['pos']
         compound += scores['compound']
     
-    return neg/10, neu/10, pos/10, compound/10, time.process_time() - t
+    return '{:.3}'.format(neg/10), '{:.3}'.format(neu/10), '{:.3}'.format(pos/10), '{:.3}'.format(compound/10), time.process_time() - t
 
 #Sentence = AuxFun.File("Textos/biden.txt")
 #Samples = AuxFun.Amostras(Sentence,10)

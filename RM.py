@@ -1,11 +1,12 @@
 # Readability Metrics
-import spacy, AuxFun, syllapy, math, re
+import spacy, AuxFun, syllapy, math, re, time
 from spacy_readability import Readability
 
 nlp = spacy.load('en_core_web_sm')
 nlp.add_pipe(Readability())
 
 def Read(File): 
+    t = time.process_time()
     doc = nlp(File)
 
     fleschg = doc._.flesch_kincaid_grade_level
@@ -14,7 +15,7 @@ def Read(File):
     coleman = doc._.coleman_liau_index
     smog = doc._.smog
     
-    return fleschg, fleschr, ari, coleman, smog
+    return fleschg, fleschr, ari, coleman, smog, time.process_time() - t
 
 #0-50
 #51-100
@@ -23,6 +24,7 @@ def Read(File):
 #201-300
 #301-500
 def SMOGA(Samples):
+    t = time.process_time()
     Soma = 0
     for Sample in Samples:
         doc = nlp(Sample)
@@ -32,7 +34,7 @@ def SMOGA(Samples):
         ComplexWords = sum(1 for word in Sample.split() if syllapy.count(word) >= 3) # Conta o numero de palavras com mais de 3 silabas
         
         Soma += 1.043 * math.sqrt((ComplexWords * (30 / sentences))) + 3.1291 # Formula para calcular SMOG
-    return Soma/len(Samples)
+    return Soma/len(Samples), time.process_time() - t
 
 #0-1.9  Preschool
 #2.0-3.9  Kindergarten-1st Grade
@@ -44,6 +46,7 @@ def SMOGA(Samples):
 #14.0-15.9  College
 #16.0+  College Graduate or Beyond
 def ColemanA(Samples):
+    t = time.process_time()
     Soma = 0
     for Sample in Samples:
         doc = nlp(Sample.lower())
@@ -58,13 +61,14 @@ def ColemanA(Samples):
         L = (characters/words) * 100
         S = (sentences/words) * 100
         Soma += 0.0588 * L - 0.296 * S - 15.8 # Formula para calcular Coleman
-    return Soma/len(Samples)
+    return Soma/len(Samples), time.process_time() - t
 
 #0-5
 #6-8
 #9-12
 #13-16: College level and above
 def FleschGradeA(Samples):
+    t = time.process_time()
     Soma = 0
     for Sample in Samples:
         doc = nlp(Sample.lower())
@@ -77,7 +81,7 @@ def FleschGradeA(Samples):
         sentences = len(list(doc.sents)) # Conta o número de frases
         
         Soma += 0.39 * (words/sentences) + 11.8 * (syllables/words) - 15.59 # Formula para calcular Flesch Grade
-    return Soma/len(Samples)
+    return Soma/len(Samples), time.process_time() - t
 
 #90-100
 #80-89
@@ -87,6 +91,7 @@ def FleschGradeA(Samples):
 #30-49
 #0-29
 def FleschReadingA(Samples):
+    t = time.process_time()
     Soma = 0
     for Sample in Samples:
         doc = nlp(Sample.lower())
@@ -99,9 +104,10 @@ def FleschReadingA(Samples):
         sentences = len(list(doc.sents)) # Conta o número de frases
         
         Soma += 206.835 - 1.015 * (words/sentences) - 84.6 * (syllables/words) # Formula para calcular Flesch Reading
-    return Soma/len(Samples)
+    return Soma/len(Samples), time.process_time() - t
 
 def ARIA(Samples):
+    t = time.process_time()
     ari = 0
     for Sample in Samples:
         doc = nlp(Sample.lower())
@@ -114,7 +120,7 @@ def ARIA(Samples):
         characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Sample)) # Retira os espaços para contar o número de letras usadas
 
         ari += 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 # Formula para calcular o ARI
-    return ari/len(Samples)
+    return ari/len(Samples), time.process_time() - t
 
 #Text = AuxFun.File("Textos/The_Mother.txt")
 #Sample = AuxFun.Amostras(Text,2)

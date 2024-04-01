@@ -69,12 +69,12 @@ def WordLengthA(Samples):
 def SentenceLengthA(Samples):
     t = time.process_time()
     SentenceLength = 0
-    for i in range(len(Samples)):
-        doc = nlp(Samples[i])
+    for Sample in Samples:
+        doc = nlp(Sample)
         sentences = [sent.text for sent in doc.sents]
         TotalWords = sum(len(sent.split()) for sent in sentences)
         SentenceLength += TotalWords / len(sentences)
-    return SentenceLength/10, time.process_time() - t
+    return SentenceLength/len(Samples), time.process_time() - t
 
 #def TTRMedio(Samples):
 #    Soma = 0
