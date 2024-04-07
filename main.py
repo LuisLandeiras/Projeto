@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import AuxFun, TCM, RM, SA, GC, Tree, TS, threading, time
+import AuxFun, TCM, RM, SA, GC, Tree, threading, time
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ def sub():
 
     ResultadosA = {}
     Resultados = {}
-    
+
     Samples = AuxFun.Amostras(Texto)
     
     #RM Amostras
@@ -48,9 +48,6 @@ def sub():
     #SA
     def TSentiment(): Resultados['Sentiment'] = SA.Sentiment(Texto)
     
-    #TS
-    def TTextSum(): Resultados['Summarization'] = TS.TextSummarization(Texto)
-    
     #GC
     def TGrammar(): Resultados['Grammar'] = GC.Grammar(Texto)
     
@@ -68,7 +65,6 @@ def sub():
         threading.Thread(target=TLexicalDiversity),
         threading.Thread(target=TTree),
         threading.Thread(target=TSentiment),
-        threading.Thread(target=TTextSum),
         threading.Thread(target=TGrammar),
         threading.Thread(target=TGradeA),
         threading.Thread(target=TSMOGA),

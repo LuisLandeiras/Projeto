@@ -12,9 +12,10 @@ def Amostras(Texto):
 
     Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
     
-    Paragrafo = Texto.split("\n") # Separa cada paragrafo 
-    Paragrafos = random.sample(Paragrafo, 10)
-    
+    # Encontrar forma diferente de dividir paragrafos
+    Paragrafos = Texto.split("\r\n\r\n") # Separa cada paragrafo 
+    Paragrafos = random.sample(Paragrafos,10)
+    print(Paragrafos)
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []
     for _ in range(100):
@@ -22,5 +23,6 @@ def Amostras(Texto):
         Samples.append(Sample)
     
     return Samples, Paragrafos # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 paragrafos de um texto
+
 
 
