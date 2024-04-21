@@ -12,10 +12,25 @@ def Amostras(Texto):
 
     Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
     
-    # Encontrar forma diferente de dividir paragrafos
-    Paragrafos = Texto.split("\r\n\r\n") # Separa cada paragrafo 
-    Paragrafos = random.sample(Paragrafos,10)
-    print(Paragrafos)
+    paragraphs = []
+    current_paragraph = ""
+    sentences_count = 0
+
+    # Separa cada paragrafo 
+    for sent in doc.sents:
+        current_paragraph += sent.text + " "
+        sentences_count += 1
+        if sentences_count == 10:
+            paragraphs.append(current_paragraph.strip())
+            current_paragraph = ""
+            sentences_count = 0
+
+    # Add the last paragraph if it's not complete
+    if current_paragraph:
+        paragraphs.append(current_paragraph.strip())
+    
+    Paragrafos = random.sample(paragraphs,10) 
+
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []
     for _ in range(100):
