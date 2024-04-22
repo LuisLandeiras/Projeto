@@ -1,4 +1,4 @@
-import spacy, random
+import spacy, random, csv, Tree, TCM, os
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -39,5 +39,15 @@ def Amostras(Texto):
     
     return Samples, Paragrafos # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 paragrafos de um texto
 
+def txt_csv(input_dir, output_file):
+    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['Text'])
 
+        for filename in os.listdir(input_dir):
+            if filename.endswith('.txt'):
+                with open(os.path.join(input_dir, filename), 'r', encoding='utf-8') as txtfile:
+                    text = txtfile.read().replace("\n\n", "  ").replace("\n", " ")
+                    writer.writerow([text]) 
 
+#txt_csv("Textos/","teste.csv")
