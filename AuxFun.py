@@ -48,6 +48,7 @@ def txt_csv(input_dir, output_file):
             if filename.endswith('.txt'):
                 with open(os.path.join(input_dir, filename), 'r', encoding='utf-8') as txtfile:
                     text = txtfile.read().replace("\n\n", "  ").replace("\n", " ")
+                    
                     writer.writerow([text]) 
 
 #txt_csv("Textos/","teste.csv")

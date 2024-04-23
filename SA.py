@@ -1,5 +1,7 @@
-import AuxFun, time
+import AuxFun, time, nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+nltk.download('vader_lexicon')
 
 def Sentiment(Sample):
     t = time.process_time()
