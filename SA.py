@@ -1,4 +1,4 @@
-import AuxFun, time, nltk
+import time, nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 nltk.download('vader_lexicon')
@@ -24,15 +24,3 @@ def SentimentA(Samples):
         compound += scores['compound']
     
     return '{:.3}'.format(neg/10), '{:.3}'.format(neu/10), '{:.3}'.format(pos/10), '{:.3}'.format(compound/10), time.process_time() - t
-
-#Sentence = AuxFun.File("Textos/biden.txt")
-#Samples = AuxFun.Amostras(Sentence,10)
-#
-#print(f"Sentiment negative: {SentimentA(Samples[1])[0]:.5f}")
-#print(f"Sentiment neutral: {SentimentA(Samples[1])[1]:.5f}")
-#print(f"Sentiment positive: {SentimentA(Samples[1])[2]:.5f}")
-#print(f"Compound: {SentimentA(Samples[1])[3]:.5f}")
-#
-#print("----------------------------------------------")
-#    
-#print("Sentiment negative:", Sentiment(Sentence))

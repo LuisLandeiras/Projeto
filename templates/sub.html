@@ -208,24 +208,7 @@
     <h2>Sentiment Analysis</h2>
     <p>Sentiment Score Amostras: Neg: {{ Amostras.Sentiment[0] }} Neu: {{ Amostras.Sentiment[1] }} Pos: {{ Amostras.Sentiment[2] }} Compound: {{ Amostras.Sentiment[3] }} Time: {{ Amostras.Sentiment[4] }}</p>
     <p>Sentiment Score: {{ Completo.Sentiment[0] }} Time: {{ Completo.Sentiment[1]}}</p>
-
     -->
-    
-    <h2>Grammar Check</h2>
-    <p>Time: {{ Completo.Grammar[1] }}</p>
-    <table border="1">
-        <tr>
-            <td>Type</td>
-            <td>Sentence</td>
-            <td>Replacements</td>
-        </tr>
-        {% for Erros in Completo.Grammar[0] %}
-            <tr>
-                <td>{{Erros.category}}</td>
-                <td>{{Erros.sentence}}</td>
-                <td>{{Erros.replacements}}</td>
-            </tr>
-        {% endfor %}
-    </table>
+
 </body>
 </html>

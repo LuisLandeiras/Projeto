@@ -20,7 +20,7 @@ def WordLength(text):
     WordL = TotalChars / len(tokens)
     return WordL, time.process_time() - t
 
-def LexicalDensity(text): # Numero de palavras lexicais / Numero total de palavras
+def LexicalDensity(text): 
     t = time.process_time()
     doc = nlp(text.lower())
     LexicalWords = []
@@ -42,13 +42,15 @@ def LexicalDiversity(text): # Numero de palavras diferentes / Numero total de pa
 #Funções com amostras
 def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de palavras
     t = time.process_time()
-    Soma = 0
+    total_lexical_words = 0
+
     for Sample in Samples:
-        doc = nlp(str(Sample))
-        for token in doc:
-            if token.pos_ == "ADP" or token.pos_ == "AUX" or token.pos_ == "PART" or token.pos_ == "CCONJ" or token.pos_ == "NOUN" or token.pos_ == "INTJ" or token.pos_ == "PROPN" or token.pos_ == "ADJ":
-                Soma += 1
-    return Soma/10000, time.process_time() - t
+        doc = nlp(str(Sample).lower())
+        lexical_words = [token.text for token in doc if token.pos_ in {"ADP", "AUX", "PART", "CCONJ", "NOUN", "INTJ", "PROPN", "ADJ"}]
+        total_lexical_words += len(lexical_words)
+
+    average_lexical_density = total_lexical_words / 10000
+    return average_lexical_density, time.process_time() - t
 
 def LexicalDiversityA(Samples): # Numero de palavras diferentes / Numero total de palavras
     t = time.process_time()
@@ -75,47 +77,3 @@ def SentenceLengthA(Samples):
         TotalWords = sum(len(sent.split()) for sent in sentences)
         SentenceLength += TotalWords / len(sentences)
     return SentenceLength/len(Samples), time.process_time() - t
-
-#def TTRMedio(Samples):
-#    Soma = 0
-#    for Sample in Samples: #1000 samples são estudadas para o resultado final
-#        Soma += len(set(Sample))/len(Sample) #Divisão entre a sample limpa(Palavras não repetidas) e o tamanho total da sample
-#    return Soma/100
-#--------------------------------------------------------
-
-#text = AuxFun.File("Textos/The_Mother.txt")
-#Samples = AuxFun.Amostras(text,2)
-#
-#SentenceL = SentenceLength(text) 
-#SentenceLA = SentenceLengthA(Samples[1])
-#
-#print("Average Sentence Length:", SentenceL[0], "Time:", SentenceL[1])
-#print("Average Sentence Length Amostras:", SentenceLA[0], "Time:", SentenceLA[1])
-#
-#print("--------------------------------------------")
-#
-#WordL = WordLength(text)
-#WordLA = WordLengthA(Samples[0])
-#
-#print("Average Word Length:", WordL[0], "Time:", WordL[1])
-#print("Average Word Length Amostras:", WordLA[0], "Time:", WordLA[1])
-#
-#print("--------------------------------------------")
-#
-#LDensity = LexicalDensity(text)
-#LDensityA = LexicalDensityA(Samples[0])
-#
-#print("Lexical Density:", LDensity[0], "Time:", LDensity[1])
-#print("Lexical Density Amostras:", LDensityA[0], "Time:", LDensityA[1])
-#
-#print("--------------------------------------------")
-#
-#LDiversity = LexicalDiversity(text)
-#LDiversityA = LexicalDiversityA(Samples[0])
-#
-#print("Lexical Diversity:", LDiversity[0], "Time:", LDiversity[1])
-#print("Lexical Diversity Amostras:", LDiversityA[0], "Time:", LDiversityA[1])
-#
-#print("--------------------------------------------")
-#
-#print("TTR:", TTRMedio(Samples[0]))

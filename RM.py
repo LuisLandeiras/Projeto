@@ -1,5 +1,5 @@
 # Readability Metrics
-import spacy, AuxFun, syllapy, math, re, time
+import spacy, syllapy, math, re, time
 from spacy_readability import Readability
 
 nlp = spacy.load('en_core_web_sm')
@@ -121,30 +121,3 @@ def ARIA(Samples):
 
         ari += 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 # Formula para calcular o ARI
     return ari/len(Samples), time.process_time() - t
-
-#Text = AuxFun.File("Textos/The_Mother.txt")
-#Sample = AuxFun.Amostras(Text,2)
-#
-#print("ARI Amostra:", ARIA(Sample[1]))
-#print("ARI:", Read(Text)[2])
-#
-#print("------------------------------------")
-#
-#print("Flesch Grade:", Read(Text)[0])
-#print("Flesch Grade Amostra:", FleschGradeA(Sample[1]))
-#
-#print("------------------------------------")
-#
-#print("Flesch Reading:", Read(Text)[1])
-#print("Flesch Reading Amostra:", FleschReadingA(Sample[1]))
-#
-#print("------------------------------------")
-#
-#print("Coleman:", Read(Text)[3])
-#print("Coleman Amostras:", ColemanA(Sample[1]))
-#
-#print("------------------------------------")
-#
-#print("SMOG:", Read(Text)[4])
-#print("SMOG Amostras:", SMOGA(Sample[1]))
-

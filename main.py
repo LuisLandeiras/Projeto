@@ -39,9 +39,9 @@ def sub():
     def TLexicalDiversity(): Resultados['LexicalDiversity'] = TCM.LexicalDiversity(Texto)
     
     #Tree Amostras
-    def TTreeA(): ResultadosA['Tree'] = Tree.DepthA(Samples[1])
+    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
     #Tree
-    def TTree(): Resultados['Tree'] = Tree.Depth(Texto)
+    def TTree(): Resultados['Tree'] = Tree.DepthAve(Texto)
     
     #SA Amostras
     def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1])
@@ -49,7 +49,7 @@ def sub():
     def TSentiment(): Resultados['Sentiment'] = SA.Sentiment(Texto)
     
     #GC
-    def TGrammar(): Resultados['Grammar'] = GC.Grammar(Texto)
+    #def TGrammar(): Resultados['Grammar'] = GC.Grammar(Texto)
     
     # Create threads
     threads = [
@@ -65,7 +65,7 @@ def sub():
         threading.Thread(target=TLexicalDiversity),
         threading.Thread(target=TTree),
         threading.Thread(target=TSentiment),
-        threading.Thread(target=TGrammar),
+        #threading.Thread(target=TGrammar),
         threading.Thread(target=TGradeA),
         threading.Thread(target=TSMOGA),
         threading.Thread(target=TColemanA),
