@@ -40,17 +40,15 @@ def LexicalDiversity(text): # Numero de palavras diferentes / Numero total de pa
 #--------------------------------------------------------
 
 #Funções com amostras
+#Possivel melhoramento em velocidade
 def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de palavras
     t = time.process_time()
-    total_lexical_words = 0
-
+    Soma = 0
     for Sample in Samples:
         doc = nlp(str(Sample).lower())
         lexical_words = [token.text for token in doc if token.pos_ in {"ADP", "AUX", "PART", "CCONJ", "NOUN", "INTJ", "PROPN", "ADJ"}]
-        total_lexical_words += len(lexical_words)
-
-    average_lexical_density = total_lexical_words / 10000
-    return average_lexical_density, time.process_time() - t
+        Soma += len(lexical_words)
+    return '{:.3}'.format(Soma/10000), time.process_time() - t
 
 def LexicalDiversityA(Samples): # Numero de palavras diferentes / Numero total de palavras
     t = time.process_time()
@@ -58,7 +56,7 @@ def LexicalDiversityA(Samples): # Numero de palavras diferentes / Numero total d
     for Sample in Samples:
         DiffWords = list(dict.fromkeys(Sample))
         Soma += len(DiffWords)
-    return Soma/10000, time.process_time() - t
+    return '{:.3}'.format(Soma/10000), time.process_time() - t
 
 def WordLengthA(Samples):
     t = time.process_time()
@@ -66,14 +64,14 @@ def WordLengthA(Samples):
     for Sample in Samples:
         WordLength = sum(len(Amostra) for Amostra in Sample)
         Soma += WordLength
-    return Soma/10000, time.process_time() - t
+    return '{:.3}'.format(Soma/10000), time.process_time() - t
 
 def SentenceLengthA(Samples):
     t = time.process_time()
-    SentenceLength = 0
+    Soma = 0
     for Sample in Samples:
         doc = nlp(Sample)
         sentences = [sent.text for sent in doc.sents]
         TotalWords = sum(len(sent.split()) for sent in sentences)
-        SentenceLength += TotalWords / len(sentences)
-    return SentenceLength/len(Samples), time.process_time() - t
+        Soma += TotalWords/len(sentences)
+    return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t

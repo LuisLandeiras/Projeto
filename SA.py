@@ -1,7 +1,7 @@
 import time, nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-nltk.download('vader_lexicon')
+#nltk.download('vader_lexicon')
 
 def Sentiment(Sample):
     t = time.process_time()
@@ -23,4 +23,4 @@ def SentimentA(Samples):
         pos += scores['pos']
         compound += scores['compound']
     
-    return '{:.3}'.format(neg/10), '{:.3}'.format(neu/10), '{:.3}'.format(pos/10), '{:.3}'.format(compound/10), time.process_time() - t
+    return '{:.3}'.format(neg/len(Samples)), '{:.3}'.format(neu/len(Samples)), '{:.3}'.format(pos/len(Samples)), '{:.3}'.format(compound/len(Samples)), time.process_time() - t

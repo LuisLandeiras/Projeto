@@ -1,10 +1,13 @@
 #Grammar Checking
 import language_tool_python, time
 
-def Grammar(text):
+def Grammar(Samples):
     t = time.process_time()
     tool = language_tool_python.LanguageTool('en-US')
-    matches = tool.check(text)
+    Soma = 0
+    for Sample in Samples:
+        matches = tool.check(Sample)
+        Soma += len(matches)
     
     #Resultados = []
     
@@ -13,4 +16,4 @@ def Grammar(text):
     #for match in matches:
     #    Resultados.append(match)
 
-    return len(matches), time.process_time() - t
+    return Soma, time.process_time() - t
