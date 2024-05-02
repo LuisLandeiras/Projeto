@@ -21,30 +21,25 @@ def SMOGA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        doc = nlp(Sample)
+        Texto = str(Sample)
         
-        sentences = len(list(doc.sents)) # Conta o número de frases
+        ComplexWords = sum(1 for word in Texto.split() if syllapy.count(word) >= 3) # Conta o numero de palavras com mais de 3 silabas
         
-        ComplexWords = sum(1 for word in Sample.split() if syllapy.count(word) >= 3) # Conta o numero de palavras com mais de 3 silabas
-        
-        Soma += 1.043 * math.sqrt((ComplexWords * (30 / sentences))) + 3.1291 # Formula para calcular SMOG
+        Soma += 1.043 * math.sqrt((ComplexWords * (30/1))) + 3.1291 # Formula para calcular SMOG
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
 
 def ColemanA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        doc = nlp(Sample.lower())
+        Texto = str(Sample)
+
+        words = len(Texto.split()) # Numero de Palavras
         
-        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
-        words = len(Palavras) # Numero de Palavras
-        
-        sentences = len(list(doc.sents)) # Conta o número de frases
-        
-        characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Sample)) # Retira os espaços para contar o número de letras usadas
+        characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Texto)) # Retira os espaços para contar o número de letras usadas
         
         L = (characters/words) * 100
-        S = (sentences/words) * 100
+        S = (1/words) * 100
         Soma += 0.0588 * L - 0.296 * S - 15.8 # Formula para calcular Coleman
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
 
@@ -52,46 +47,37 @@ def FleschGradeA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        doc = nlp(Sample.lower())
+        Texto = str(Sample)
+
+        words = len(Texto.split()) # Numero de Palavras
         
-        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
-        words = len(Palavras) # Numero de Palavras
+        syllables = sum(syllapy.count(word) for word in Texto.split())
         
-        syllables = sum(syllapy.count(word) for word in Sample.split())
-        
-        sentences = len(list(doc.sents)) # Conta o número de frases
-        
-        Soma += 0.39 * (words/sentences) + 11.8 * (syllables/words) - 15.59 # Formula para calcular Flesch Grade
+        Soma += 0.39 * words + 11.8 * (syllables/words) - 15.59 # Formula para calcular Flesch Grade
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
 
 def FleschReadingA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        doc = nlp(Sample.lower())
+        Texto = str(Sample)
         
-        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
-        words = len(Palavras) # Numero de Palavras
+        words = len(Texto.split()) # Numero de Palavras
         
-        syllables = sum(syllapy.count(word) for word in Sample.split())
+        syllables = sum(syllapy.count(word) for word in Texto.split())
         
-        sentences = len(list(doc.sents)) # Conta o número de frases
-        
-        Soma += 206.835 - 1.015 * (words/sentences) - 84.6 * (syllables/words) # Formula para calcular Flesch Reading
+        Soma += 206.835 - 1.015 * words - 84.6 * (syllables/words) # Formula para calcular Flesch Reading
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
 
 def ARIA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        doc = nlp(Sample.lower())
-        
-        Palavras = [token.text for token in doc if token.is_alpha] # Lista com todas as Palavras do Paragrafo
-        words = len(Palavras) # Numero de Palavras
-        
-        sentences = len(list(doc.sents)) # Conta o número de frases
+        Texto = str(Sample)
 
-        characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Sample)) # Retira os espaços para contar o número de letras usadas
+        words = len(Texto.split()) # Numero de Palavras
 
-        Soma += 4.71 * (characters/words) + 0.5 * (words/sentences) - 21.43 # Formula para calcular o ARI
+        characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Texto)) # Retira os espaços para contar o número de letras usadas
+
+        Soma += 4.71 * (characters/words) + 0.5 * words - 21.43 # Formula para calcular o ARI
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t

@@ -11,7 +11,8 @@ def average_depth(token, depth=0, count=0):
 
 def DepthAve(text):
     t = time.process_time()
-    doc = nlp(text)
+    Texto = str(text)
+    doc = nlp(Texto)
     
     total_depth = sum(average_depth(sent.root) for sent in doc.sents)
     return total_depth/max(1, len(list(doc.sents))), time.process_time() - t
@@ -19,8 +20,9 @@ def DepthAve(text):
 def DepthAveA(samples):
     t = time.process_time()
     Depth = 0
-    for sample in samples:
-        doc = nlp(sample)
+    for Sample in samples:
+        Texto = str(Sample)
+        doc = nlp(Texto)
         for sent in doc.sents:
             Depth += average_depth(sent.root)
     return '{:.3}'.format(Depth/len(samples)), time.process_time() - t

@@ -40,7 +40,6 @@ def LexicalDiversity(text): # Numero de palavras diferentes / Numero total de pa
 #--------------------------------------------------------
 
 #Funções com amostras
-#Possivel melhoramento em velocidade
 def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de palavras
     t = time.process_time()
     Soma = 0
@@ -70,8 +69,7 @@ def SentenceLengthA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        doc = nlp(Sample)
-        sentences = [sent.text for sent in doc.sents]
-        TotalWords = sum(len(sent.split()) for sent in sentences)
-        Soma += TotalWords/len(sentences)
+        Texto = str(Sample)
+        TotalWords = len(Texto.split())
+        Soma += TotalWords/1
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t

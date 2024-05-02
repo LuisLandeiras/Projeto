@@ -12,63 +12,51 @@ while True:
     except OverflowError:
         maxInt = int(maxInt/10)
 
+def File(file):
+    with open(file, 'r', encoding='utf-8') as file:
+        Texto = file.read()
+    return Texto
+
 def Amostras(Texto):
     doc = nlp(Texto)
 
     Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
     
-    paragraphs = []
-    current_paragraph = ""
-    sentences_count = 0
-
-    # Separa cada paragrafo 
-    for sent in doc.sents:
-        current_paragraph += sent.text + " "
-        sentences_count += 1
-        if sentences_count == 10:
-            paragraphs.append(current_paragraph.strip())
-            current_paragraph = ""
-            sentences_count = 0
-
-    # Add the last paragraph if it's not complete
-    if current_paragraph:
-        paragraphs.append(current_paragraph.strip())
+    Sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.split()) >= 4]
     
-    paragraphs = [item for item in paragraphs if item != '']
+    Frases = random.sample(Sentences,20)
     
-    Paragrafos = random.sample(paragraphs,10) 
-
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []
     for _ in range(100):
         Sample = random.sample(Palavras,100)
         Samples.append(Sample)
     
-    return Samples, Paragrafos # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 paragrafos de um texto
+    return Samples, Frases # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 frases de um texto
 
 def Resultados(Samples):
     ResultadosA = {}
             
-    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples[1])
-    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples[1])
-    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples[1])
-    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples[1])
-    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples[1])
+    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples[1]) #
+    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples[1]) #
+    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples[1]) #
+    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples[1]) #
+    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples[1]) #
     
     #TCM Amostras
-    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1])
-    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples[0])
-    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[0])
-    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[0])
+    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1]) #
+    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples[0]) #
+    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[0]) #
+    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[0]) #
     
     #Tree Amostras
-    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
+    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1]) #
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1])
+    def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1]) #
     
     #GC
-    def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
+    def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1]) #
     
     # Create threads
     threads = [
@@ -161,8 +149,22 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['Smog'][0],
                 ResultadosA['Tree'][0],
                 ResultadosA['WordLength'][0]
-            ]) 
+            ])
+    return
 
 #Txt_Csv("Textos/","teste.csv")
 #Csv_Csv("TBons.csv", "Texto.csv")
-CsvAlgo("TMaus.csv", "TextoAlgo2.csv")
+#CsvAlgo("Resto.csv", "TextoAlgo2.csv")
+
+#Texto = File("Textos/trump.txt")
+#
+#print(Resultados(Amostras(Texto)))
+#
+#print(TCM.LexicalDensity(Texto))
+#print(TCM.LexicalDiversity(Texto))
+#print(TCM.SentenceLength(Texto))
+#print(TCM.WordLength(Texto))
+#print(RM.Read(Texto))
+##print(GC.Grammar(File("Textos/trump.txt")))
+#print(Tree.DepthAve(Texto))
+#print(SA.Sentiment(Texto))

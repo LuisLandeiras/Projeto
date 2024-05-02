@@ -16,8 +16,9 @@ def SentimentA(Samples):
     pos = 0
     compound = 0
     for Sample in Samples:
+        Texto = str(Sample)
         analyzer = SentimentIntensityAnalyzer()
-        scores = analyzer.polarity_scores(Sample)
+        scores = analyzer.polarity_scores(Texto)
         neg += scores['neg']
         neu += scores['neu']
         pos += scores['pos']
