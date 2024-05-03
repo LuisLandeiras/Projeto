@@ -3,14 +3,13 @@ import spacy, random, csv, Tree, TCM, threading, RM, SA, GC, sys
 nlp = spacy.load("en_core_web_sm")
 nlp.max_length = 1600000
 
-maxInt = sys.maxsize
-
-while True:
-    try:
-        csv.field_size_limit(maxInt)
-        break
-    except OverflowError:
-        maxInt = int(maxInt/10)
+#maxInt = sys.maxsize
+#while True:
+#    try:
+#        csv.field_size_limit(maxInt)
+#        break
+#    except OverflowError:
+#        maxInt = int(maxInt/10)
 
 def File(file):
     with open(file, 'r', encoding='utf-8') as file:
@@ -37,26 +36,26 @@ def Amostras(Texto):
 def Resultados(Samples):
     ResultadosA = {}
             
-    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples[1]) #
-    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples[1]) #
-    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples[1]) #
-    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples[1]) #
-    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples[1]) #
+    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples[1])
+    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples[1])
+    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples[1])
+    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples[1])
+    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples[1])
     
     #TCM Amostras
-    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1]) #
-    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples[0]) #
-    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[0]) #
-    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[0]) #
+    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1])
+    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples[0])
+    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[0])
+    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[0])
     
     #Tree Amostras
-    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1]) #
+    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1]) #
+    def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1])
     
     #GC
-    def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1]) #
+    def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
     
     # Create threads
     threads = [
