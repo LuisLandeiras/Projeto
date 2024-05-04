@@ -151,6 +151,19 @@ def CsvAlgo(input_csv, output_csv):
             ])
     return
 
+def CsvFilter(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    with open(output_file, 'w', encoding='utf-8') as f_out:
+        for line in lines:
+            parts = line.strip().split(',')
+            if len(parts) >= 7:
+                text = ','.join(parts[6:])
+                if len(text.split()) > 5000:
+                    f_out.write(','.join(parts) + '\n')
+
+CsvFilter("blogtext.csv", "Tier.csv")
 #Txt_Csv("Textos/","teste.csv")
 #Csv_Csv("TBons.csv", "Texto.csv")
 #CsvAlgo("Resto.csv", "TextoAlgo2.csv")
@@ -167,3 +180,5 @@ def CsvAlgo(input_csv, output_csv):
 ##print(GC.Grammar(File("Textos/trump.txt")))
 #print(Tree.DepthAve(Texto))
 #print(SA.Sentiment(Texto))
+
+#Tier1 = 13-22; Tier2 = 23-32; Tier3 = 33-45

@@ -17,7 +17,7 @@ def WordLength(text):
     doc = nlp(text.lower())
     tokens = [token.text for token in doc if token.is_alpha]
     TotalChars = sum(len(token) for token in tokens)
-    WordL = TotalChars / len(tokens)
+    WordL = TotalChars/len(tokens)
     return WordL, time.process_time() - t
 
 def LexicalDensity(text): 
@@ -71,5 +71,5 @@ def SentenceLengthA(Samples):
     for Sample in Samples:
         Texto = str(Sample)
         TotalWords = len(Texto.split())
-        Soma += TotalWords/1
+        Soma += TotalWords
     return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
