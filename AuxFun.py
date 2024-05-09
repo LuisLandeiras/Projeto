@@ -1,20 +1,9 @@
-import spacy, random, csv, Tree, TCM, threading, RM, SA, GC, sys
+import spacy, random, csv, Tree, TCM, threading, RM, SA, GC
 
 nlp = spacy.load("en_core_web_sm")
 nlp.max_length = 1600000
 
-#maxInt = sys.maxsize
-#while True:
-#    try:
-#        csv.field_size_limit(maxInt)
-#        break
-#    except OverflowError:
-#        maxInt = int(maxInt/10)
-
-def File(file):
-    with open(file, 'r', encoding='utf-8') as file:
-        Texto = file.read()
-    return Texto
+csv.field_size_limit(2147483647)
 
 def Amostras(Texto):
     doc = nlp(Texto)
@@ -23,7 +12,7 @@ def Amostras(Texto):
     
     Sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.split()) >= 4]
     
-    Frases = random.sample(Sentences,20)
+    Frases = random.sample(Sentences,40)
     
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []
@@ -125,7 +114,8 @@ def CsvAlgo(input_csv, output_csv):
             'SentimentPos',
             'Smog',
             'Tree',
-            'WordLength'
+            'WordLength',
+            'Classification'
             ])
 
         for Texto in filtered_texts:
@@ -147,7 +137,8 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['Sentiment'][2],
                 ResultadosA['Smog'][0],
                 ResultadosA['Tree'][0],
-                ResultadosA['WordLength'][0]
+                ResultadosA['WordLength'][0],
+                2
             ])
     return
 
@@ -163,22 +154,21 @@ def CsvFilter(input_file, output_file):
                 if len(text.split()) > 5000:
                     f_out.write(','.join(parts) + '\n')
 
-CsvFilter("blogtext.csv", "Tier.csv")
+def CsvTier(input_csv, output_csv):
+    with open(input_csv, 'r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        headers = reader.fieldnames
+        filtered_rows = [row for row in reader if 33 <= int(row['age']) <= 45]
+
+    with open(output_csv, 'w', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(filtered_rows)
+
+#CsvTier("Tier.csv", "Tier3.csv")
+#CsvFilter("blogtext.csv", "Tier.csv")
 #Txt_Csv("Textos/","teste.csv")
 #Csv_Csv("TBons.csv", "Texto.csv")
-#CsvAlgo("Resto.csv", "TextoAlgo2.csv")
-
-#Texto = File("Textos/trump.txt")
-#
-#print(Resultados(Amostras(Texto)))
-#
-#print(TCM.LexicalDensity(Texto))
-#print(TCM.LexicalDiversity(Texto))
-#print(TCM.SentenceLength(Texto))
-#print(TCM.WordLength(Texto))
-#print(RM.Read(Texto))
-##print(GC.Grammar(File("Textos/trump.txt")))
-#print(Tree.DepthAve(Texto))
-#print(SA.Sentiment(Texto))
+CsvAlgo("Tier2.csv", "Tier2Algo.csv")
 
 #Tier1 = 13-22; Tier2 = 23-32; Tier3 = 33-45
