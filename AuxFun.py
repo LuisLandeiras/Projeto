@@ -165,10 +165,36 @@ def CsvTier(input_csv, output_csv):
         writer.writeheader()
         writer.writerows(filtered_rows)
 
+def Csv_Ave(csv_file):
+    total = 0
+    count = 0
+
+    with open(csv_file, 'r', newline='', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        next(reader)
+        
+        for row in reader:
+            total += float(row[14])
+            count += 1
+            
+        print(total/count)
+            
+
+
+
+#Csv_Ave('Tier1Algo.csv')
+#print("----------------")
+#Csv_Ave('Tier2Algo.csv')
+#print("----------------")
+#Csv_Ave('Tier3Algo.csv')
+#print("----------------")
+#Csv_Ave('Tier4Algo.csv')
+#print("----------------")
+
 #CsvTier("Tier.csv", "Tier3.csv")
 #CsvFilter("blogtext.csv", "Tier.csv")
 #Txt_Csv("Textos/","teste.csv")
 #Csv_Csv("TBons.csv", "Texto.csv")
-CsvAlgo("Tier2.csv", "Tier2Algo.csv")
+#CsvAlgo("Tier2.csv", "Tier2Algo.csv")
 
 #Tier1 = 13-22; Tier2 = 23-32; Tier3 = 33-45
