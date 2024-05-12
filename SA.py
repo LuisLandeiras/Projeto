@@ -24,4 +24,4 @@ def SentimentA(Samples):
         pos += scores['pos']
         compound += scores['compound']
     
-    return '{:.3}'.format(neg/len(Samples)), '{:.3}'.format(neu/len(Samples)), '{:.3}'.format(pos/len(Samples)), '{:.3}'.format(compound/len(Samples)), time.process_time() - t
+    return round(neg/len(Samples),3), round(neu/len(Samples),3), round(pos/len(Samples),3), round(compound/len(Samples),3), time.process_time() - t

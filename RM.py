@@ -15,7 +15,7 @@ def Read(File):
     coleman = doc._.coleman_liau_index
     smog = doc._.smog
     
-    return fleschg, fleschr, ari, coleman, smog, time.process_time() - t
+    return round(fleschg,3), round(fleschr,3), round(ari,3), round(coleman,3), round(smog,3), time.process_time() - t
 
 def SMOGA(Samples):
     t = time.process_time()
@@ -25,8 +25,8 @@ def SMOGA(Samples):
         
         ComplexWords = sum(1 for word in Texto.split() if syllapy.count(word) >= 3) # Conta o numero de palavras com mais de 3 silabas
         
-        Soma += 1.043 * math.sqrt((ComplexWords * (30/1))) + 3.1291 # Formula para calcular SMOG
-    return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
+        Soma += 1.043 * math.sqrt(ComplexWords * 30) + 3.1291 # Formula para calcular SMOG
+    return round(Soma/len(Samples),3), time.process_time() - t
 
 def ColemanA(Samples):
     t = time.process_time()
@@ -41,7 +41,7 @@ def ColemanA(Samples):
         L = (characters/words) * 100
         S = (1/words) * 100
         Soma += 0.0588 * L - 0.296 * S - 15.8 # Formula para calcular Coleman
-    return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
+    return round(Soma/len(Samples),3), time.process_time() - t
 
 def FleschGradeA(Samples):
     t = time.process_time()
@@ -54,7 +54,7 @@ def FleschGradeA(Samples):
         syllables = sum(syllapy.count(word) for word in Texto.split())
         
         Soma += 0.39 * words + 11.8 * (syllables/words) - 15.59 # Formula para calcular Flesch Grade
-    return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
+    return round(Soma/len(Samples),3), time.process_time() - t
 
 def FleschReadingA(Samples):
     t = time.process_time()
@@ -67,7 +67,7 @@ def FleschReadingA(Samples):
         syllables = sum(syllapy.count(word) for word in Texto.split())
         
         Soma += 206.835 - 1.015 * words - 84.6 * (syllables/words) # Formula para calcular Flesch Reading
-    return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
+    return round(Soma/len(Samples),3), time.process_time() - t
 
 def ARIA(Samples):
     t = time.process_time()
@@ -80,4 +80,4 @@ def ARIA(Samples):
         characters = len(re.sub(r'[^a-zA-Z\s]+|\s+', '', Texto)) # Retira os espaços para contar o número de letras usadas
 
         Soma += 4.71 * (characters/words) + 0.5 * words - 21.43 # Formula para calcular o ARI
-    return '{:.3}'.format(Soma/len(Samples)), time.process_time() - t
+    return round(Soma/len(Samples),3), time.process_time() - t

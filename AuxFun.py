@@ -5,6 +5,11 @@ nlp.max_length = 1600000
 
 csv.field_size_limit(2147483647)
 
+def File(file):
+    with open(file, "r", encoding='utf-8') as file:
+        content = file.read()
+    return content
+
 def Amostras(Texto):
     doc = nlp(Texto)
 
@@ -12,12 +17,12 @@ def Amostras(Texto):
     
     Sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.split()) >= 4]
     
-    Frases = random.sample(Sentences,40)
+    Frases = random.sample(Sentences,60)
     
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []
     for _ in range(100):
-        Sample = random.sample(Palavras,100)
+        Sample = random.sample(Palavras,10)
         Samples.append(Sample)
     
     return Samples, Frases # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 frases de um texto
@@ -34,8 +39,8 @@ def Resultados(Samples):
     #TCM Amostras
     def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1])
     def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples[0])
-    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[0])
-    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[0])
+    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[1])
+    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[1])
     
     #Tree Amostras
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
@@ -60,6 +65,46 @@ def Resultados(Samples):
         threading.Thread(target=TColemanA),
         threading.Thread(target=TReadingA),
         threading.Thread(target=TARIA),
+    ]
+    # Start threads
+    for thread in threads: thread.daemon = True
+    for thread in threads: thread.start()
+        
+    # Wait for all threads to finish
+    for thread in threads: thread.join()
+
+    return ResultadosA
+
+def ResultadosC(Samples):
+    ResultadosA = {}
+            
+    def Read(): ResultadosA['Read'] = RM.Read(Samples)
+     
+    #TCM Amostras
+    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLength(Samples)
+    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLength(Samples)
+    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensity(Samples)
+    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversity(Samples)
+    
+    #Tree Amostras
+    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAve(Samples)
+    
+    #SA Amostras
+    def TSentimentA(): ResultadosA['Sentiment'] = SA.Sentiment(Samples)
+    
+    #GC
+    #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples)
+    
+    # Create threads
+    threads = [
+        threading.Thread(target=TSentenceLengthA),
+        threading.Thread(target=TWordLengthA),
+        threading.Thread(target=TLexicalDensityA),
+        threading.Thread(target=TLexicalDiversityA),
+        threading.Thread(target=TTreeA),
+        threading.Thread(target=TSentimentA),
+        #threading.Thread(target=TGrammar),
+        threading.Thread(target=Read),
     ]
     # Start threads
     for thread in threads: thread.daemon = True
@@ -179,9 +224,6 @@ def Csv_Ave(csv_file):
             
         print(total/count)
             
-
-
-
 #Csv_Ave('Tier1Algo.csv')
 #print("----------------")
 #Csv_Ave('Tier2Algo.csv')

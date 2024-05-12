@@ -15,7 +15,7 @@ def DepthAve(text):
     doc = nlp(Texto)
     
     total_depth = sum(average_depth(sent.root) for sent in doc.sents)
-    return total_depth/max(1, len(list(doc.sents))), time.process_time() - t
+    return round(total_depth/max(1, len(list(doc.sents))),3), time.process_time() - t
 
 def DepthAveA(samples):
     t = time.process_time()
@@ -25,4 +25,4 @@ def DepthAveA(samples):
         doc = nlp(Texto)
         for sent in doc.sents:
             Depth += average_depth(sent.root)
-    return '{:.3}'.format(Depth/len(samples)), time.process_time() - t
+    return round(Depth/len(samples),2), time.process_time() - t
