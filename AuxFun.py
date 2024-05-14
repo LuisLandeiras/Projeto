@@ -1,4 +1,4 @@
-import spacy, random, csv, Tree, TCM, threading, RM, SA, GC
+import spacy, random, csv, Tree, TCM, threading, RM, SA, GC, os
 
 nlp = spacy.load("en_core_web_sm")
 nlp.max_length = 1600000
@@ -49,7 +49,7 @@ def Resultados(Samples):
     def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1])
     
     #GC
-    def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
+    #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
     
     # Create threads
     threads = [
@@ -59,7 +59,7 @@ def Resultados(Samples):
         threading.Thread(target=TLexicalDiversityA),
         threading.Thread(target=TTreeA),
         threading.Thread(target=TSentimentA),
-        threading.Thread(target=TGrammar),
+        #threading.Thread(target=TGrammar),
         threading.Thread(target=TGradeA),
         threading.Thread(target=TSMOGA),
         threading.Thread(target=TColemanA),
@@ -67,7 +67,6 @@ def Resultados(Samples):
         threading.Thread(target=TARIA),
     ]
     # Start threads
-    for thread in threads: thread.daemon = True
     for thread in threads: thread.start()
         
     # Wait for all threads to finish
@@ -149,7 +148,7 @@ def CsvAlgo(input_csv, output_csv):
             'ARI', 
             'Coleman', 
             'Grade', 
-            'Grammar', 
+            #'Grammar', 
             'LexicalDensity',
             'LexicalDiversity',
             'Reading',
@@ -172,7 +171,7 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['ARI'][0], 
                 ResultadosA['Coleman'][0], 
                 ResultadosA['Grade'][0], 
-                ResultadosA['Grammar'][0], 
+                #ResultadosA['Grammar'][0], 
                 ResultadosA['LexicalDensity'][0],
                 ResultadosA['LexicalDiversity'][0],
                 ResultadosA['Reading'][0],
@@ -183,7 +182,7 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['Smog'][0],
                 ResultadosA['Tree'][0],
                 ResultadosA['WordLength'][0],
-                2
+                3
             ])
     return
 
@@ -219,24 +218,36 @@ def Csv_Ave(csv_file):
         next(reader)
         
         for row in reader:
-            total += float(row[14])
+            total += float(row[13])
             count += 1
             
-        print(total/count)
-            
-#Csv_Ave('Tier1Algo.csv')
-#print("----------------")
-#Csv_Ave('Tier2Algo.csv')
-#print("----------------")
-#Csv_Ave('Tier3Algo.csv')
-#print("----------------")
-#Csv_Ave('Tier4Algo.csv')
-#print("----------------")
+    return round(total/count,3)
+        
+def txt_to_csv(input_dir, output_file):
+    # Open CSV file for writing
+    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        
+        # Iterate through each file in the input directory
+        for filename in os.listdir(input_dir):
+            if filename.endswith(".txt"):
+                file_path = os.path.join(input_dir, filename)
+                
+                # Read contents of the file
+                with open(file_path, 'r', encoding='utf-8') as txtfile:
+                    content = txtfile.read().replace('\n', ' ')  # Replace newlines with space
+                    writer.writerow([content])
+                    
+print("Tier1: ", Csv_Ave('Tier1Algo.csv'))
+print("Tier2: ", Csv_Ave('Tier2Algo.csv'))
+print("Tier3: ", Csv_Ave('Tier3Algo.csv'))
+print("Tier4: ", Csv_Ave('Tier4Algo.csv'))
 
 #CsvTier("Tier.csv", "Tier3.csv")
 #CsvFilter("blogtext.csv", "Tier.csv")
 #Txt_Csv("Textos/","teste.csv")
 #Csv_Csv("TBons.csv", "Texto.csv")
-#CsvAlgo("Tier2.csv", "Tier2Algo.csv")
+#CsvAlgo("Tier4.csv", "Tier4Algo.csv")
 
 #Tier1 = 13-22; Tier2 = 23-32; Tier3 = 33-45
+#txt_to_csv("Textos/", "Tier4.csv")

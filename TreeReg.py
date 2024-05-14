@@ -10,7 +10,7 @@ from xgboost import plot_importance
 
 data = pd.read_csv("Data.csv")
 
-X = data.drop(columns=['Text','Classification'])
+X = data.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos'])
 y = data['Classification']
 
 N = 20
@@ -45,4 +45,4 @@ def plot_feature_importance(model, feature_names, max_num_features=14):
     plt.show()
 
 print(accavg)
-#plot_feature_importance(model, feature_names=range(X.shape[1]))
+plot_feature_importance(model, feature_names=range(X.shape[1]))

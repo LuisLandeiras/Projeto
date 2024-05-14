@@ -9,7 +9,7 @@ from xgboost import plot_importance
 # Load dataset
 data = pd.read_csv("Data.csv")
 
-X = data.drop(columns=['Text','Classification'])
+X = data.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos'])
 y = data['Classification']
 
 #d = pd.DataFrame(X)
