@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from xgboost import plot_importance
 
-data = pd.read_csv("Data.csv")
+data = pd.read_csv("DataV2.csv")
 
-X = data.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos'])
+X = data.drop(columns=['Text','Classification'])
 y = data['Classification']
 
 N = 20

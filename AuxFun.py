@@ -1,4 +1,6 @@
 import spacy, random, csv, Tree, TCM, threading, RM, SA, GC, os
+import pandas as pd
+import numpy as np
 
 nlp = spacy.load("en_core_web_sm")
 nlp.max_length = 1600000
@@ -237,12 +239,48 @@ def txt_to_csv(input_dir, output_file):
                 with open(file_path, 'r', encoding='utf-8') as txtfile:
                     content = txtfile.read().replace('\n', ' ')  # Replace newlines with space
                     writer.writerow([content])
-                    
-print("Tier1: ", Csv_Ave('Tier1Algo.csv'))
-print("Tier2: ", Csv_Ave('Tier2Algo.csv'))
-print("Tier3: ", Csv_Ave('Tier3Algo.csv'))
-print("Tier4: ", Csv_Ave('Tier4Algo.csv'))
 
+def Ave(File):
+    df = pd.read_csv(File)
+    df_num = df.drop(columns=['Text','SentimentNeg','SentimentNeu','SentimentPos','Classification'])
+    df_num = df_num.apply(pd.to_numeric, errors='coerce')
+    df['Average'] = df_num.mean(axis=1).round(2)
+
+    #print(((df['Average'] < 14.50 ) & (df['Average'] >= 13.50)).sum())
+    conditions = [
+        df['Average'] < 13,
+        (df['Average'] >= 13) & (df['Average'] < 13.50),
+        (df['Average'] >= 13.50) & (df['Average'] < 14.50),
+        df['Average'] >= 14.50
+    ]
+    choices = [0, 1, 2, 3]
+    
+    df['Classification'] = np.select(conditions, choices)
+    df.to_csv('A.csv', index=False)
+
+def CSV():
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv('A.csv')
+    
+    # Drop the specified column
+    df = df.drop(columns=['Average'])
+    
+    # Save the updated DataFrame to a new CSV file
+    df.to_csv('B.csv', index=False)   
+
+#T1: < 13 85
+#T2: 13 <= x < 13.50 54
+#T3: 13.50 <= x < 14.50 68
+#T4: >= 14.50 31
+
+#Text,ARI,Coleman,Grade,LexicalDensity,LexicalDiversity,Reading,SentenceLength,SentimentNeg,SentimentNeu,SentimentPos,Smog,Tree,WordLength,Classification
+Ave("Data.csv")
+CSV()        
+#print("Tier1: ", Csv_Ave('Tier1Algo.csv'))
+#print("Tier2: ", Csv_Ave('Tier2Algo.csv'))
+#print("Tier3: ", Csv_Ave('Tier3Algo.csv'))
+#print("Tier4: ", Csv_Ave('Tier4Algo.csv'))
+#
 #CsvTier("Tier.csv", "Tier3.csv")
 #CsvFilter("blogtext.csv", "Tier.csv")
 #Txt_Csv("Textos/","teste.csv")
