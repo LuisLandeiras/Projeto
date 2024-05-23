@@ -274,8 +274,8 @@ def CSV():
 #T4: >= 14.50 31
 
 #Text,ARI,Coleman,Grade,LexicalDensity,LexicalDiversity,Reading,SentenceLength,SentimentNeg,SentimentNeu,SentimentPos,Smog,Tree,WordLength,Classification
-Ave("Data.csv")
-CSV()        
+#Ave("Data.csv")
+#CSV()        
 #print("Tier1: ", Csv_Ave('Tier1Algo.csv'))
 #print("Tier2: ", Csv_Ave('Tier2Algo.csv'))
 #print("Tier3: ", Csv_Ave('Tier3Algo.csv'))

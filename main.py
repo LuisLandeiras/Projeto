@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-import AuxFun, TCM, RM, SA, GC, Tree, threading, time
+import XGBoost
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -11,6 +12,8 @@ def main():
 def sub():
     result = request.form
     Texto = result.get('text')
+    data = pd.read_csv("DataV2.csv")
     
+    Resultado = XGBoost.XGBoost(data,Texto)
     
-    return render_template('sub.html'  )
+    return render_template('sub.html', Result=Resultado)
