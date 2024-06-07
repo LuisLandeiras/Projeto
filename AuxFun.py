@@ -19,6 +19,7 @@ def Amostras(Texto):
     
     Sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.split()) >= 4]
     
+    #Alterar maneira de pegar frases para samples possivelmente repetidas
     Frases = random.sample(Sentences,60)
     
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras

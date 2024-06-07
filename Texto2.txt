@@ -1,0 +1,37 @@
+Around the world this summer, professional and amateur astronomers alike will be fixed on one small constellation deep in the night sky. But it’s not the seven stars of Corona Borealis, the “Northern Crown,” that have sparked such fascination.
+
+It’s a dark spot among them where an impending nova event – so bright it will be visible on Earth with the naked eye – is poised to occur.
+
+“It’s a once-in-a-lifetime event that will create a lot of new astronomers out there, giving young people a cosmic event they can observe for themselves, ask their own questions, and collect their own data,” said Dr. Rebekah Hounsell, an assistant research scientist specializing in nova events at NASA’s Goddard Space Flight Center in Greenbelt, Maryland. “It’ll fuel the next generation of scientists.”
+
+T Coronae Borealis, dubbed the “Blaze Star” and known to astronomers simply as “T CrB,” is a binary system nestled in the Northern Crown some 3,000 light-years from Earth. The system is comprised of a white dwarf – an Earth-sized remnant of a dead star with a mass comparable to that of our Sun – and an ancient red giant slowly being stripped of hydrogen by the relentless gravitational pull of its hungry neighbor.
+
+The hydrogen from the red giant accretes on the surface of the white dwarf, causing a buildup of pressure and heat. Eventually, it triggers a thermonuclear explosion big enough to blast away that accreted material. For T CrB, that event appears to reoccur, on average, every 80 years.
+
+Don’t confuse a nova with a supernova, a final, titanic explosion that destroys some dying stars, Hounsell said. In a nova event, the dwarf star remains intact, sending the accumulated material hurtling into space in a blinding flash. The cycle typically repeats itself over time, a process which can carry on for tens or hundreds of thousands of years.
+
+“There are a few recurrent novae with very short cycles, but typically, we don’t often see a repeated outburst in a human lifetime, and rarely one so relatively close to our own system,” Hounsell said. “It’s incredibly exciting to have this front-row seat.”
+The first recorded sighting of the T CrB nova was more than 800 years ago, in autumn 1217, when a man named Burchard, abbot of Ursberg, Germany, noted his observance of “a faint star that for a time shone with great light.”
+
+The T CrB nova was last seen from Earth in 1946. Its behavior over the past decade appears strikingly similar to observed behavior in a similar timeframe leading up to the 1946 eruption. If the pattern continues, some researchers say, the nova event could occur by September 2024.
+
+What should stargazers look for? The Northern Crown is a horseshoe-shaped curve of stars west of the Hercules constellation, ideally spotted on clear nights. It can be identified by locating the two brightest stars in the Northern Hemisphere – Arcturus and Vega – and tracking a straight line from one to the other, which will lead skywatchers to Hercules and the Corona Borealis.
+
+The outburst will be brief. Once it erupts, it will be visible to the naked eye for a little less than a week – but Hounsell is confident it will be quite a sight to see.
+Dr. Elizabeth Hays, chief of the Astroparticle Physics Laboratory at NASA Goddard, agreed. She said part of the fun in preparing to observe the event is seeing the enthusiasm among amateur stargazers, whose passion for extreme space phenomena has helped sustain a long and mutually rewarding partnership with NASA.
+
+“Citizen scientists and space enthusiasts are always looking for those strong, bright signals that identify nova events and other phenomena,” Hays said. “Using social media and email, they’ll send out instant alerts, and the flag goes up. We’re counting on that global community interaction again with T CrB.”
+
+Hays is the project scientist for NASA’s Fermi Gamma-ray Space Telescope, which has made gamma-ray observations from low Earth orbit since 2008. Fermi is poised to observe T CrB when the nova eruption is detected, along with other space-based missions including NASA’s James Webb Space Telescope, Neil Gehrels Swift Observatory, IXPE (Imaging X-ray Polarimetry Explorer), NuSTAR (Nuclear Spectroscopic Telescope Array), NICER (Neutron star Interior Composition Explorer), and the European Space Agency’s INTEGRAL (Extreme Universe Surveyor). Numerous ground-based radio telescopes and optical imagers, including the National Radio Astronomy Observatory’s Very Large Array in Mexico, also will take part. Collectively, the various telescopes and instruments will capture data across the visible and non-visible light spectrum.
+
+“We’ll observe the nova event at its peak and through its decline, as the visible energy of the outburst fades,” Hounsell said. “But it’s equally critical to obtain data during the early rise to eruption – so the data collected by those avid citizen scientists on the lookout now for the nova will contribute dramatically to our findings.”
+
+For astrophysics researchers, that promises a rare opportunity to shed new light on the structure and dynamics of recurring stellar explosions like this one.
+
+“Typically, nova events are so faint and far away that it’s hard to clearly identify where the erupting energy is concentrated,” Hays said. “This one will be really close, with a lot of eyes on it, studying the various wavelengths and hopefully giving us data to start unlocking the structure and specific processes involved. We can’t wait to get the full picture of what’s going on.”
+
+Some of those eyes will be very new. Gamma-ray imagers didn’t exist the last time T CrB erupted in 1946, and IXPE’s polarization capability – which identifies the organization and alignment of electromagnetic waves to determine the structure and internal processes of high-energy phenomena – is also a brand-new tool in X-ray astronomy. Combining their data could offer unprecedented insight into the lifecycles of binary systems and the waning but powerful stellar processes that fuel them.
+
+Is there a chance September will come and go without the anticipated nova outburst from T CrB? Experts agree there are no guarantees – but hope abides.
+
+“Recurrent novae are unpredictable and contrarian,” said Dr. Koji Mukai, a fellow astrophysics researcher at NASA Goddard. “When you think there can’t possibly be a reason they follow a certain set pattern, they do – and as soon as you start to rely on them repeating the same pattern, they deviate from it completely. We’ll see how T CrB behaves.”
