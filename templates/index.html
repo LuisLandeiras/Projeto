@@ -15,10 +15,17 @@
     </style>
 </head>
 <body>
-    <form action="{{ url_for('sub') }}" method="post">
+    <form action="{{ url_for('main') }}" method="post">
         <textarea name="text" cols="80" rows="40"></textarea>
         <br>
         <button type="submit">Enviar</button>
     </form>
+
+    <h2>Resultado</h2>
+    <p>{{ Result[0] }}</p>
+
+    <h2>Sentimento</h2>
+    <p>O sentimento demonstrado neste texto é {{ Result[1] }}, com o valor de {{ Result[2] }}</p>
+    
 </body>
 </html>
