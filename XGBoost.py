@@ -10,9 +10,9 @@ import seaborn as sns
 def XGBoostTrain(data):
     warnings.filterwarnings('ignore', category=FutureWarning)
     
-    data = pd.read_csv("DataV2.csv")
+    data = pd.read_csv("DataV3.csv")
     
-    X = data.drop(columns=['Text', 'Classification'])
+    X = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos'])
     y = data['Classification']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
@@ -23,7 +23,7 @@ def XGBoostTrain(data):
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
-    if(round(accuracy * 100,2) > 90): model.save_model('XGBModelS.txt')
+    if(round(accuracy * 100,2) > 90): model.save_model('XGBModelV3.txt')
 
     print(round(accuracy * 100,2))
 
@@ -39,24 +39,24 @@ def preprocess_text(text):
         'LexicalDiversity': Resultado['LexicalDiversity'][0],
         'Reading': Resultado['Reading'][0],
         'SentenceLength': Resultado['SentenceLength'][0],
-        'SentimentNeg': Resultado['Sentiment'][0],
-        'SentimentNeu': Resultado['Sentiment'][1],
-        'SentimentPos': Resultado['Sentiment'][2],
+        #'SentimentNeg': Resultado['Sentiment'][0],
+        #'SentimentNeu': Resultado['Sentiment'][1],
+        #'SentimentPos': Resultado['Sentiment'][2],
         'Smog': Resultado['Smog'][0],
         'Tree': Resultado['Tree'][0],
         'WordLength': Resultado['WordLength'][0],
-    }])
+    }]), Resultado['Sentiment']
 
 def XGBoostPredict(Texto):
     model = xgb.XGBClassifier()
-    model.load_model('XGBModelS.txt')
+    model.load_model('XGBModelV3.txt')
     
-    #data = pd.read_csv("DataV2.csv")
+    #data = pd.read_csv("DataV3.csv")
     #feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos']).columns
     #plot_importance(model, importance_type='gain', max_num_features=10)
     #plt.gca().set_yticklabels(feature_names) 
     #plt.show()
-    
+
     #cm = confusion_matrix(y_test, y_pred)
     #plt.figure(figsize=(10, 6))
     #sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
@@ -65,28 +65,28 @@ def XGBoostPredict(Texto):
     #plt.title('Confusion Matrix')
     #plt.show()
     
-    TextoP = preprocess_text(Texto)
+    TextoP, Sentiment = preprocess_text(Texto)
     
-    sentiment_dict = {'SentimentNeg': TextoP['SentimentNeg'].iloc[0],'SentimentNeu': TextoP['SentimentNeu'].iloc[0],'SentimentPos': TextoP['SentimentPos'].iloc[0]}
+    SentLabels = ['SentimentNeg', 'SentimentNeu', 'SentimentPos']
+    SentIndex = Sentiment.index(max(Sentiment))
+    SentName = SentLabels[SentIndex]
     
-    SentName = max(sentiment_dict, key=sentiment_dict.get)
-
-    if SentName == 'SentimentNeu': SentimentName = "Neutro"
-    if SentName == 'SentimentPos': SentimentName = "Positivo"
-    if SentName == 'SentimentNeg': SentimentName = "Negativo"
-    
-    SentimentValue = sentiment_dict[SentName]
+    if SentName == 'SentimentNeu': SentName = "Neutro"
+    if SentName == 'SentimentPos': SentName = "Positivo"
+    if SentName == 'SentimentNeg': SentName = "Negativo"
     
     prediction = model.predict(TextoP)
     
-    return prediction[0], SentimentName, SentimentValue
+    return prediction[0], SentName
 
-#Accuracy 95.83
-#Accuracy Sent 91.67
+#AccuracyV2 95.83
+#Accuracy SentV2 91.67
 
-file = AuxFun.File("Texto3_2.txt")
-for _ in range(100):
+#AccuracyV3 92.68
+
+file = AuxFun.File("Textos_Teste/PF.txt")
+for _ in range(10):
    print(XGBoostPredict(file))
 
-#for _ in range(10):
-#    XGBoostTrain("DataV2.csv")
+#for _ in range(100):
+#    XGBoostTrain("DataV3.csv")

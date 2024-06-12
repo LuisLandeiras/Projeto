@@ -52,13 +52,7 @@ def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de pa
     return round(Soma/Count,3), time.process_time() - t
 
 def LexicalDiversityA(Samples): # Numero de palavras diferentes / Numero total de palavras(TTR)
-    t = time.process_time()
-    #Soma = 0
-    #for Sample in Samples:
-    #    DiffWords = list(dict.fromkeys(Sample))
-    #    Soma += len(DiffWords)
-    #return '{:.3}'.format(Soma/1000), time.process_time() - t
-    
+    t = time.process_time()    
     Text = ' '.join(Samples)
     Words = Text.split()
     return round(len(set(Words))/len(Words),3), time.process_time() - t

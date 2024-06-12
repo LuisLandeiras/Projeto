@@ -1,0 +1,2093 @@
+This project memory aims to fulfil the objectives of the Componente Não Letiva
+(CNL) of the Master’s Degree in Translation of the Faculdade de Ciências Sociais e
+Humanas da Universidade Nova de Lisboa and to be the one of the first published
+translations of Sophia de Mello Breyner Andresen’s children’s tale A Fada Oriana (first
+written in 1958 and first published in 1964).
+Of all three options available, the project was chosen as a way of both testing
+what has been learned in the Componente Letiva and acquiring more experience in
+translating literature, especially from Portuguese into English while allowing some
+freedom in the areas and themes explored. For this, A Fada Oriana by Sophia de Mello
+Breyner Andresen was the chosen piece of literature. It is a re-imagination of the Greek
+mythological tale of Narcissus with a Christian undertone and a happier ending. It
+follows the story of a good fairy that took care of her forest and the people within it until
+a fish lured her to the water and she saw herself. As she fell in love with her reflection,
+she forgot all her good fairy duties. Everything went wrong in the forest without Oriana’s
+guidance: people left for the city, where they found nothing but pain and misery while
+getting lost in the alleys, and the animals ran for the hills. As punishment, the Fairy
+Queen took away her wings and magic wand, telling the fairy she could only have them
+back when she showed true selflessness. It is a moralistic fairy-tale that teaches
+empathy, selflessness and the importance of one’s responsibilities.
+Andresen is a canonical author in the Portuguese education system and an
+award-winning poet that has been largely neglected in English-speaking countries,
+although her work has been translated into other European languages and even into
+Chinese. With this project, this author (and Portuguese culture in general) can hopefully
+gain more exposure in the English-speaking world and, now that English is a Lingua
+Franca, also gain more exposure world-wide indirectly.
+The project is divided into two parts. The first part briefly introduces the author,
+addresses children’s literature and introduces the new intended target reader. It also
+2
+discusses possible outlets for publication of the book, such as Carcanet’s series The
+Aspects of Portugal or other scholarly and educational editions.
+The second part is the translation. The entire book was translated and annexed
+to this project but due to page limit constraints only problematic chapters are included
+in the body of the text and have been commented on. The translation present in the text
+body consists of the following chapters: I – Good Fairies and Evil Fairies (181 words), II
+– Oriana (2,161 words), III – The Very Rich Man (2,046 words), IV – The fish (2,474
+words), V – The Fairy Queen (947 words) and VIII – The Tree and the Animals (2,307
+words) for a total of 10,116 words translated.
+The commentary is also present in the second part of this project. It describes
+the translation, comments on the process and explains the translation choices made
+with a focus on semantic choices driven by sociocultural factors. It is, after all, a literary
+text and as times change, language adapts to change with use. Contemporary English
+has undergone important sociolinguistic changes driven by social and political pressures,
+which may pose an issue while translating texts from languages, cultures and periods
+without the same concerns as the target reader and intended culture. How should older
+texts that no longer fit within our values be treated, and can they still be inserted in
+modern times?
+Alongside those issues, there is also some attention to the nationality of the
+translator, who belongs to the source culture rather than the target culture. This fact
+certainly influences the interpretation of the source text and subsequent rewriting into
+English, therefore the advantages and disadvantages of translating into English as a
+lingua franca when the translator belongs to the source culture are also briefly
+discussed.
+3
+PART 1. THEORETICAL CONCERNS
+1. Sophia de Mello Breyner Andresen
+Sophia de Mello Breyner Andresen was born in 1919, just before Portugal fell in
+tumultuous times. When she was a little over seven years old, in 1926, a coup removed
+the Primeira República Portuguesa from power and instated a military dictatorship. In
+1933, the new constitution was approved, and the military dictatorship became known
+as Estado Novo, an authoritarian regime. She was very outspoken against the regime,
+which was not taken lightly, and she was considered a persona non-grata. This meant
+that any interviews she did were censored, her house would be searched for no reason
+and any poems published in newspapers or periodicals were cut and censored. In
+addition to interviews, she also collaborated with various journals and periodicals, like
+Aventura, Variante, Atlântico, Unicórnio, Tábua Redonda and Diário Popular (Oliveira
+1981: 60), alongside her poetry. Despite all this, she still managed to be published: A
+Fada Oriana, for example, was published in 1964, ten years before the regime fell, and
+she won her first literary award in 1966 (however, it was the only one she won until
+1977). She was a famous poet and won a myriad of other awards, including the Prémio
+Camões in 1999; but she also wrote narratives, such as Contos Exemplares (1962),
+Histórias da Terra e do Mar (1984) and many others.
+As said by Andresen in an interview to Eduardo Prado Coelho in 1986, her five
+children were the reason her tales began taking shape. According to Martins (1994: 90-
+91), she was influenced by stories such as the satirical narrative Gulliver’s Travels (1726)
+by Jonathan Swift, whose ideals amused her, as he wrote to Alexander Pope in 1725
+saying that he intended it to “vex the world rather than divert it” (Swift 1801: 37); by
+the tales of Sindbad the Sailor, a later addition to The Thousand and One Nights, which
+told the story of merchants trading under rough and dangerous times (Britannica 2016)
+and by The Adventures of Robison Crusoe (1789) by Daniel Defoe, a fictional travelogue
+of a castaway. Her children’s stories are modern fairy-tales and were also inspired by
+classic fairy-tales by Charles Perrault, Hans Christian Andersen and the Grimm brothers.
+She was also heavily influenced by the sea and sea themes, as well as by her studies in
+Classical Philology and Greek mythology. Both the sea and Greek mythology are
+recurring themes in A Fada Oriana: Oriana’s story mirrors the Greek tale of Narcissus
+4
+closely. Furthermore, there are two very important fish in the story, the nameless fish,
+known only as “the fish” and one that is named, fish Solomon. The first one feeds Oriana
+compliments and helps her forget all her responsibilities and the second one has her
+wait for seven days by the sea shore, which she does, forgetting the old woman
+completely and thus severing the last of her empathic feelings towards the inhabitants
+of the forest.
+Andresen passed away in 2004 and, since 2014, her remains have rested at the
+National Pantheon, a place reserved for Portuguese citizens who have greatly
+distinguished themselves.
+2. The Portuguese target reader and children’s literature during Estado
+Novo
+Sophia de Mello Breyner Andresen had already published poetry and earned
+renown amongst her adult readership when she emerged as a children’s book writer in
+1958 with the first edition of A Fada Oriana. Andresen began writing for children when
+her own children were sick and irritable. Natércia Rocha (1984: 80) characterizes
+Andresen’s children’s stories as moralistic and magical, with the fantastic and the surreal
+leading the plot through flowing, delicate and musical writing.
+There was a long period of stagnation in the 1930s, caused by the consolidation
+of António Salazar’s power, the Spanish civil war and the pre-world war tensions. This
+led to a decline in the amount of children’s literature produced. However, in the 1950s,
+there was a rise in national talent in the genre, consisting of names like Sophia de Mello
+Breyner Andresen, Maltilde Rosa Araújo, Esther de Lemos, and so on (Rocha 1984: 80-
+82). Salazar’s Catholic background made it so the values he imposed the State were
+Catholic and conservative in nature, with special emphasis on nationalism and rurality.
+All artistic production took a heavy toll under the repressive regime, including literary
+creation and thus children’s literature. Much of the production was disguised
+propaganda designed to morally format the children, and everything else would be
+censored in accordance with the values of the regime, so there was no doubt or question
+of the political, moral and ideological principles of the state. The state co-authored
+5
+whatever was published, and, in time, authors would censor themselves (Patriarca 2012:
+29-32).
+A Fada Oriana was targeted at young children under an oppressive regime in a
+poor and rural country, a product of circumstance and time. Therefore, it can no longer
+be expected to resonate with young children in developed countries today.
+3. The Anglophone target reader and target publisher
+This translation does not intend to share a similar target reader with the source
+text. It is no longer aimed at middle-school-aged children for cultural and socioeconomic
+reasons. The British website schoolreadinglist.co.uk, managed by English teachers,
+librarians and parents, recommends 33 different books for children aged 10 to 11 years
+old (the age at which Portuguese children read the source text, as per the Plano Nacional
+de Leitura) and none of them are translations. If the translation were to be marketed for
+children, the established native English-speaking authors would always take precedence
+over a translated Portuguese author who, despite being a canonical author in the
+education system in Portugal who has been consistently taught since 1979 (Matias,
+2003: 34).
+Source-text-oriented translations are no longer fashionable in contemporary
+leisure literature mostly because they possess low economic value, which, as Venuti
+(1995: 12) says, as the market is “enforced by editors, publishers and reviewers, fluency
+results in translations that are eminently readable and therefore consumable on the
+book market”. The target text has opted for a completely different readership: this
+translation is aimed at adults and young people (whether native English speakers or
+speakers of English as a lingua franca) that are interested in Portuguese culture. It could
+also function as a culturally rich learning tool for students of Portuguese as a foreign
+language, in which case it could be packaged as a parallel-text edition. The target text
+could be published in Carcanet’s series Aspects of Portugal – either as a stand-alone text
+or in a bigger edition featuring all of Andresen’s short stories. Carcanet Press is a British
+renowned literary published, founded in 1969 by Michael Schmidt. The collection of
+Aspects of Portugal is a series of books ranging from history to prose, all focusing on
+Portuguese culture.
+6
+PART 2. THE TRANSLATION
+1. Translated Chapters
+The Fairy Oriana
+I – Good fairies and Evil Fairies
+There are two kinds of fairies: good fairies and evil fairies. Good fairies do good
+things and evil fairies do evil things.
+Good fairies water the flowers with morning dew, light the fires of old people,
+hold back the children about to fall in the river, enchant the gardens, dance in the air,
+make up dreams and, at night, place golden coins in the shoes of the poor.
+Evil fairies dry up the wells, extinguish the fires of the shepherds, tear up the
+clothes drying in the sun, disenchant the gardens, bother the children, torment the
+animals and steal from the poor.
+When a good fairy sees a dead tree with dry branches and no leaves, she touches
+it with her magic wand and in that same instant the tree is filled with leaves, flowers,
+fruits and singing birds.
+When an evil fairy sees a tree filled with leaves, flowers, fruits and singing birds,
+she touches it with her cursed magic wand and in that same instant an icy wind rips out
+the leaves, makes the fruits rot, the flowers wither and the birds drop dead.
+II – Oriana
+Once upon a time there was a fairy called Oriana. She was a good fairy and she
+was very pretty. She was free; joyfully and happily dancing on the fields, on the hills, in
+the woods and on the beaches.
+One day, the Fairy Queen called her and said:
+"Oriana, come with me."
+And together they soared across plains, lakes and mountains until they arrived
+at a country with a very big forest.
+7
+"Oriana," said the Fairy Queen, "I give you this forest. Every man, animal and
+plant that lives here is, from now on, under your care. You are the fairy of this forest.
+You must promise me you will never leave it."
+To which Oriana replied,
+"I promise."
+From that day on, Oriana lived in the forest. At night, she slept in an oak trunk.
+In the morning, she would wake up very early, way before the flowers and the birds. Her
+clock was the very first ray of sunshine because she had a lot to do. Everyone needed
+her in the forest. She would warn the rabbits and the deer that the huntsmen were
+coming. She would water the plants with morning dew. She would watch over the
+miller's eleven children. She would rescue the birds that were stuck in the rat traps.
+At night, when everyone was asleep, Oriana would go to the prairies to dance
+with the other fairies. Or she would fly above the forest and, spreading her wings, she
+would stay still, hanging in the air between the earth and the sky. All around the forest
+there were sleeping fields and mountains, full of silence. Far away you could see lights
+of a city looking on to its river. During the day and up close, the city was dark, ugly and
+sad. But at night the city would shine bright, full of lights: green, purple, yellow, blue,
+red and lilac, as if there was a big party. It seemed made of opals, of rubies, of glitter, of
+emeralds and sapphires.
+A summer passed, then an autumn, then a winter and then spring came. One
+morning in April, Oriana rose even earlier than usual. As soon as the first ray of sunshine
+entered the forest, she left the oak trunk where she slept. She took a deep breath,
+breathing in the scent of the dawn and danced a bit. Then she combed her hair with her
+fingers and washed her face with morning dew.
+"What a beautiful morning!" she said. "I have never seen a morning this blue,
+this green, so fresh and golden."
+And she danced through the forest, greeting everything. The trees woke up first,
+then the roosters, then the birds, then the flowers, then the rabbits, then the deer and
+the foxes. After that, the men started waking up, and Oriana went to visit the old
+woman.
+8
+She was a very old woman who lived in an even older house. And inside the house
+there were only rags, broken furniture and cracked crockery. Oriana peeked through the
+unglazed window. The old woman was doing housework whilst talking to herself, saying:
+"What a dark life, what a dark life! I am as old as time and I still need to work. I
+have no children to help me. If it wasn't for the fairies, where would I be?...
+… When I was young I would play in the forest, and the animals, leaves and
+flowers would play with me. My mother would comb my hair and place a dancing ribbon
+in my dress. Now, if it wasn't for the fairies, where would I be?...
+… When I was young I would laugh all day, and at the balls I would dance all night;
+I had over a hundred friends. Now that I am old, I have none. If it wasn't for the fairies,
+where would I be?...
+… When I was young I had gentlemen telling me I was beautiful and throwing
+carnations at my feet. Now the boys run after me, calling me ‘old crone, old crone!’ and
+throw rocks at me. If it wasn't for the fairies, where would I be?...
+… When I was young I had a palace, silk dresses, maids and lackeys. Now I am
+old, and I have nothing. If it wasn't for the fairies, where would I be?”
+Oriana heard this lament every morning, and every morning she would be sad,
+feeling sorry for the old woman, so curved, so wrinkly and so alone, who spent her whole
+days grumbling and sighing.
+Fairies would only show themselves to children, animals, trees and flowers, so
+the old woman never saw Oriana. But even though she couldn't see her, she knew she
+was there, ready to help.
+After she swept her house, the old woman lit the stove and boiled some water.
+She opened the coffee canister and said:
+"I am out of coffee."
+Oriana touched the canister with her magic wand and filled it with coffee.
+The old woman made the coffee, then she held her milk mug and said:
+"I am out of milk."
+9
+Oriana touched the mug with her magic wand and filled it with milk.
+The old woman grabbed the sugar bowl and said:
+"I am out of sugar."
+Oriana touched the sugar bowl with her magic wand and filled it with sugar.
+The old woman opened the bread drawer and said:
+"I am out of bread."
+Oriana touched the drawer with her magic wand and inside the drawer was a
+loaf of bread and some butter.
+The old woman grabbed the bread and said:
+"If it wasn't for the fairies, where would I be?"
+Oriana heard her and smiled.
+The old woman ate and drank and then sighed.
+"Now I have to go to work."
+Her job was to collect dry branches to sell in the city afterwards.
+Every morning, Oriana would help her gather wood, and every morning she
+would guide her into the city, because the old woman’s sight was very poor and the path
+to the city was too close to the abyss and she could fall in if the fairy did not guide her.
+And so, in that April morning, Oriana and the old woman walked along the road,
+the old woman bent over, leaning against a stick, and Oriana fluttering in the air like a
+butterfly. And, without the old woman noticing, the fairy held the bundle of wood, so it
+would be lighter on her crooked back.
+When they got to the city, the old woman went to sell the wood door to door,
+and Oriana flew to a rooftop where she sat watching the city, waiting for her friend.
+While she waited, she started talking to the swallows.
+"The faraway countries are beautiful," said the swallows.
+"Could you tell me all about them?" asked Oriana.
+10
+"The king of Siam has a palace with golden roofs and in China there are porcelain
+towers," said a swallow.
+"In Oceania there are islands made of coral covered in grass and palm trees. And
+in those islands, people dress themselves with flowers and they're all beautiful, good
+and happy," said another swallow.
+"Kangaroos have a pouch in which they keep their children and the king of Tibet
+can read the thoughts of every man," said another swallow.
+"At the top of the Andes mountain range there are abandoned cities where only
+eagles and serpents live," said another swallow.
+"That is wonderful! Could you tell me more?" asked Oriana.
+"Some things can’t be told, they must be shown," replied the swallows. "The
+wonders of the world are so, so many! But come with us, Oriana. We leave when autumn
+comes. You too have two wings. Come with us."
+But Oriana stared at the vast round and transparent sky, sighed and replied:
+"I can’t go. The men, animals and plants of the forest need me."
+"But you have two wings, Oriana. You can fly above the oceans and the
+mountains. You can go to the other side of the world. There is always more and more
+space. Imagine how good it would be if you came. You could fly high above the clouds,
+or you could fly close to the blue sea, dipping the tip of your toes in the cold waves. You
+could fly above virgin forests and breathe in the scent of unknown fruits and flowers.
+You would see the cities, hills, rivers, deserts and oases. In the middle of the big Ocean
+there are tiny islands with beaches of white, thin sand. Over there, in the moonlight,
+everything is blue, still and silver. Imagine all these things, Oriana."
+But Oriana, looking at the sky and at the wandering clouds, sighed and said:
+"I imagine what would become of the old woman without me when she woke up
+on a cold winter morning and could not find the bread or milk."
+"Come with us, Oriana," the swallows invited again.
+11
+"I promised I would take care of the forest," replied the fairy. "And a promise is
+something very important."
+The swallows stared at her with their shiny hardened black eyes, and harshly
+said:
+"Oriana, you don't deserve your wings. You don't love the wide open spaces and
+don’t care about freedom."
+Oriana lowered her head and replied:
+"I made a promise."
+The swallows turned their backs on her and ignored her.
+As soon as the old woman finished selling her wood she left the city, the fairy
+right behind her, and together they returned to the forest.
+When they arrived, it was almost noon. Oriana left the old woman and went to
+the woodcutter's house.
+The woodcutter was very poor. At his house, there was only a bed, a fireplace, a
+table and three stools.
+The door was open because there was nothing worth stealing.
+Before coming in, Oriana picked up three little pebbles from the ground.
+The house was very tidy because the woodcutter's wife enjoyed doing everything
+to perfection. Besides, there was very little to tidy up.
+Oriana looked around the house to see what was missing.
+She opened the bread drawer and saw there was still bread, so she closed it
+again.
+Then she opened the clothes drawer. The clothes were few and poor, but clean
+and sewn up. But there was a shirt so old and with so many holes that even after sewing
+it was torn. Oriana placed a little white pebble inside the drawer, touched it with her
+magic wand and the little pebble turned into a new shirt.
+Afterwards, Oriana opened the money drawer and saw it was empty. She placed
+a little pebble inside and turned it into a new round coin.
+12
+And under the table was the woodcutter's son's ball. Oriana picked it up and saw
+it was ruined. So, she placed the last little pebble under the table and turned it into a
+new ball.
+Almost every day, Oriana would go to the woodcutter's house. She would always
+take three little white pebbles with her and turn them into whatever they needed the
+most. And the woodcutter's wife would tell her husband:
+"I wonder who this good person is that comes into our home when I go out and
+brings me what I need?"
+Oriana left the woodcutter's house and she thought:
+"Today is festival day; the miller went to the city to sell flour and his wife went
+with him with their eleven children. I am going to their place to see what they need."
+And she went to the miller's house.
+The door was locked, but Oriana touched the lock with her magic wand and
+opened it.
+The house was a mess. Everything was upside down and covered in flour.
+Everything was out of place. Because the miller's wife had eleven children and was very
+messy and absent-minded, and never had time for anything. Without Oriana their house
+would be impossible to live in.
+Oriana came in and looked around. She sighed at that much disarray. Then she
+went to pick up a broom and a duster and cleaned the whole house. She fixed the broken
+things with her magic wand. She washed the dishes and placed them in the cupboards.
+She brushed the clothes and hung them up. She stitched all the clothes inside the
+clothes' basket and fixed the broken toys.
+When she finished all this, she looked around her. The house was beautiful, full
+of order and cleanliness. Oriana smiled and left.
+And almost every day Oriana would clean the miller's house. But the miller's wife
+would never realize a fairy had been there, because she was always late and left home
+in a hurry, and since she was always distracted she would not notice she had left her
+13
+house all topsy-turvy. So, when she would come back home she would not be surprised
+everything was in order, because she didn't remember leaving any untidiness.
+Oriana left the miller's house and went to the Very Rich Man's house.
+III – The Very Rich Man
+The Very Rich Man had no wife, no children and no friends. He only had servants.
+His house was in the middle of a very well-kept garden, with grass, bushes, and
+sand paths.
+Oriana circled the house, so she could spot where to come in. All the doors were
+locked, and Oriana could not open them. Because in the Very Rich Man's house, the
+locks were so expensive not even a magic wand could unlock them. But there was an
+open window. It was the window to the living room. Oriana peeked and saw no one
+there. There were only the things. But there lingered a very bad atmosphere. The sofas
+and the chairs would elbow each other, the dressers would kick the walls, the flower
+vases would ask the boxes and the ashtrays to stop squeezing them, and the flowers
+said:
+"I can't stay here, can't stay here, I can't breathe!"
+The room was filled to the brim.
+Oriana went in and the things begun talking over each other.
+"Oriana, get us out of here," screamed the flowers.
+"Oriana, can you tell the flower vase to stop pushing me?" asked the box.
+"Oriana, can you tell the table to stop stepping on me so hard?" asked the carpet.
+"Oriana, can you tell the sofa to stop elbowing me?" asked the chair.
+"Oriana, can you tell the folding screen to move?" asked the wall.
+"Oriana," said the mirror, "can you get me out of here. I am always watching. I
+see all. This room full of things, this room with no space, no emptiness, no width, it tires
+and hurts my glass eyes."
+"Settle down, calm down, don't speak all at once," said the fairy.
+14
+And so, the things went quiet and the table said:
+"Oriana, we can’t be here. We do not fit this room. There are too many things
+here. We are much too tight. And we are all things with different shapes and we don't
+get along well. I am a very antique table; I am from a convent dining room. I am long,
+but the room was big, and I fit there well, as besides me, only stools were there. I feel
+awful here. The things are always shoving me. Me and the golden sofa do not get along.
+I am all plain, and he is all woven. We can’t get along. I am a convent table, I made a
+poverty vow, I can’t live in this room. Oriana, touch me with your wand and make me fly
+away to my convent.”
+Then the dresser said:
+"I’m a very beautiful and antique dresser. For two centuries, I lived in a manor in
+a farm. I was in a very big room and whoever walked in would see how beautiful I was
+right away. During the day, I would hear the children laughing in the garden and I would
+hear them chase each other through the halls. At night, I would only hear the wind
+singing, the frogs and the running fountain in the garden. Many lights would be lit during
+parties. People would walk by me and they would say:
+… 'What a beautiful dresser!'…
+… And the house owner would reply: …
+… 'My father had it1 made.' …
+… And in a couple of decades another house owner would say: …
+… 'My grandfather had it made.' …
+… Another couple of decades would pass and another house owner would say:
+…
+… 'My great–grandfather had it made.'…
+
+1 a (her, personal pronoun) in the original. In Portuguese, the word cómoda (dresser) is female. In the
+story, the dresser is personified and should speak with a female voice. However, as the characters
+speaking (the men) would not be aware that the objects were animated and in English common nouns
+are gender neutral, they would call her ‘it’. All objects have grammatical genders in Portuguese, and
+thus they are male or female, depending on whichever grammatical gender their word is assigned. Since
+the same does not happen in English, their characterization was left open and up to the reader’s
+imagination.
+15
+… Yet another couple of decades would pass, and another house owner then
+would say: …
+… 'My great–great–grandfather had it made.'…
+… Because I would pass on generation to generation. And I met the fathers, the
+sons, the grandsons and their grandsons…
+… I was part of the family. When I was sold, everyone cried. Tears would fall from
+the trees onto the ground and their leaves waved goodbye. Here it's different. Here no
+one is my friend, neither men or things. When someone mentions how beautiful I am,
+the house owner says, ‘I bought her for 100 gold coins’2 Oriana, take me away from here.
+Take me back to the room in the farm manor."
+Then the mirror spoke and said:
+"I was in a palace and in front of me there was space, space and more space. The
+floor was plain shiny marble. And I was at the end of a lonesome and quiet gallery. And
+would contemplate how the hours would change. I saw kings and queens, polished for
+coronation day, with their sparkling heavy crowns. I saw ministers, advisers and the
+important men, with their long noses, their serious faces and somber auras. And I saw
+damsels in white dresses running to the lone gallery for a moment. They would glide
+light and fast denying everyone’s flowers. And I saw rebellious crowds pass me by, in
+despair, destroying everything, seeking justice. I saw, I saw, I saw…
+… I am a mirror; I have spent my whole life watching. The images all entered me…
+… I saw, I saw, I saw. And now I am in this room without somewhere to rest my
+glass eyes. Oriana, get me out of here and place me in front of a white wall, plain and
+naked."
+And one by one all the things asked her to take them somewhere else.
+"My dear things," said Oriana, "I can’t do as you ask. If I made you disappear, the
+house owner would be very upset. And I can’t come into a house to upset their owners."
+
+2
+100 Contos in the original. (One) Conto is the colloquial word for 1000 escudos ($, iso code: PTE), a now
+obsolete currency in Portugal, having been replaced by the Euro (€, iso code: EUR) in January 2002.
+16
+"So, what can you do?" asked the things.
+"Nothing," said Oriana. "This room looks hopeless. When I go into other houses,
+I make missing things appear. But there is nothing missing here. There are too many
+things. I would have to remove some. But I can’t come into a house and take away what
+is already there."
+"If you can’t take us out of here make the room bigger so we fit."
+"I am really sorry," said Oriana, "but that is impossible. When the owner of this
+house had it made, he told the architect: 'I want a small house because of jealous eyes.'"
+The things went silent for a minute, thought and said:
+"Oriana, make the house owner gift us to someone that has no furniture."
+"That," said Oriana, "is a great idea. I know what to do."
+On top of the table were a notepad and a pen.
+Oriana grabbed the pen and wrote:
+"Whoever is kind to the poor lends to the Lord. Give the poor half your furniture."
+"Great," said the things.
+"Oriana," said the mirror, "I beg you to remove that ballerina from my line of
+sight. I am tired of looking at her all day with a foot in the air in a state of imbalance. My
+glass eyes have no eyelids. Only the nights are my eyelids. But during the day I can never
+close my eyes. And I am too tired of spending my days watching a ballerina with a foot
+up in the air."
+The ballerina was in a shelf in front of the mirror.
+Oriana picked her up and moved her to the top of the dresser, so the mirror could
+not see her.
+"Thank you," said the mirror.
+Then they heard footsteps in the corridor and Oriana hid behind the folding
+screen.
+The door opened, and the Very Rich Man came in.
+17
+As soon as he entered he saw the notepad on the table. He was furious at the
+miserly note he read and exclaimed:
+"Who dares this?!"
+Then he noticed the ballerina had been moved, was angry again and exclaimed:
+"Oh!"
+He rang the bell and the butler appeared.
+"Call all the servants immediately!" said the Very Rich Man.
+They all came in the very next moment. They queued in front of the door. The
+Very Rich Man turned to them, turning his back on the table with the notepad and on
+the dresser with the ballerina and said:
+"Two outrageous things have happened in this house. Woe betide those who
+have done them! I want the guilty person to come clean. I want to know who wrote
+these judgements on the paper and who moved the ballerina."
+The servants were terrified. Hearing this speech upset Oriana. In a blink, she
+touched the notepad with her magic wand, making the notes disappear and touched the
+ballerina, making her fly back to the shelf.
+The Very Rich Man grabbed the notepad, turned it to the servants and said:
+"Who wrote this?"
+The servants saw a white piece of paper and replied:
+"There is nothing there."
+The Very Rich Man thought he was dreaming.
+He didn't know what to do or say. He coughed and said in a very stern tone:
+"Who moved the ballerina from the shelf?"
+But he looked at the shelf and noticed the ballerina was back there again. He
+thought he had gone mad. He got furious again and very embarrassed with the way he
+was acting. He had no idea what to tell the servants. He coughed again and said:
+"It was an experiment. You can leave now."
+18
+The servants left, and the Very Rich Man sat in a chair talking to himself:
+"This was a joke. But it was so well done I didn't get it. Surely it was the living
+room maid. By now they are all in the kitchen laughing at me. I should fire her."
+Oriana was stunned.
+"What a horrible house," she thought, "everything goes wrong here. I couldn't
+help anyone."
+While thinking, she peeked above the folding screen. The Very Rich Man had his
+back turned to her and she noticed he was bald as a coot. She was filled with pity. She
+decided to give him some hair. She touched with his head with her magic wand and
+immediately filled it with thousands of tiny little hairs. The Very Rich Man felt an itch in
+his head. He went to the mirror to check it out. And saw he had his head full of new hair
+growths.
+At first, he didn't believe what he was seeing. He had his mouth agape for a
+moment, unable to talk.
+Then he shouted:
+"HAIR!...
+ …HAIR!…
+ …HAIR!!?"
+When he was done shouting he said:
+"How come I am growing hair? I have been bald for so long and tried so many
+medicines that have never worked, up until today!"
+He was quiet for a second and suddenly facepalmed, exclaiming:
+"I know, I know what did it. It was that widow asking for a job for her son. She
+started talking about how poor she was, and I started talking about how bald I was. She
+said: …
+…'I don't have any money!'…
+… And I said: …
+19
+… 'I don't have any hair!'…
+… So, she told me she would send me a medicine that would make my hair
+grow back. And the next day she sent me a bottle with some medicine inside. I used the
+medicine and my hair grew! I must thank her! I must get her son a job! Right now!"
+And the Very Rich Man, very excited, grabbed the phone and dialed a number.
+The widow picked up.
+They greeted each other and then the Very Rich Man said:
+"Madam, I am insanely grateful! I kneel at your feet and kiss your hands. I have
+hair! I might even grow curls! And I think the new hair will be blond! I have always
+wanted to be rich and blond. So far, I had only been rich. Now, thanks to you, I'll be
+blond! Blond! Blond! I want to thank you. I want to talk to your son."
+The widow's son came to the phone and the Very Rich Man told him:
+"I have a job for you! A magnificent place, perfect, ideal. You only need go there
+twice a week and you’ll make 30 gold3 a month. There is nothing to do. It is a very
+important place. They gave it to me, it was for me, but now it's for you!"
+Hearing this, Oriana thought, "Finally! I could do something in this house. I can
+leave now. Phew!"
+And she left through the window.
+IV – The Fish
+There was a wonderful fresh afternoon outside. The breeze danced with the
+grass in the fields. You could hear the birds singing. There seemed to be golden dust in
+the air.
+Oriana ran, danced and flew through the forest until she reached the river.
+It was a tiny and transparent river, almost a creek, and there were clovers,
+poppies and daisies growing in the riverbank. Oriana sat watching the stream amongst
+the grass and the flowers. And she heard a voice calling her:
+
+3 30 contos in the original.
+20
+"Oriana, Oriana."
+The fairy turned and saw a fish flopping in the sand.
+"Save me, Oriana," screamed the fish. "I jumped after a fly and I landed too far
+from the river."
+Oriana grabbed the fish and placed him back in the water.
+"Thank you, thank you!" said the fish, bowing at her. "You saved my life and the
+life of a fish is a delicious life. Thank you very much, Oriana. If you ever need something
+from me, I am at your disposal."
+"Thank you," said Oriana, "I don't need anything right now."
+"Remember my promise. I will never forget that I owe you my life. You can ask
+me anything you want. Without you I would have choked to death in the middle of the
+clovers and the daisies. My gratitude is eternal."
+"Thank you," said the fairy.
+"Good afternoon, Oriana. I must leave now, but when you want to just come to
+the river and call for me." And with many salutes the fish said goodbye to the fairy.
+Oriana stared at the fish amusedly, because he was such a tiny fish, but very
+important looking.
+And when she was looking at the fish she saw her face reflected in the water. The
+reflection came up from the bottom of the creek and met her with a smile on her red
+lips. And Oriana saw her blue eyes like sapphires, her blonde hair like cornfields, her
+white skin like lilies and her glittering air-like wings.
+"Look how beautiful I am" she said. "I am beautiful. I had never thought of this. I
+had never thought of looking at myself. Look how big my eyes are, how thin my nose is,
+how golden are my hairs! My eyes shine like blue stars; my neck is tall and thin like a
+tower. How odd life is! If it wasn't for this fish jumping out of water to catch the fly, I
+would have never seen myself. The trees, animals and flowers have seen me and know
+how beautiful I am. But I had never seen it!"
+21
+Oriana was amazed with her discovery. Leaning over the water, she would not
+get tired of looking at herself. The hours went by and she kept talking to her reflection.
+The sun went down; the night came, and the river went dark. Oriana could not
+see herself anymore. She got up and stood brooding for some time. Then she looked
+around and said:
+"The night is here! Time went by so fast!"
+And she remembered it was time to visit her friend, the Poet. Because the Poet
+was the only grown-up Oriana could show herself to. He was different from the other
+grown-ups.
+The Poet lived at the end of the forest, in a very old and tall tower, covered with
+ivy, wisteria and rose trees. Oriana flew above the trees in the first blue of the night. The
+tower door was opened, but Oriana came in through the window with the breeze. The
+climbing plant's roses shivered and danced when she arrived.
+"You are late today" said the Poet.
+"I was leaning over the river seeing my reflection" said Oriana. "I was late
+because I was enchanted with my beauty."
+"Oriana," said the Poet, "enchant the night."
+So, Oriana touched the night with her magic wand and enchanted it.
+And the Poet told her:
+"You bring me so much more than beauty. There are many beautiful girls in the
+world. But only you can enchant the night because you are a fairy."
+So, Oriana sat at on the edge of the window and started telling him the wonderful
+stories of the horses of the wind, of the cave with two dragons and of the rings of Saturn.
+The Poet told her his verses, clear and bright like stars. Then they both watched quietly
+the Moon going up in the sky. Until a far-away bell brought them the sound of the twelve
+strokes of midnight and Oriana and the Poet said their goodbyes.
+The next morning Oriana took the old woman to the city. But as soon as she got
+back, she quickly flew to the river. She knelt in the riverbank and leaned over the water.
+22
+Her sun-touched reflection appeared on the surface of the water.
+"Look how beautiful I am!" said Oriana. "I look even more beautiful than
+yesterday. Do I really look as beautiful as I see myself in the water?"
+Oriana looked intently at the other reflections in the river. And it seemed to her
+that the reflected trees in the river were much better looking than the trees themselves.
+"Maybe," she thought, "my reflection looks better than I do! How will I know the
+truth?"
+She remembered the fish and called him:
+"Fish, fish, fish, my friend!"
+The fish appeared and said:
+"Good morning, Oriana. Here I am."
+"Fish," said the fairy, "I need you. I want to know if my reflection in the river is
+prettier than me."
+"Nothing in the world is as beautiful as you," said the fish. "You are so much
+more than your reflection. Your eyes are brighter, your hair more golden, your lips are
+redder."
+"You think so?" asked Oriana.
+She was brooding.
+Suddenly she had an idea as she remembered the mirror. She thought, "I'll see
+what the mirror has to say."
+She said, "See you later, fish."
+And, fast as an arrow, she went to the Very Rich Man's house.
+The window was open and the room was empty.
+Oriana came in, greeted the things and placed herself in front of the mirror:
+"Mirror," she said, "take a good look at me and show me as I am: I saw my
+reflection in the river and I think I am beautiful. But I am scared the river embellished
+23
+and flattered me just as it flatters the landscape. Show me as I am so I can know if the
+fish told the truth and I really am more beautiful than my reflection in the river."
+"Oriana," said the mirror, " I am, as you know, a very antique mirror. Pretty girls
+have placed themselves in front of me to see what they look like and all of them want
+to know if there is anyone fairer than them in the world. Take a good look at yourself.
+You are very pretty, but there is something prettier than you."
+"What is it?" asked Oriana expectantly.
+"A naked white wall."
+"Don't talk about that wall again," said Oriana, upset.
+But she took a good look at herself and said:
+"I think I am beautiful."
+"That is good," said the mirror. "But you can’t imagine the sheer number of girls
+that looked themselves in my eyes throughout the centuries and said, ‘I think I am
+beautiful!’"
+"Goodbye, then," said the fairy, rather annoyed.
+"Don't leave yet. I want to ask something of you."
+"What is it?"
+"Take away the Very Rich Man's hair again."
+"Why would I do something so wicked?"
+"Because he spends the whole day in front of me, seeing himself in me and
+saying, 'What beautiful hair.' And I can’t look at him anymore."
+"In this house," said Oriana, "everything goes wrong."
+And she left.
+Once outside she thought:
+"I am never coming back to this house: the mirror just mocked me. They have
+everything, and everything is hopeless."
+And she went back to the river.
+24
+She sat at the edge of the water and the fish appeared:
+"Fish," said Oriana, "I saw myself in the mirror of the Very Rich Man, and I
+thought I was very pretty, as pretty as this reflection in the river. But the mirror told me
+a white wall was more beautiful than me!"
+"The mirrors are dreamers, always imagining what they do not see. You are so
+much more beautiful than a wall. I have never seen anyone as beautiful as you. But I
+think it is a shame your hair is always such a mess."
+"Ah?!" said Oriana, restless.
+"You have to change your hairstyle," said the fish. "I'll teach you!"
+And the fish started teaching her:
+"Part your hair sideways, pull your curls backwards, pull the right wave forward,
+put the left wave backward and curl up the hair in your nape."
+Oriana did everything the fish told her to, but he was not satisfied. He had her
+undo everything she had done and restart again. Oriana did and redid waves and curls.
+Until it started getting dark.
+"Now it is better," said the fish. "But tomorrow we will try out another hairstyle."
+"See you tomorrow, then," said Oriana.
+And she walked slowly through the forest, brooding.
+It was almost night when she arrived at the Poet's tower. She sat on the edge of
+the window and asked:
+"Do you think I am different?"
+"No," said the Poet. "I think you are the same."
+"But I changed my hair."
+"I hadn't noticed."
+Oriana went quiet, upset with the answer.
+The Poet asked her:
+"Oriana, can you fill the air with music?"
+25
+Oriana touched the air with her magic wand and the air was filled with music.
+It was a full moon and the moonlight flooded the night. It smelled like
+honeysuckle and roses.
+"Oriana," said the Poet, “dance tonight's dance."
+And Oriana started dancing in the air, tiptoeing, the Spring Night Moon Dance.
+She danced like the flowers dance in the wind, and her arms were like running rivers.
+The Poet sat on the edge of the window watching her, and from the depths of
+the forest came the deer, the rabbits, the birds and the butterflies to watch the fairy
+dance.
+Until the far-away wind brought the sound of the twelve strokes of midnight.
+Oriana said goodbye to the Poet and vanished.
+The next day, in the morning, after taking the old woman to town, Oriana ran to
+kneel in front of the river. The fish was already waiting. They started trying new
+hairstyles right away. The fish had her make a flower crown, for her head. Oriana spent
+the morning and the afternoon picking flowers, looking at herself in the river and hearing
+the fish's compliments. She forgot to go to the miller's house and to the woodcutter's
+house. She forgot to take care of the animals. She forgot to water the flowers. But at
+night she went to visit the Poet.
+And, from then on, Oriana abandoned, one by one, every man, animal and plant
+that lived in the forest. One day she abandoned the Poet as well. Because one afternoon
+the fish told her:
+“You are beautiful in the sunlight, but you must look even better by candlelight.”
+And that night, instead of visiting the Poet, Oriana filled the riverbank with
+fireflies and will-o'-the-wisps and spent the night looking at herself in the water.
+It was a wonderful night. It seemed like an extraordinary and fantastic night in
+the middle of the silence and darkness of the forest.
+The will-o'-the-wisps and the fireflies were like tiny stars and Oriana would see
+herself in the water surrounded by lights, flames and shadows, with her bright eyes, her
+luminous hair, her lily crown and her transparent wings.
+26
+And from that day onward she never visited the Poet again. She forgot all her
+friends. The only person she still visited was the old woman, because she felt an
+immense sorrow when she heard her say how beautiful and young she had been and
+now she was old, wrinkly and ugly. So, every morning she would lit her fire, place milk
+in her cup, coffee in the canister, sugar in the sugar bowl, bread and butter in the drawer
+and then guided her along the way to the city, so she would not fall in the abyss.
+But as soon as she got back from the city with the old woman she would go
+straight to the river, to stare at her beauty and hear the compliments of her fish admirer.
+And, during spring, Oriana adorned herself with crowns and collars made of
+honeysuckle, daisies, daffodils, orange blossoms and poppies.
+Afterwards, during the summer, Oriana adorned herself with carnations, roses
+and lilies. And in the autumn with red vine leaves, dahlias and chrysanthemums.
+But when winter came there were only violets.
+And after a while the fish said:
+"I think the purple of the violets really goes with the white of your skin and the
+blonde of your hair. In any case, you haven't changed your adornments in days. I think
+you should vary them.”
+"How can I do that?" replied Oriana. "It's winter and there are no other flowers
+in the forest."
+The fish thought for a bit and said:
+"You could use pearls."
+"How will I get pearls?"
+"Could you wait a second," asked the fish.
+After a while he came back with a ring for the fairy.
+"Take this ring."
+Oriana took the ring and he told her:
+"Put it on your finger and fly to the sea.”
+27
+And when you get to the seashore call for the fish Solomon, show him the ring
+and ask him to bring you a thousand pearls from the eastern sea.
+Oriana did just that.
+She flew above forests, hills, cities and fields until she reached a very big and
+deserted beach, where foamy sea waves would crash.
+And she went to the seashore and called:
+"Fish, fish, fish Solomon."
+And a black and blue fish with red eyes appeared and asked:
+"Who calls for me?"
+"It is me, Oriana, the fairy. I brought you this ring."
+"Tell me what you want."
+"I want you to bring me a thousand pearls from the eastern sea."
+"Sit on that rock," replied Solomon the fish "and wait for my return."
+Oriana sat on the rock and waited seven days and seven nights.
+Occasionally she would remember the old woman, but she would think, "I'm sure
+the fish won't take long. She won't even notice I am gone. She knows the way so well
+she surely won't fall off the cliff and into the abyss."
+After the seventh night, the fish came at the break of dawn. He brought with him
+a big turtle shell with the thousand pearls inside.
+"Thank you, fish Solomon," said the fairy.
+And, grabbing the turtle shell, she went back to the forest.
+V – The Fairy Queen
+As soon as she got to the riverbank she called, "Fish, my friend, here are the
+pearls."
+And the fish brought forth ten silver necklaces and Oriana threaded the pearls
+and made ten necklaces.
+28
+She wrapped one around her neck, one around each arm and braided the
+remaining into her hair.
+Then she leaned over the water. It was a bright and clear Winter's day. And
+Oriana saw her reflection clearer than ever. She had never thought herself so beautiful.
+The glowing pearls surrounded her neck, reflected in her skin, lit up her hair.
+"Never have I seen something so beautiful!" she exclaimed.
+"You look like the queen of the sea, the princess of the moon, the goddess of the
+pearls," said the fish.
+"I will never leave the riverbank," said Oriana. "I want to spend the rest of my life
+looking at myself."
+But suddenly Oriana went quiet. There was a silence in the air. And from that
+silence rose a voice, a loud, straightforward and rigorous voice that called:
+"Oriana!"
+Oriana shuddered and turned around. By her side, in the air, was the Fairy
+Queen.
+And the loud, straightforward and rigorous voice spoke again: "Oriana, what are
+you doing?"
+Oriana went pale and replied:
+"I was looking at myself."
+"What about your promise?"
+Oriana lowered her head and did not reply. "Oriana," said the voice, "you broke
+your promise and abandoned the forest. You abandoned the men, animals and plants.
+The children were afraid, and you did not comfort them, the poor were hungry, and you
+did not feed them, the little birds fell of the nest and you did not pick them up, the Poet
+waited for you until the twelve strokes of midnight and you did not appear. You left the
+woodcutter, the miller, the Poet. In the end, you even abandoned the old woman. You
+did not keep your promise. For one spring, one summer and one winter you spent day
+29
+and night leaning over a river, hearing a fish complimenting you, in love with yourself.
+For that, Oriana, you will no longer have wings and will lose your magic wand."
+And with these words the Fairy Queen gestured in the air. And in that same
+moment, like leaves falling from tree branches in autumn, Oriana saw her wings falling
+off her shoulders, drying up and dying like two old papers. The wind blew past and took
+them with him. Oriana ran after them, but she could no longer fly, and the wings
+vanished. And she saw her magic wand break apart and break apart into dust, falling to
+the ground.
+And Oriana tried to gather the dust, kneeling in the ground. But the dust was
+already mixed with the soil and that was all her hands could grab.
+And the loud, straightforward and rigorous voice called again:
+"Oriana!"
+Oriana got up, face covered in tears and hands covered in dirt, and begged the
+Fairy Queen,
+"Please, give me my wings back! Give me my magic wand back, please! Forgive
+my vanity. I know I broke my promise, I know I abandoned the men, animals and plants
+of the forest. The fish filled me with vanity with his compliments. I looked at myself so
+much I forgot everything. But give me my wings back. I want it to be like before. I want
+to help the men, the animals and the plants again. Without a magic wand and wings I
+can’t be a fairy. I need the wings to fly to those who call me, I need the magic wand to
+help those who need me.
+But the loud, straightforward and rigorous voice of the Fairy Queen replied,
+"Walk through the forest and see the wrong you have done. See what happened
+to the men, animals and plants you abandoned. You forgot everyone else by looking at
+yourself. You will only have your wings back when you undo all the wrong you have
+done. You will only have your wings back when you forget about yourself while thinking
+of the others."
+And with these words, the Fairy Queen was gone.
+30
+And Oriana was left by herself at the riverbank, with a face full of tears and hands
+full of dirt.
+She kneeled next to the river to wash her hands. But when she saw her wingless
+image in the water she started sobbing and saying:
+"Wings, wings, oh my wings! How ugly is a wingless fairy! How ridiculous is a
+wingless fairy! No one will believe I am a fairy. They will think I am just a beautiful girl.
+But I do not want to be a beautiful girl. I want to be a fairy."
+Oriana felt very sad and very lonely.
+She remembered the fish and thought,
+"I will ask the fish for help. It is his fault after all."
+And she started calling,
+"Fish, fish, fish, my friend!"
+But the fish did not appear.
+Oriana called again,
+"Fish, fish, come comfort me! Come see how sad I am, look what happened to
+me!"
+But the fish did not appear.
+"He must have run off," thought Oriana. "I will wait for him to come back."
+And she waited and waited, sat by the riverbank.
+But many hours went by and the fish did not appear.
+"What a terrible friend" thought Oriana, "I am so sad, and he will not come up to
+comfort me."
+Oriana remembered all the old friends she had abandoned.
+And she remembered what the Fairy Queen had told her,
+"See what happened to the men, animals and plants you abandoned."
+And, getting up, she wiped her tears and started walking through the forest.
+31
+VIII - The Tree and the Animals
+The day was breaking when she got there. The dawn was white with mist. It was
+when the birds should start waking up to sing. But the birds were gone to the hills and
+no animal sang.
+“Such silence! Such silence!” muttered Oriana. “You can tell that my bird friends
+flew away. Oh, how lonely I am! Oh, how tired I am! I don’t know where to go and I can’t
+walk a step more.”
+Having said this, Oriana leaned her head against a tree trunk and started crying.
+It was a strong trunk, rugged and black. Oriana encircled her hands around it and
+pressed her face against the rough bark. The tree leaned down and, with its branches,
+picked her up, then it covered her with its foliage and put two leaves over her eyes.
+Oriana fell asleep.
+It was high morning when she woke up. A thousand sunrays passed through the
+forest. Oriana saw the blue sky through the green leaves. She stretched and took a deep
+breath, taking in the scents of the earth. She felt full of joy at the beauty of everything.
+She said:
+“What a beautiful morning!”
+But suddenly she remembered the previous day. She remembered the
+woodcutter, the miller’s wife and the Poet.
+She thought:
+“I must find a way to fix everything. Surely there is a way. There must be one. But
+what shall I do?”
+She placed her elbow on her knee, so she could hold her chin and started
+thinking. Suddenly, she exclaimed:
+“I will look for the miller’s son. The animals that have gone to the hills must know
+where he is. I will ask them to help me find him. And I will ask them to come to the city
+to help me release the woodcutter. And then maybe the fox, who is so cunning, can
+convince the Poet that I am a fairy.
+32
+And, delighted with her idea, Oriana danced.
+Then she turned to the tree and said:
+“Thank you, tree. Even though I no longer have wings you saw I was a fairy. When
+I came to you I was sad and tired, but you gave me peace and covered me with your
+leaves. Now I am going to search for the miller’s son. Yesterday I cried and thought there
+was no way to save my friends and no cure for my sadness. But you covered my eyes
+with your leaves and while I slept my sadness went away. This morning is so green and
+so blue! And I am so happy because I am sure there is a way!”
+Oriana said goodbye to the tree and headed for the hills.
+The hills were far away and were all blue.
+Oriana walked on and on.
+And she thought:
+“How hard are men’s lives, because they have no wings!”
+And she walked, walked and walked.
+At sunset the hills went dark against the red sky.
+The night came, and moonlight fell over the fields.
+Oriana looked for a tree to sleep on, because fairies can only sleep on trees.
+And she found a pine.
+During the night the pine kept repeating:
+“When the wind blows I imagine I’m a mast.”
+As soon as dawn came Oriana went on her way.
+She got to the top of the hills and called all the animals.
+She told them:
+“I am Oriana, the fairy.”
+They said:
+“But where are your wings and your magic wand?”
+33
+Oriana told them her story and asked:
+“Do you know where the miller’s son is?”
+“He is here,” replied the deer, coming out from behind a rock with the miller’s
+son on his back.
+“Please, give him to me,” said Oriana. “I want to take him back to his mother.”
+“A fairy with no wings,” said the deer, “is a very strange thing. I can’t give you a
+child, because a child is a sacred thing. I can’t give a child to someone who claims to be
+a fairy but has no wings to show.”
+“I am a fairy,” said Oriana, “but I can’t prove I am one.”
+“Present witnesses!” said the rabbit.
+“Anyway,” said the fox, “we can’t trust her. On the one hand, she has no wings
+and doesn’t seem to be a fairy. On the other hand, even if she is the fairy Oriana, we
+can’t trust her. Because that fairy left us, broke her promise and betrayed her word.”
+“I did break my promise, but I regret it terribly,” said Oriana. “I have been crying
+for three days.”
+“Present a witness!” said the deer.
+“The fish!” said the fairy. “He has seen everything. He was the reason I forgot the
+men, animals and plants that live in the forest. He saw the Fairy Queen raise her hand
+and say I would lose my wings. He saw the wind take away my wings!”
+“If the fish says he saw your wings vanish, taken by the wind, and that it was the
+Fairy Queen that punished you and that you are the fairy Oriana, then we will believe
+you,” said the porcupine.
+“And if everyone believes you,” said the deer, “I will give you the miller’s son, so
+you can take him to his mother.”
+“I will look for the fish,” said Oriana. “Meet me at the riverbank tomorrow, at
+midday.”
+“Tomorrow,” said all the animals, “we’ll meet you at the riverbank.”
+“See you tomorrow,” said Oriana.
+34
+And she went on her way again.
+She walked, walked, walked.
+The next day, as soon as dawn rose, Oriana was leaning over the river, calling:
+“Fish, fish, fish, my friend!”
+The fish appeared.
+“Good morning, Oriana” he said grumpily. “Your hair looks terrible.”
+“I don’t have any time to fix it” said Oriana. “There are more important things
+than having my hair done. I must save all men, animals and plants that live in the forest.
+I must undo all the wrong I have done. I saw the miller woman’s sadness, the
+woodcutter’s misery, and the Poet’s loneliness. I want to be good again. I want to help
+others. Tell the animals that you know I am a fairy.”
+“Oriana,” replied the fish, “you are a dear friend, but in all fairness, I can’t
+disrespect the Fairy Queen. She is very angry with your behaviour.”
+“It was your fault,” said Oriana.
+“Excuse me!” said the fish. “It was not my fault! I didn’t know you had made a
+promise to take care of the men, animals and plants that live in the forest. I had nothing
+to do with it.”
+“There’s no point in arguing,” said Oriana. “I only have this to ask of you: the
+animals don’t believe I am a fairy because I have no wings. They say fairies always have
+wings. I want you to tell them you saw the Fairy Queen take my wings away and that
+you know I am the fairy Oriana.”
+“Of course I know who you are.” said the fish, “But that animal business has
+nothing to do with me.”
+“Fish,” said Oriana, “the day I saved you, you told me: ‘You can come to the river
+and call for me whenever you want. You can ask me anything you want.’ And that is why
+I now ask you: please tell the animals I am a fairy.”
+“You know,” said the fish, “you can’t expect me to be thankful for something you
+have done if you are going to throw it in my face.”
+35
+Oriana blushed, speechless. She felt like spitting on that cowardly entitled fish.
+But then she remembered the woodcutter rotting in jail, the miller’s wife that had lost
+her son and the Poet who no longer believed in fairies. She collected herself and said,
+“Fish, you must tell the animals I am the fairy Oriana.”
+“Fine,” said the fish. “I don’t want to be ungrateful. When the animals arrive, call
+for me.”
+“Thank you, thank you, thank you!” said Oriana.
+“I shall see you soon,” said the fish in a polite and ceremonial tone. Then, he
+vanished.
+Oriana was waiting for the animals. The sun rose up in the sky until midday, when
+they appeared.
+They walked in a line with serious faces. First came the wolf and at the end of
+the line came the deer, with the miller’s son on his back.
+“Good day,” said Oriana.
+“Good day,” replied the animals. “Where is your witness?”
+“He will be here,” said the fairy. “He is just waiting for me to call for him.”
+Oriana kneeled next to the river and called,
+“Fish, fish, fish, my friend!”
+The fish did not appear.
+Oriana called again,
+“Fish, fish, fish, my friend!”
+And the fish did not appear.
+“Where is the fish?” asked the animals.
+“He hasn’t had time to arrive yet,” replied the fairy.
+And she called again,
+“Fish, fish, fish, my friend!”
+36
+But the fish did not appear.
+“He’s late,” said Oriana.
+“Very late,” said the very punctual pig. “It’s already past midday.”
+“We’ll wait,” said the deer.
+And they waited.
+Occasionally, Oriana called out,
+“Fish, fish, fish my friend!”
+But he would not show up.
+The sun was setting on the other side of the river.
+The animals were getting angry. Oriana was distressed and embarrassed.
+“The fish is not coming then?” asked a rabbit.
+“He’s not coming,” the animals agreed.
+“Maybe something happened to him,” said Oriana, “he promised he would be
+my witness.”
+“But he didn’t come,” said the fox.
+Oriana started crying and said,
+“Maybe someone fished him.”
+Some animals started laughing, others got angry.
+“You said the fish would be your witness and there was no fish,” yelled the wolf.
+“You said you were a fairy, yet you have no wings,” grumbled the pig.
+“You don’t have a magic wand either,” added the fox.
+“She has no witness and she’s no fairy,” the animals yelled. “Let’s go.”
+“I am a fairy,” said Oriana.
+“You’re lying,” they yelled again.
+“I don’t lie,” said Oriana.
+37
+And, turning to the deer with tears rolling down her face, Oriana asked,
+“Would you please give me the miller’s son? Believe me. I am a fairy.”
+“No,” replied the deer. “I don’t believe you.”
+“Let’s leave.” Said the wolf.
+And Oriana was alone.
+In tears, she said,
+“Fish, fish, cowardly fish! You spent days saying I was beautiful and now I call for
+you and you don’t show up. You ungrateful, lying, cowardly fish! I saved your life and
+you won’t help me. I am so alone! No one will help me!”
+Oriana heard a noise behind her. She went quiet and listened. A sweet, gentle
+and wavy voice called:
+“Oriana.”
+Oriana turned around and saw a very beautiful fairy looking at her, smiling. Her
+eyes were glittering black, her hairs were like dark blue serpents, her wings had a
+thousand colours, like butterfly wings. And she held another pair of wings in her left
+hand.
+“Oriana,” she said, “do you want to have wings again?”
+“I do, I do,” said Oriana.
+“These wings I hold in my left hand are for you.”
+“For me?” repeated Oriana, in disbelief.
+“Yes.”
+“Please give them to me fast, hurry!” Oriana begged, shaking.
+“But first you must promise something.”
+“Promise what?” Oriana asked.
+The dark–haired fairy smiled and said:
+“I am the Queen of the Evil Fairies. If you want me to give you these wings, you
+must promise that from this day onwards you will follow my orders.”
+38
+“And what are your orders?” Oriana asked.
+“My orders,” said the Queen of the Evil Fairies, “are as follows: …
+… Dirty the fountain’s water…
+… Cover the flowers in cobwebs…
+… Dry out the seeds that are germinating in the earth…
+… Steal the nightingale’s voice…
+… Sour the wine…
+… Steal from the poor…
+… Push the children…
+… Put out old people’s fires…
+… Steal the scent of the roses…
+… Torment animals…
+… Disenchant the world…”
+“No! No! No!” said Oriana, recoiling in horror. “I don’t want to do any of those
+things!”
+“If you don’t promise to do these things, I won’t give you these wings” said the
+dark–haired fairy.
+“I would rather have no wings.”
+“Without wings you can’t be a fairy.”
+“I would rather not be a fairy.”
+“Choose carefully, Oriana: these wings have a thousand colors, like butterfly
+wings, and with them you can fly, instead of walking so laboriously, step by step, over
+the earth, tearing your feet on the pathway.”
+“I would rather be good!” said Oriana. “I want to be good, even if that means I
+can’t have wings.”
+39
+“How sorry I feel for you,Oriana!” the evil fairy said, laughing. “You do everything
+upside down: first you lost your wings because a fish was complimenting you. Now I
+bring you a pair of wings like those of a butterfly and you don’t want them. You fill me
+with pity, Oriana: you are a silly fool and you chose wrong.”
+The dark–haired fairy vanished cackling.
+Oriana found herself alone, thinking:
+“I will never ever have wings again. Because I did wrong, I lost my blue wings.
+And now, because I did not want to do more wrong, I have lost the butterfly-like wings.
+It’s as if I am not a fairy. No one will ever believe that I am a fairy again. Maybe I’ll forget
+I am a fairy myself. I will have to live like a regular girl. I will never be able to fly over the
+rocky paths. I will have to walk step by step along the rocky paths like the other girls. But
+at least I can be good. I can go to the city and help others. I must go to the city; men’s
+lives are harder there.”
+And Oriana started walking towards the city.
+40
+2. Commentary
+The translation was relatively easy as the source text had a simple and straightforward
+prose style. There have been no significant changes in the Portuguese language since
+1958 except for the Spelling Agreement of 1990 which made some minor changes to
+spelling, therefore the source text was easy to read and interpret.
+There were, however, still a few problems: the register of the source text did not fit with
+the intended target reader of the target text and required semantic and structural
+changes to be in line with the typical English fairy-tale register. Additionally, the
+dialogue, which plays a critical role in the source text, was unreadable for the
+international speaker and had to be adapted to follow typical English dialogue
+formatting.
+Most of the issues were semantic and motivated by sociocultural differences in language
+and period: modern western culture shifts rapidly, and what was acceptable 60 years
+ago, when the source text was published, may not be fashionable in contemporary
+culture. Problems include language that may be perceived as sexist, subtle religious
+imagery and proper names that show political stances. There was also a problem with
+grammatical gender and how personification works in Portuguese, versus the
+genderless objects in English grammar which follows a natural gender rule for gender
+attribution.
+2.1 Adapting the dialogue punctuation from Portuguese into English
+Transferring a literary text from one language to another often requires
+domestication of more than just grammar and lexicon. The punctuation, for example,
+differs greatly among European languages and it is not intuitive at all: Portuguese and
+Spanish both use the long dash to indicate the start and end of dialogue. French can use
+both the long dash and the guillemet, and German uses mostly the guillemets. Neither
+of those are used in English for dialogue, with the guillemet not being used at all.
+In this translation, the dialogue was fully domesticated, in both punctuation and
+in register. The choice to domesticate punctuation was because an English reader (or
+anyone reading a text in English) should not be expected to be familiar with the
+Portuguese punctuation system. Additionally, it would look too foreign and shocking at
+41
+a first reading – domestication allows the text to remain fluent and ensures a smooth
+reading:
+Source Text Target Text
+– Os países distantes são maravilhosos –
+diziam as andorinhas.
+– Contem, contem – pediu Oriana.
+"The faraway countries are beautiful,"
+said the swallows.
+"Could you tell me about them?" asked
+Oriana.
+In Portuguese, dashes are used both to initiate and end the dialogue and there
+is no punctuation needed, other than interjections such as exclamation and question
+marks. In English, single or double inverted commas are used, with a regular comma
+preceding the inverted commas where no other punctuation is necessary. For this
+translation, the double inverted commas were the most appropriate as the main
+initiator, as there were instances where certain characters narrated dialogues they had
+witnessed; for instances of dialogue within dialogue, the single inverted commas were
+used.
+Paragraphs in the middle of dialogue were also a common occurrence in the
+source text. They happen in II – Oriana, during the old woman’s soliloquy, III – The Very
+Rich Man, when The Very Rich Man is talking to himself about his hair, in VIII – The Tree
+and the Animals when the Queen of the Evil Fairies is telling Oriana what she must do
+to earn and keep her butterfly wings but also in chapter VI – The Abandoned Forest
+(annexed, p. 98). The source text utilises the guillemet ‘»’ to indicate the dialogue has
+not yet finished. As the guillemet is not utilised in English at all, ellipsis ‘…’ were used
+before and after the sentence instead, to make it clearer for the reader, as opposed to
+having no punctuation, thus making it harder to discern whether the character was still
+speaking or not.
+The dialogue in this source text was intricate: with the long dashes for regular
+dialogue but also for dialogue within dialogue, and the guillemet for paragraphs in the
+middle of dialogue. This punctuation would have only made sense to a Portuguese,
+Spanish or French reader. As this translation aims to be accessible to all speakers of
+42
+English (native or otherwise) and therefore was adapted into the general English format.
+The target text assumes that if the reader has the required level of English to read it, the
+reader is also familiar with the English dialogue format.
+2.2 Regular formal Portuguese register and the traditional fairy-tale
+register in English
+The source text maintains a regular formal register in Portuguese. The target text
+took a similar approach, aiming for the fairly formal conservative register of the typical
+fairy-tale. Some of the words and expressions from the intended register are barely used
+in everyday conversations today but are very common in fairy-tales; these include cliché
+words such as ‘cunning’, ‘cackle’ or ‘high morning’. The decision behind this change of
+register is that old-fashioned and highly formal words and structures in the narrative
+help convey the traditional setting and set the tone for the story.
+Maintaining register, however, proved to be a challenge at first as the level of
+register fluctuated throughout the first draft of the translation. Most problems came
+from unknowingly lowering the register, making certain expressions stand out and seem
+out of place with the rest of the text. This happened mostly due to inexperience. Not
+being able to accurately identify the register was also one of the issues that stemmed
+from not being a native English speaker and was overcome with careful reviewing.
+Examples are shown in the table below:
+Source Text Target Text (draft) Target Text (revised)
+De manhã acordava muito
+cedo, acordava ainda
+antes das flores e dos
+pássaros.
+In the morning, she would
+wake up very early, way
+before the flowers and the
+birds
+In the morning, she would
+wake up very early, long
+before the flowers and the
+birds
+Enquanto esperava,
+começou a conversar com
+as andorinhas:
+While she waited, she
+started chatting with the
+swallows.
+While she waited, she
+started talking to the
+swallows.
+43
+For a less experienced and non-native translator, the line between formal and
+informal language is blurred. The middle column shows some examples of register
+problems in the first draft. All three expressions, ‘way before’, ‘chatting’ and ‘show up’
+are modern, but also very informal and are better suited to everyday oral conversation.
+Those expressions do not fit as part of the narrator’s conservative and traditionalist
+style.
+The freedom that the literary model allows can be overwhelming: sensitivity to
+register is a very advanced skill in foreign language learning. It can take years of exposure
+and studying to master. This makes much harder for the non-native student-translator,
+or even a professional translator with little work experience, to correctly identify and
+use the proper register. In addition to this, non-native English speakers are generally
+translating into English as a Lingua Franca – mostly scientific or technical texts with fixed
+structures and clearer guidelines. This translation was done not into a Standard English,
+but into a very formal literary register to elevate the fairy-tale to a traditional and
+timeless status.
+2.3 Problematic semantic choices in Modern Western Culture
+Sociocultural, economic and technological changes in the western world have
+meant that our reality nowadays is very different from Andresen’s. New ideologies and
+social pressures have brought linguistic changes. Moral views and values have changed
+and much of what was considered normal is no longer accepted. In 1997, Flotow (1997:
+14) had already commented on how translating in an era of feminism (one of the new
+ideologies that has arisen in contemporary times, but not the only one) had significant
+effects on translation. She also mentions how translators face a new set of problems:
+how they should intervene, when they should or should not ‘correct’ a text and ponders
+about just how political their role is.
+There is also an increasing tendency for political correctness, which prompted
+Fairclough (2003: 26-27) to comment on how “we need a balanced view of the
+importance of language in social change and politics, which avoids a linguistic
+O peixe apareceu e disse: The fish showed up and
+said:
+The fish appeared and
+said:
+44
+vanguardism as well as dismissing questions about language as trivial”. Indeed,
+discourse intervention in modern times has become akin to censorship, which turns to
+self-censorship even during translated as to be accepted by the masses and to increase
+the marketability of the text in the target culture.
+This has led to provocative mainstream rewritings and adaptations such as
+Disney’s Shrek (2001), which turns fairy-tale clichés upside down: the ugly green ogre is,
+in fact, the hero; the royalty is in the wrong; the princess falls in love with the ugly ogre
+and the hero’s steed is the love interest of the dragon. Shrek was critically acclaimed
+despite being a fairy-tale that has been turned inside out. In a similar (but much more
+violent) vein, Roald Dahl’s 1982 book Revolting Rhymes is also a satirical rewriting of
+well-known fairy-tales. Nevertheless, the stories are very unconventional – Little Red
+Riding Hood shoots the Big Bad Wolf, because she can defend herself and does not need
+a huntsman to save her, and Cinderella marries a jam-maker instead of the prince,
+because the prince was an awful person. These rewritings have been marketed towards
+children and are critically well received in the modern world – in fact, BBC One adapted
+the rhymes to TV in two half hour animated films in 2016, which is available on Netflix
+as well. Both Shrek and Revolting Rhymes have dropped the conservative fairy-tale
+values, which are no longer fashionable in our contemporary culture.
+In a highly satirical rewriting of children’s stories called Politically Correct
+Bedtime Stories, Garner makes a joke out of what happens when discourse intervention
+is taken to the absolute extreme, claiming we have a social obligation to rewrite stories
+that were used to “entrench the patriarchy, to estrange people from their own natural
+impulses, to demonize ’evil’ and to ‘reward‘ an ‘objective’ ‘good’” to into stories that are
+sensitive to “womyn’s issues, minority cultures and the environment” (Garner 1994: 3).
+He finishes his introduction by apologising for any “sexist, racist, culturalist, nationalist,
+regionalist, ageist, lookist, ableist, sizeist, speciesist, intellectualist, socioeconomicist,
+ethnocentrist, phallocentrist, heteropatriarchalist, or other type of bias as yet
+unnamed”. (Garner 1994: 4). This satirizes our society and values but also the need to
+constantly rewrite classical stories so they will serve our values.
+The sociocultural and linguistic phenomena of modern times were not ignored.
+Even though the translation has followed less politically correct semantic choices that
+45
+may be controversial due to their conservativism, they have been reflected upon. This
+translation strives for balance in all things – be it between faithfulness to the source text
+and enjoyment for the reader as well as fluency in the target text but also between the
+linguistic issues. The semantic problems encountered mirror the linguistic and discursive
+problems of today and ought to be discussed. This translation is neither a satirical or
+ironic rewriting of the source text, but it has not undergone a cultural domestication
+either.
+2.3.1 ‘Homens’, or ‘men’ as the traditional word for ‘Humankind’
+In Portuguese, people can be referred to as ‘homens’, ‘pessoas’ or ‘gente’. In the
+text, Andersen uses ‘homens’ thirty-one times, ‘pessoas’ eight times and ‘gente’ four
+times. The last two words are never used to refer to the people that live in the forest
+with Oriana, with the word used always being ‘homens’ (men). Traditionally, the word
+‘men’ has been used to refer to all of humankind. In modern times, it could be viewed
+as sexist language that promotes patriarchy. However, there is much to consider on
+whether to translate all mentions of ‘homens’ into a generic ‘people’ except when
+‘homens’ is referring to human males, or to keep ‘homens’ as ‘men’. The patriarchy was
+indeed deeply entrenched in the values of Portuguese culture during Estado Novo and
+this translation wishes to preserve traditional values and culture of Portugal during the
+Estado Novo. It is therefore inappropriate to modernize the language into a socially
+acceptable modern English, but rather to keep the past as it was, with its flaws included.
+The typical fantasy register chosen for the translation tends to use the word
+‘men’ as general for humankind. For example, J.R.R. Tolkien refers to Gondor, a kingdom
+in the Middle-Earth mostly populated by humans, as the ‘kingdom of men’ and George
+R. R. Martin refers to humankind in Westeros as ‘the first men’. In the highly popular TV
+adaptation of a Song of Ice and Fire called A Game of Thrones (2011-2019), the term ‘the
+first men’ was kept as a name for humankind in a world where other sentient races (such
+as dragons and other forest beings) have walked the earth. In A Fada Oriana, everything
+is seemingly sentient: the objects, the trees, the animals, and it admits the existence of
+fantastical creatures such as fairies. Utilizing words like “folk” or “people” when
+referring to humans who live in the forest could create problems in the interpretation
+46
+of a text where folklore creatures, such as fairies, exist, as ‘people of the forest’, ‘forest
+people’, ‘forest folk’ or ‘folk of the forest’ could be read as a euphemism.
+An entry in the Cambridge’s Dictionary series of grammar articles called English
+Grammar Today suggests using ‘human beings’ or ‘humankind’ in lieu of ‘men’. That
+option, however, would clash with fluency and turn the text into translationese by
+having sentences such as “human beings of the forest” or “humankind of the forest”
+(Venuti 1995: 4) and this translation aims for fluency and not for domestication.
+2.3.2 ‘Moleira’ as ‘millerwoman’ or just ‘the miller’s wife’
+‘Miller’ is a relatively old word for someone who operates a mill as today all such
+processes are automated. It is a gender-neutral word and both the Merriam-Webster
+and Cambridge’s online dictionaries refer to miller as ‘person’. However, due to the
+nature of the work it is often assumed that the job would be undertaken by a man.
+Furthermore, as the word ‘millerwoman’ does not exist in English, there is no other way
+to create a female noun except using ‘female miller’, which sounds very unnatural; and
+the text requires us to distinguish which miller (the male or the female) is being spoken
+of and the lack of proper names does not help.
+Andresen calls the wife of the miller a ‘moleira’ (the female form of the noun
+moleiro (miller), achieved by replacing the final ‘o’ with an ‘a’) seven times and uses
+‘mulher do moleiro’ (the miller’s wife) five times. It is unclear whether she is an actual
+miller or if it is just the Portuguese tendency to not repeat the same word and find
+synonyms instead. With the lexical problems, the role of the woman in Estado Novo
+propaganda, in which the wife is portrayed as a mother and discouraged to hold a job
+(Patriarca 2012: 33) and the fact that the miller’s wife has eleven children, both ‘moleira’
+and ‘mulher do moleiro’ have been translated to ‘the miller’s wife’ on every occasion.
+2.3.3 ‘Fadas más’: should they be ‘bad fairies’ or ‘evil fairies’?
+In the source text, Oriana is described as a ‘fada boa’, which is literally translated
+as ‘good fairy’. She takes care of the forest, of the animals, plants and people that dwell
+in it, and is supposed to maintain a good moral character. She must “water the flowers
+with morning dew, light the fires of old people, hold back the children about to fall in
+the river, enchant the gardens, dance in the air, make up dreams and, at night, place
+47
+golden coins in the shoes of the poor”, as per chapter I – Good fairies and evil fairies.
+She is the cog that makes the forest tick. The opposite of the ‘good fairies’ are the ‘fadas
+más’. In Portuguese, ‘má’, which is the feminine form of ‘mau’, can adopt many
+meanings with different degrees of seriousness: bad, evil, wicked, and all the synonyms.
+These fairies, who are also described in the first chapter, “dry up the wells, extinguish
+the fires of the shepherds, tear up the clothes drying in the sun, disenchant the gardens,
+bother the children, torment the animals and steal from the poor”.
+Fairies in folklore have been both of benevolent and mischievous nature. All the
+synonyms would fit as an adjective: bad fairies, mischievous fairies, wicked fairies or evil
+fairies. Contextually, however, the fairies in the source text were not just ‘bad’ or
+‘mischievous’. In chapter VIII – The tree and the animals, when their Fairy Queen
+appears to offer Oriana butterfly-like wings, she says she would have to do things like
+steal the nightingale’s voice and sour the wine. She would have to disenchant the world
+and make it a worse place for no apparent reason. That could only be classified as
+‘wicked’, or worse, ‘evil’. The word ‘wicked’ is much less intense than ‘evil’ despite being
+synonyms, as it can even mean ‘playfully mischievous’, something which these fairies
+are not. They are consciously evil and have no morals or empathy for the other beings
+of the forest. Indeed, the Queen of the Evil Fairies mocks Oriana for refusing the wings
+and wishing to remain good, then vanishes.
+‘Good’ and ‘evil’ have always been the dichotomy at the core of all moralistic
+fairy-tales; and, these fairies are an evil entity in the source text, despite not being the
+main antagonist and just co-existing with the good fairies; they are forces that cancel
+each other out rather than one prevailing over the other. Yet they are both necessary.
+Without the ‘good’ of Oriana, the forest fell into ruin and was taken over by darkness.
+There is also implied Christian symbolism: alongside fish Solomon, the main
+antagonist can be interpreted as being Vanity, one of the seven deadly sins (and thus,
+evil), which Oriana succumbs to. The Fairy Queen takes away her wings because she
+went down an immoral path and thus is no longer good. That is why the Queen of the
+Evil Fairies comes to Oriana, after all she had already gone down the immoral, sinful path
+and was desperate to be a fairy again. The fact that Oriana refuses and would rather be
+a regular girl and do good deeds than be an evil fairy just for wings is what sets her on
+48
+the path for redemption. Andresen had a religious background and Christianity played a
+very influential role in the state, following Oliveira de Salazar’s Christian values.
+If this translation were to be read by modern children, ‘bad’, ‘mischievous’ or
+‘wicked’ would have been suitable words, despite softening the inherent evilness of the
+fairies – in fact, it would have been a preferred solution to make it more appropriate,
+but also to undermine the religious imagery (which modern child readers may not be as
+familiar with). However, not only those linguistic measures are not necessary for the
+adult target reader but the immoral, apathetic to suffering and cruel ‘evil’ is also a better
+lexical contrast to the morally righteous ‘good’. The fairies characterised as ‘más’ have
+thus been translated as ‘evil’, the strongest available word for wickedness, which also
+maintains the subtle religious theme through the story.
+2.4 Translating an informal word for a currency that has not been in use
+for 16 years
+Chapter III – The Very Rich Man contains a strong cultural marker: the word
+‘contos’. ‘Contos’ is an informal way of saying a thousand escudos, the Portuguese
+currency which circulated from 1911 to 2002. In the story, the dresser cost 100 contos,
+or 100,000 escudos and the job The Very Rich Man had for the widow’s son paid 30
+contos, or 30,000 escudos.
+The first option to convert the currency into a relatable modern currency.
+100,000 Escudos would be 498.80 euros, which still would not make much sense to a
+reader of a country which does not use the euro. It would be the same as not translating
+the Escudos, or worse: it also does not account for inflation. In 1958, 100 contos was an
+exorbitant amount of money that could buy a house. In 2018, 500 euros would be a fair
+price for a good quality dresser and is less money than minimum wage in Portugal, which
+is currently 580 euros as of January 2018.
+A different approach was taken instead by opting for the generic fantasy money
+route, gold coins. This decision goes in line with the translation strategy adopted, a
+compromise between information and enjoyment. However, the Escudo was not
+forgotten and is instead mentioned in the footnotes, which also includes the Euro
+conversion and facilitates the international reader to convert the Euros into their own
+49
+currency. This path also allowed me to keep the timelessness of the fairy-tale in the core
+text while preserving and explaining the original Portuguese cultural marker in a nonintrusive way.
+2.5 Translating proper nouns
+The text has very few proper nouns. Most of the characters remain unnamed,
+being referred to by common names instead. Regardless of their importance in the
+story, most relevant characters like the fish, the miller, and so on, do not even have their
+common nouns capitalized in the source text (as is the norm in fairy-tales). The Fairy
+Queen, the Queen of the Evil Fairies, the Poet and the Very Rich Man are exceptions to
+this and have their common names stand out.
+All the proper nouns present in the text were very similar in their transference
+into English or required no change at all. Oriana works very well in English and required
+no rewriting or alternative spelling; there is actually a book of British madrigals
+published in 1601 by Thomas Morley called The Triumphs of Oriana , which were written
+for Queen Elizabeth I, as Oriana was one of her names. Every other name has an English
+equivalent, which facilitates this edition’s educational purpose as well as facilitating the
+translation.
+There were two proper nouns that prompted questions as there is a certain
+reluctance in translating names of characters from English into Portuguese which was
+also felt whilst translating into English. The fish Salomão (Solomon), the only other
+character with a given name besides Oriana, and Sião, the former name of the kingdom
+of Thailand. However, Sião is pronounced /sɪɑ̃ɯ̃/ and Salomão is pronounced
+/sɐʟʊɱɑ̃ɯ̃/. Both share the phoneme /ɑ̃ɯ̃/, a nasalized sound that most English
+speakers, English as a lingua franca or native, are not expected to be familiar with.
+2.5.1 ‘Sião’: a geographical term out of political fashion
+‘Sião’ was translated into ‘Siam’, even though the name is no longer used. It is
+an old geographical name for Thailand, which first changed names in 1939, under a
+fascist dictatorship. They allied themselves with Japan in the Second World War, so the
+western powers did not recognize their name until 1948 (Cavendish: 1999). However,
+Siam was already Thailand by the time that A Fada Oriana was published in 1964 but
+50
+was not recognized as such in the text. There are three probable causes for this: the first
+cause is the influence of Ralph Wright’s 32-minute documentary Siam, released in 1954
+and distributed by Walt Disney. The half-length film was nominated for an Oscar on Best
+Short Subject, Two Reel in 1954 and won a Small Silver Plaque at Berlin International
+Film Festival in 1955. The second cause is the fact that the Portuguese were the ones
+responsible for Siam’s geographical term after adopting the term from the Sanskrit word
+‘syam’ in the 16th century (Cavendish, 2014); and the final cause may be a subtle
+provocation at the regime by not accepting a name that was first changed under a fascist
+dictatorship, especially since Thailand means ‘land of the free’.
+2.5.2 ‘Salomão’: the seemingly randomly named fish
+‘Salomão’ was translated into ‘Solomon’, although his name had more possible
+spellings: ‘Shlomo’ (from shalom, which means peace in Hebraic) or the direct
+translations of the Arabic name, ‘Suleiman’ or ‘Suleyman’. The significance of the name
+had to be considered whilst choosing the spelling. ‘Suleiman’ or ‘Suleyman’ were not
+considered because they ended in ‘man’ and did not particularly suit a fish. ‘Shlomo’ was
+phonetically and aesthetically interesting as the name of a fish in a fantasy story, but the
+meaning of the name was not very fitting. Finally, there was Solomon, the spelling most
+commonly associated with a biblical Hebraic king and the name given to a 20-liter wine
+bottle. Whilst wine is a significant cultural marker in Portugal, it is unlikely the fish was
+named solely because of wine. It is easy to overlook Solomon if the reader has no (or
+only superficial) biblical knowledge. The biblical figure Solomon was a great, wise king
+and ruled over Israel but eventually fell from grace due to his vanity, lust and worship of
+pagan gods. The fish Solomon is more than likely inspired on the biblical king and his
+appearance foreshadows the appearance of the Fairy Queen in the next chapter, V –
+The Fairy Queen. The following passage of the bible of Solomon’s interaction with God
+mirrors Oriana’s interaction with the Fairy Queen, after Oriana ignored the orders of the
+Fairy Queen to take care of the forest and succumbed to her own vanity instead:
+The LORD grew angry with Solomon, because his heart had turned away
+from being with the LORD, the God of Israel, who had appeared to him twice.
+The LORD had commanded Solomon about this very thing, that he shouldn’t
+follow other gods. But Solomon didn’t do what the LORD commanded.
+51
+The LORD said to Solomon, “Because you have done all this instead of
+keeping my covenant and my laws that I commanded you, I will most certainly
+tear the kingdom from you and give it to your servant. (Common English Bible,
+Kings, 1.9-11)
+2.6 Gender neutrality of objects in English and personification
+English only has a natural gender, which mostly follows the rules of the biological
+sex of the subject. That is, gender is mostly attributed to animate entities. According to
+Östen Dahl in Animacy and the Notion of Semantic Gender (2000:1), gender attribution
+follows an animacy hierarchy which goes from humans → animals → inanimate. Even
+then, being an animal in that hierarchy does not guarantee being assigned a gender, as
+there are ‘lesser’ animals that may be considered as inanimate entities and thus remain
+genderless. Animate entities can be male or female, ‘he’ or ‘she’, depending on the
+biological sex and inanimate entities are a genderless ‘it’.
+Portuguese is a gendered language, in which “the link between grammatical
+gender and word meaning appears to be completely unpredictable” (Cubelli, 2011: 450).
+Every noun is assigned a gender, male or female, and there is no neutral gender. This
+would not be a problem in this translation if inanimate objects remained inanimate, or
+if they were personified like Disney’s film adaptation of Beauty and the Beast (1991),
+where the objects have proper names, attributed genders and every other character is
+aware of their animacy status.
+In chapter III – The Very Rich Man, the things in the house talk to Oriana, begging
+her to save them from the crowded room they are in. In Portuguese, the innate gender
+of the words helps characterize the objects. As Jakobson says, “ways of personifying or
+metaphorically interpreting inanimate nouns are prompted by their gender” (Jakobson
+2012: 117) without more information, the reader automatically attributes female voices
+to the wall, the flowers, the dresser and so on, and male voices to the sofa, to the mirror,
+etc. In the English translation their gender was left arbitrary, allowing the reader to
+imagine male or female voices as they please. Otherwise, the text would be too cluttered
+with information on the inanimate objects instead of drawing their characterization
+from the simplicity of the natural grammatical properties of the word. The problem
+52
+arises when the dresser, or ‘cómoda’ is talking about itself – or rather herself – and it
+narrates human dialogue. In Portuguese, ‘cómoda’ is, grammatically, a female noun. The
+word ends in ‘-a’ and is preceded by the definite article ‘a’, which also doubles as a
+personal pronoun. In English, the dresser is an object. Grammatically, ‘dresser’ should
+be replaced by the pronoun ‘it’ – except in the source text, the dresser is alive.
+There were two options, as shown in the table below:
+Source Text Target Text (Female) Target Text (Object)
+– Que cómoda tão
+bonita!
+E o dono da casa
+respondia:
+– Foi o meu pai que a
+mandou fazer.
+'What a beautiful
+dresser!'
+And the house owner
+would reply:
+'My father had her
+made.'
+'What a beautiful
+dresser!’
+And the house owner
+would reply:
+'My father had it
+made.'
+The first option is a literal translation. It admits the dresser is female and uses
+the personal pronoun ‘her’. However, that is the only reference to the gender of the
+dresser in the English text, and looks very out of place. Additionally, it dismisses an
+important point: except for the Poet, no human is aware of the fantasy elements of their
+own world. This means that, even though dialogue is happening within dialogue, the
+dresser is still quoting what humans said regarding the dresser. Since they have never
+heard the dresser speak or have seen it show any signs of animacy, they would not, in a
+normal dialogue situation, consider any pronoun other than ‘it’ to refer to the dresser.
+Therefore, the personal pronoun ‘a’ was translated as ‘it’. Then, this peculiarity was
+utilised to describe the problem in a footnote, paying attention to their status of secret
+animacy and their innate characterisation in Portuguese.
+53
+GENERAL CONCLUSION
+The aim of this project was to draw attention to Portuguese literary culture, to a
+famous Portuguese author who has been critically well-received nationally and has been
+part of the literary teaching canon from as early as 1979; but also, to study the
+theoretical and practical issues in translating a source text that no longer resonates with
+contemporary culture. In the first iteration of this project, the target reader was Englishspeaking children, which would almost certainly be native speakers. Non-native
+speakers most likely would not have acquired, through the regular teaching system, the
+necessary language skills required to read the entire book (about 50 pages) without help
+from a supervising teacher.
+However, as children’s literature and its cultural shifts were explored, it was
+noted that what was popular in the 20th century in Portugal (during a fascist and
+oppressive dictatorship) is no longer fashionable in a contemporary English-speaking
+world, despite the source text still being relatively popular among teaching staff in the
+source culture which is traditionally conservative. This holds true not only for the moral
+views, but also for the language used in the source text.
+Without rethinking and rewriting the target text until it was appropriate and in
+line with contemporary values (which may likely have yielded a completely different
+fairy-tale altogether, thus defying the entire point of the project), the translation would
+have had no marketability and would not have been accepted by publishers, let alone
+be accepted into recommended reading lists. It was then that it was decided to redirect
+the target text towards adults – scholars, or indeed regular readers with an interest in
+Portuguese culture. With this decision came the need to find a healthy balance between
+fidelity and leisure, and so the target text was conservatively translated very closely to
+the source text in lexical terms, but with its grammar, linguistic structures and
+punctuation domesticated to help facilitate the reader’s understanding.
+Ideally, this translation would be published with a contextual preface explaining
+the prevalent cultural values in Portugal during the Estado Novo, a short biography of
+the text’s author Sophia de Mello Breyner Andresen, and the contemporary relevance
+54
+of the source text in its source culture (e.g., its relevance and moulding of the literary
+canon in teaching systems).
+As has already been stated in this project, foreignization yields considerably less
+satisfactory results market-wise than a domestication. While this translation is neither
+a full foreignization or a full domestication, preferring to sit comfortably in the middle,
+it would still always be followed by the stigma of being a translation – one done not only
+by an unknown student-translator, but a non-native one at that. As Peter Newmark says
+on the first page of his introduction of A Textbook of Translation,
+I shall assume that you, the reader, are learning to translate into your language of
+habitual use, since that is the only way you can translate naturally, accurately and
+with maximum effectiveness. In fact, however, most translators do translate out of
+their own language ('service' translation) and contribute greatly to many people's
+hilarity in the process. (Newmark 1988: 3)
+While translations from a non-native language are still relatively frowned upon,
+they are slowly becoming acceptable in the scientific and other academic fields, from
+any language into English as a Lingua Franca, regardless of the translator’s mother
+tongue. This is because the technical, functional and comprehension requirements are
+completely different for a literary text.
+It could be argued that non-native speakers are not as equipped to write at
+maximum fluency: they may have difficulties in letting go of the linguistic structures
+present in their mother tongue; they may not transfer text in a satisfying manner to a
+language they have not been speaking since birth but acquired at an older age. A great
+part of language acquisition is exposure and practice and the translator’s language skills
+may limit the naturalness of the target text.
+However, non-native translators translating from their mother tongue into
+another language they are fluent in do, arguably, have something to add that native
+translators translating from another language into their mother tongue do not. They can
+understand the subtleties of the grammar and the linguistic structures of the source
+text, can read ‘between the lines and understand all the hidden intricacies of the source
+culture which will allow for a better transfer into a new text. While they may struggle
+with domestication (as they are often not familiar with the target culture), in cases of
+55
+foreignization, a non-native translator could be an acceptable choice. The raw grammar
+and other minor mistakes can be overcome with the help of a native reviewer.
+With this translation and the critical commentary that goes along with it, this
+project also aims to be a small step towards breaking the stigma surrounding non-native
+translators working on literary texts.
+56
+BIBLIOGRAPHY
+Primary Bibliography:
+Andresen, Sophia De Mello Breyner. A Fada Oriana. Lisboa: Figueirinhas, 1993. Print.
+Secondary Bibliography:
+Carcanet Press. Carcanet Press, n.d. Web. 20 Feb. 2018. <http://www.carcanet.co.uk>.
+Cavendish, Richard. “Siam Becomes Thailand.” History Today, June 2014,
+<ww.historytoday.com/richard-cavendish/siam-becomes-thailand>.
+Cavendish, Richard. “Siam Officially Renamed Thailand.” History Today, May 1999,
+<www.historytoday.com/richard-cavendish/siam-officially-renamed-thailand>.
+Common English Bible. Bible Gateway. Web. 14 Mar 2018.
+Cubelli, Roberto, Daniela Paolieiri, Lorella Lotto. “The Effect of Grammatical Gender on
+Object Categorization.” Journal of Experimental Psychology: Learning, Memory, and
+Cognition, vol. 37, no. 2, 2011, pp. 449–460., doi:10.1037/a0021965.
+Cunha, Isabel Arriaga E. "DESTAQUE. Adeus Escudo, Bom Dia Euro." PÚBLICO. Público,
+30 Dec. 1998. Web. 06 Mar. 2018. <https://www.publico.pt/1998/12/31/jornal/adeusescudo-bom-dia-euro-121062>.
+Dahl, Östen. “Animacy and the Notion of Semantic Gender.” Gender in Grammar and
+Cognition, Jan. 2000, doi:10.1515/9783110802603.99.
+Dahl, Roald, and Quentin Blake. Revolting Rhymes. London: Puffin, 2016. Print.
+De Oliveira, César, Fernando Rosas, José Medeiros Ferreira, Manuel Braga Da Cruz,
+Maria Inácia Rezola, Sacuntala De Miranda, Fernando Martins, José Maria Brandão De
+Brito, Ana Bela Nunes, Rui Ferreira Da Silva, Jorge Ramos Do Ó, and António
+Nóvoa. Nova História De Portugal: Portugal E O Estado Novo (1930-1960). Ed. Joel
+Serrão and A.H. De Oliveira. Comp. Fernando Rosas. Vol. XII. Lisboa: Editorial Presença,
+1992. Print.
+Fairclough, Norman. "`Political Correctness': The Politics of Culture and
+Language." Discourse & Society 14.1 (2003): 17-28. Web. 13 Mar. 2018.
+57
+Frazão, Dilva. "Biografia De Sophia De Mello Breyner Andresen." EBiografia. N.p., 14 Apr.
+2016. Web. 20 Sept. 2017.
+Infopédia. "A História Do Escudo." Infopédia. Porto Editora, n.d. Web. 06 Mar. 2018.
+<https://www.infopedia.pt/$historia-do-escudo>.
+Jakobson, Roman. "On Linguistic Aspects of Translation." 1959. The Translation Studies
+Reader, Lawrence Venuti (ed.). New York: Routledge, 2012. 117. Print.
+"Man, Mankind or People ? - English Grammar Today." Cambridge Dictionary. N.p., n.d.
+Web.f 14 Mar. 2018. <https://dictionary.cambridge.org/grammar/britishgrammar/man-mankind-or-people>
+Martins, Maria João. “Sophia De Mello Breyner Andresen.” Mulheres Portuguesas:
+Divas, Santas e Demónios, Vega, 1994, pp. 90–91. Print.
+Matias, Ana Cristina Simões. Percursos De Leitura Da Poesia De Sophia De Mello Breyner
+Andresen Nas Disciplinas De Português A E B Do 12º Ano. Diss. Universidade Do Algarve
+Faculdade De Ciências Sociais E Humanas, 2003. Algarve: Universidade Do Algarve, 2003.
+Print.
+Munro, Eleasaid. "Feminism: A Fourth Wave?" The Political Studies Association (PSA).
+N.p., n.d. Web. 13 Mar. 2018. <https://www.psa.ac.uk/insight-plus/feminism-fourthwave>.
+Newmark, Peter. A Textbook of Translation. New York: Prentice Hall, 1988. Print.
+Oliveira, Américo Lopes De. "Sophia De Mello Breyner Andresen." Dicionário De
+Mulheres Célebres. Porto: Lello, 1981. 60. Print.
+Patriarca, Raquel. "O Livro Infantojuvenil Em Portugal Entre 1870 E 1940 – Uma
+Perspetiva Histórica." Diss. Faculdade De Letras Universidade Do Porto, 2012. Faculdade
+De Letras Universidade Do Porto. Universidade Do Porto, 16 Apr. 2013. Web. 21 Mar.
+2018. <https://sigarra.up.pt/flup/pt/pub_geral.pub_view?pi_pub_base_id=28037>.
+Rocha, Natércia. Breve História Da Literatura Para Crianças Em Portugal. Lisboa:
+Instituto De Cultura E Língua Portuguesa, 1984. Print.
+"Sindbad the Sailor." Sindbad the Sailor. Encyclopædia Britannica, Inc., 10 Apr. 2016.
+Web. 29 Nov. 2017.
+58
+Shrek. Dir. Andrew Adamson and Vicky Jenson. Dreamworks, 2001.
+Swift, Jonathan. "Letter: Swift to Pope - 5." The Works of the Rev. Jonathan Swift. Ed.
+Thomas Sheridan, John Nicols, John Boyle, Patrick Delany, John Hawkesworth, Deanne
+Swift, William Bowyer, John Birch, and George Faulkner. Vol. 14. London: Luke Hansard,
+1801. 37. Print.
+Tokien, Tom. "Suggested Reading List for Year 6 Pupils | KS2 | Age 10-11." The School
+Reading List. N.p., 6 May 2013. Web. 5 Feb. 2018.
+<https://schoolreadinglist.co.uk/reading-lists-for-ks2-school-pupils/suggested-readinglist-for-year-6-pupils-ks2-age-10-11/>.
+Vasconcelos, José Carlos de. "Sophia: A Luz Dos Versos." Interview. Jornal De Letras
+[Lisboa] 25 June 1991, 468th ed.: 8. Print.
+Venuti, Lawrence. The Translator's Invisibility: A History of Translation. London:
+Routledge, 1995. Print.
+Von Flotow, Louise. Translation and Gender: Translating in the 'Era of Feminism'.
+University of Ottawa Press, 1997.
+ANNEXES
+1. Chapters cut from the Target Text:
+VI – The Abandoned Forest
+Everything was quiet. The forest seemed deserted. No birds were heard. There
+were no flowers. But there were many poisonous mushrooms. And Oriana called,
+"Birds, squirrels, deer, rabbits and hares!"
+She heard a noise underneath the floor and, tiny and black, a viper appeared.
+"Good morning," said the viper.
+"Good morning, viper," replied Oriana. "Where are the other animals?"
+"They all left for the hills. Since Oriana, the fairy, left them and they had no one
+to protect them from huntsmen, they had to run far away. Only rats, vipers, ants,
+mosquitoes and spiders stayed."
+59
+"Ah!" said Oriana, blushing in shame.
+And she asked:
+"Do you know who I am?"
+"No," said the viper. "All I see is that you are a very beautiful girl.”
+"I am not a beautiful girl. I am a fairy. I am Oriana.”
+"Ah! How very odd! Where are your wings? No one has ever seen a fairy without
+wings."
+"I do not have any wings, but I will have them back in a couple of days. It is a
+story I can’t tell you."
+"I am always underground, I had never seen you before, but I have heard of you."
+"Really? What was told of me?"
+"I was told you were very good and took care of the forest before, but one day
+you left all your friends because you fell in love with a fish."
+"That is a lie," said Oriana, furious. "I never fell in love with the fish. What a silly
+story!"
+"Well you should know that is what is being said. Stories say you would spend
+hours and hours leaning over the river doing your hair and adorning yourself with
+flowers, so the fish would tell you how beautiful you were."
+"But I never fell in love with the fish. I would spend hours by the river because I
+enjoyed watching myself."
+"Maybe it is how you said. But the fish told the other fish, who then told the
+birds, who told the rabbits, who told the vipers, that you were madly in love and only
+wanted to make yourself prettier for him."
+Oriana was appalled. She felt ridiculous. She looked at the viper and said:
+"That is a very silly lie. A fairy can’t fall in love with a fish. What a trickster! He
+speaks with a tongue forked like yours."
+60
+And, turning her back, Oriana went on her way, but while she walked she heard
+the evil hissing laughter of the viper:
+“SSSSSSSSSSS.”
+After walking for a long time, she arrived at the miller’s house. There everything
+was broken. the house seemed abandoned a long time ago. The fire was put out; the
+rooms were full of spider webs. Oriana grabbed a broom and a drag and started
+sweeping and cleaning the house. then she heard the noise and the voice called her:
+“Oriana!”
+It was a mouse.
+“Oriana, it's pointless to tidy the house up. No one lives here but me. The miller,
+his wife and their children went to the city.”
+“Ah! But why?” asked Oriana.
+“One of the younger children went missing one day, the four–year-old one with
+black curls. The miller and his wife looked for him through the whole forest for nine days
+without finding him, and after nine days the miller said: …
+… ‘Our son is lost in the forest, he has been eaten by wolves, or fell in the river,
+that took his drowned body far away. There is no point looking for him further. Let us
+leave the forest before another disaster happens.’…
+… ‘I could feel something bad coming for a long time’ said the miller's wife.
+‘Everything was going wrong lately. when I got home, everything was a mess. My
+children were always falling in the river and would always come back dirty, torn and full
+of wounds. Let us leave this forest quickly.’…
+… And after this chat the miller and his wife packed their bags and their
+bundles, put everything in a wagon end left for the city with their children. So, there is
+no point in tidying up the house.”
+“Everything was my fault,” sighed Oriana, “I left them. The miller's children fell
+in the river and came back dirty, torn and wounded because I would not take care of
+them. One even got lost. How can I undo all the wrong I've done?
+61
+And with this Oriana started crying next to the fireplace.
+“It’s a great sadness,” said the mouse. “And it really was your fault.”
+Oriana grabbed the broom, saying:
+“Despite everything, I will finish cleaning the house.”
+When she finished everything, the fairy said goodbye to the mouse and began
+walking through the forest again. Through the way there were stones that would hurt
+her feet and bushes that would sting her. When she had wings, she could fly over the
+bad trails and only come down when the ground was covered in moss, soft grass or thin
+sand.
+“Men’s lives are hard,” she thought. “They don’t have wings to fly over the bad
+things.”
+Oriana arrived at the woodcutter’s house. The fire was put out there too, and
+the floor was covered in dust.
+The bed, the table and the stools were gone. Oriana kneeled next to the fireplace
+and cried. And she heard a voice saying:
+“Where are your wings?”
+It was an ant.
+“The fairy queen took my wings because I broke a promise.”
+“It was a fair punishment, because you forgot and abandoned your friends. Look
+what happened in this shack. The woodcutter and his wife were very poor. But every
+morning you would walk in here with three little white stones, and you would turn the
+stones into money, clothes and bread. But one morning you did not come. And from
+that day onwards there was hunger, cold and misery in this shack. One day the
+woodcutter told his wife…
+… ‘We can’t keep living in so much poverty. Let's go to the city to find work.’…
+… And they bundled their rags, placed their furniture on their backs and, holding
+their son by the hand, they left to the city. They were sad and cried a lot when they said
+62
+goodbye to the shack, where they had been so happy, back when every day you would
+visit them with three white stones.”
+“Oh, ant,” said Oriana, sobbing. “Can I undo all the wrong I have done? I’ve only
+just understood how important my promise was. I've only just understood how much
+the forest needs me.”
+“I don't know what advice to give you,” replied the ant. “But if you regret having
+abandoned us, if you want to help the men, animals and plants again, do me a favor.”
+“What is it?” Oriana asked, wiping her tears away.
+“Take a white stone and turn it into a sugar cube.”
+“Oh, ant!” said Oriana. “I don't have a magic wand anymore. I can’t do what you
+ask. I can't even help an ant.”
+“If you can't help me, goodbye, Oriana. I have a lot to do.”
+And, looking very busy, the ant left.
+Oriana sighed, got up and left the shack.
+It was already getting dark outside. The fairy started walking to the Poet's tower.
+The tower was far away, and the way was wild, full of thorns and stones. Oriana would
+cut her feet with every step. There were no birds singing, no rabbits running, no majestic
+deer with their sweet eyes. All there was in the forest was silence, abandonment and
+loneliness. When Oriana got to the tower, it was already very dark. She had bleeding
+feet and a heavy heart.
+The door to the tower was open. Oriana went in, and went up the stairs, thinking:
+“The Poet will comfort me, he will tell me what to do. He will let me cry on his
+shoulder, cry until my loneliness is gone.”
+Oriana opened the door to the Poet's room, and saw the room was empty.
+The papers that used to cover the furniture and the floor were gone. But the
+extinguished hearth was full of burnt paper ash. And the wind, coming through the
+window, would scatter the ashes. Everything was covered in ashes.
+63
+Oriana walked across the room and her hurt feet left blood red footprints over
+the soft white ash. And she kneeled in front of the burnt papers, and with tears rolling
+down her face, she said,
+"I came looking for my friend but didn't find him. Oh, how will I undo all the
+wrong I've done? I broke everyone's happiness. I forgot my word and abandoned my
+promise. Now all I find is extinguished fires, empty houses and ash."
+A spider came down from the ceiling, holding onto her glimmering gossamer
+thread, and asked:
+"Are you Oriana, the fairy?"
+"I know I am Oriana, but I don't know if I'm a fairy. I broke my promise and the
+Fairy Queen punished me: the wind took my wings and my magic wand turned to dust.
+"It's a fair punishment," said the spider, "Because you abandoned your friends.
+Here's what happened in this house: one night you didn't come. And the next day, as
+soon as night fell, the Poet leaned against the window waiting for you. When a leaf
+moved, when a dry twig creaked, or the breeze made the grass dance, he would say: 'It's
+Oriana.' But it wasn't you. You never came back. And he waited for nights on end.
+Without reading, writing, or doing anything…
+… He paced through the room and talked to himself. Until one night, when the
+first rooster of the dawn sung, he said, …
+… 'Oriana lied. She told me: 'I will never ever abandon you'. But I have waited,
+waited and waited. The nights have gone by slowly, one by one. Oriana no longer shows
+up…
+… The world is no longer enchanted. I want to go to the city and become like the
+other men…
+… I want to become like the men who don't believe in magic and don't write
+verses. I will burn all my books and papers.'
+And after he said this he lit a big fire in the fireplace with all the books and papers
+where his verses were written.
+64
+He sat watching the fire burn and the glare of the flames danced in his pale, sad
+face. When everything turned to ash, he got up and left for the city. I watched him vanish
+into the cold light of the dawn."
+"It was my fault," said Oriana. "How can I revive his verses from ash? How can I
+make my friend's joy and companionship be reborn from this ash?" Oh, how the fish
+deceived and tricked me with his compliments! I want to undo the wrong I have done. I
+will go to the city to get the men and to the hills to get the animals who are my friends."
+And, getting up from the floor, Oriana said goodbye to the spider and left for the
+city. She walked through the city again, hurting and tearing her feet in the rocks and
+gorse. She walked the path next to the abyss, and at midday, she arrived at the city.
+VII - The City
+The streets were full of people and Oriana felt very lost and very dizzy in the
+middle ofso many houses, noise and commotion. She looked everywhere,searching for
+someone who could help her. But all she saw was unknown faces that walked right past
+her. She decided to ask the signalman,
+"Could you please tell me, mister signalman, if you know a miller that came from
+the forest and has eleven children?"
+"There must be a million people in this city and I don't know any millers. Move
+along now, you're holding up traffic!" And Oriana went on, pushed by the crowd.
+Then she asked a newspaper salesman,
+“Excuse me, please. Do you know where a miller that came from the forest with
+many children might live?"
+"There are so many persons living in this city! How should I know where the
+miller lives? Let me through!"
+So, Oriana walked into a hat shop and the shop owner came running.
+Oriana asked,
+"Do you know a miller from the forest with eleven children?"
+65
+"No, I do not. But I have a beautiful hat there that seems to have been made
+especially for you! Sit in front of the mirror and see how pretty you'll look."
+But Oriana remembered the fish and ran from the shop. Then she saw a man
+sitting in a terrace, drinking beer, and asked him:
+"Do you know a miller from the forest with many children?"
+"I don't know any miller, but I would like to know you, I have never seen such a
+pretty girl in this city before." Oriana remembered the fish's compliments again and ran,
+terrified.
+She kept asking around for the miller, but no one would give her a straight
+answer. After walking through many streets filled with shops, cars and men, she arrived
+at a very poor neighborhood, on the otherside of the city. The streets were dark, narrow
+and dirty. So dark, so narrow and so dirty that when the sun finally got there, it was
+already pale.
+"What a sad place!" thought Oriana. A cat walked by.
+"Hello, cat," said Oriana. "Do you know where a miller from the forest with
+eleven children lives?
+"I do," said the cat. "Come with me" They walked two streets and went into the
+building number 9537. They went up the fourth floor and knocked on the door.
+The miller's wife was at the door.
+"Good morning," said Oriana. "I am the fairy Oriana, and I came from the forest
+looking for you."
+"What an odd thing," said the miller's wife. "Where are your wings?"
+Oriana told her story and asked her to come back to the forest.
+"From this day onwards," she said "I will take care of your children and clean your
+house again."
+But the miller's wife would not believe a word she said.
+"I don't believe in fairies I will only believe your words and I will only go back to
+the forest if you bring me my lost child first."
+66
+And with this, she closed the door.
+Oriana turned to the cat sadly and said:
+"No one believes me. I am so, so tired! Tell me: do you know where the
+woodcutter from the forest lives? Maybe he'll believe me."
+"No, I do not," said the cat. And they said their goodbyes.
+Oriana walked the streets by herself again, asking questions no one would give
+an answer to.
+Until she found a stray dog.
+“Tell me, dog, do you know where the woodcutter from the forest lives with his
+wife and child?”
+“I do,” said the dog. “Come with me.”
+Oriana followed the dog until they arrived at a very poor neighborhood. The
+houses were made of tin, the women were pale and disheveled, the men had torn
+clothes and unshaven faces. The children played in the mud.
+“It’s there,” said the dog, pointing to a hut falling apart.
+Oriana peeked inside the hut.
+The woodcutter’s wife was sitting on the floor with her son asleep on her lap.
+They were both so pale and so thin that Oriana hardly recognized them. There was no
+bed, no mattress, no stool, no furniture at all. There was only a pile of rags on a corner.
+Oriana could feel her eyes starting to fill with tears. She felt a knot in her throat
+and a huge weight on her back. Like she had lead wings. Crying, she told the
+woodcutter’s wife:
+“I am the fairy Oriana, and I abandoned you. It’s my fault you have fallen in
+disgrace. Forgive me for the wrong I have done you and help me undo it.”
+“What wrong have you done me?” asked the wife. “I’ve never seen you before.”
+Oriana told her everything. The wife replied:
+67
+“I had always thought there had to be a fairy in the forest. Oh! Why did you
+abandon us? Listen to our story,
+When we got to the city my husband got a job in the docks. But he earned very
+little. We rented a room, but after a while we could no longer afford rent and the
+landlord kicked us out and kept our furniture. So, we came to this hut, and with our rags
+we made a bed on the floor. Then winter came, and the wind and the rain wouldn’t let
+us sleep. We would put our son between our bodies, so the rain wouldn’t make him wet
+and the wind wouldn’t freeze him. And winter kept going. One day our son got sick and
+wouldn’t stop coughing. During the night, our bodies weren’t enough to keep him warm.
+The doctor came, gave him a medicine and said: ‘He needs two very warm blankets.’
+The next day, after work, my husband went around the city begging door to door. He
+only got six coins and he needed fifty to buy the blankets. The next day he walked past
+a shop that was selling blankets. My husband was a good and honorable man, but our
+son was freezing to death. So, he stole two blankets and ran. The shop owner called the
+Police and they went after him. And they were shouting,
+‘Grab the thief!!! Thief! Thief!’
+They arrested him and threw him in jail. I went to the jail to ask for him, with my
+son in my arms. But they sent me away and told me the father of my son was a thief.
+Now I am just sitting here, and there is nothing I can do. Nothing. You are a fairy, help
+us.”
+“How awful is the wrong I have done!” said Oriana. “When I was leaning over the
+river and I would see my hair, my face, my neck like a tall white tower, the wrong I was
+doing seemed good and beautiful. But now I see the wrong I have done is empty houses,
+unlit fires, hunger, cold, tears, jails.”
+“Will you help me?” asked the woodcutter’s wife.
+“Come back to the forest with me,” said Oriana. “I promise that from this day
+onward I will never abandon you.”
+“I will only go back with you if you go to the jail to get my husband. I can’t go
+back without him.”
+“Wait for me then,” said Oriana. “I will get your husband.”
+68
+Oriana walked along the city again. Walked and walked until she arrived at the
+jail door. It was a sad door, dark and stained by humidity.
+“Good morning” she greeted the guard. “Have you arrested a woodcutter that
+stole two wool blankets?”
+“I have,” said the guard.
+“I ask you to release him. He’s my friend and he’s not a thief. I know he’s not a
+thief.”
+“He stole,” said the guard. “So, he’s a thief.”
+“He stole because his son was freezing to death, so he’s not a thief.”
+“Law says he’s a thief,” replied the guard.
+“I don’t want you calling him a thief,” said Oriana.
+“You are insulting authority. I’ll have you arrested too,” said the guard.
+And he called out,
+“Need two guards to arrest this girl.”
+Having heard this, Oriana ran off. No one could catch her, because even though
+she didn’t have her wings anymore she was still a fairy, and she could run a lot faster
+than men.
+And Oriana went along the city. She was so upset that she was speaking to herself
+out loud. People laughed at her, saying,
+“She’s crazy, talking to herself.”
+Oriana would run, embarrassed.
+But other people would say,
+“What a beautiful girl! This city had never seen such a beautiful girl. Like a May
+lily, like a star.”
+When she heard this, she would run even faster, as she remembered the fish’s
+compliments.
+69
+Until it got dark. The sun went down, and the city lights went up. There lights
+were blue, green, white, yellow, purple and red. The ground was glittering black.
+Oriana was looking for the Poet.
+She looked for him in the streets, in the public squares and gardens. She looked
+for him in cafés, in pastry shops, in terraces, in taverns. She looked for him in viewpoints,
+in tramway stops and at the cinemas. Until the city lights went out one by one. When
+the first rooster sang, at dawn, there was only one house still lit.
+“He is there,” said Oriana.
+She walked towards the light and arrived at a wide street with tall houses. Oriana
+had been there before in the afternoon, but the street was full of shouts, people,
+movement, noise and cars. Now everything was still and quiet. The doors and the
+windows were closed. There was only one door open, where the light she had seen came
+from.
+Oriana peeked and saw a large room with many small tables with white and cold
+marble tops. It was a café that had been full of people during the day. Now it barely had
+anyone. There was a tired servant, leaning against the counter, four dark men sitting
+around a table to the right of the entrance and, at the end of the bar, alone, sitting in
+front of an empty glass, was the Poet. Oriana walked across the room in silence and sat
+in front of him. The Poet was so lost in his thoughts he did not see her arrive. His eyes
+stared into the distance and saw nothing. The fairy touched his hand softly, saying:
+“It’s me. Oriana. I am back!”
+“Oriana,” he said, laughing.
+He stood quiet for a moment. Then his smile came undone and his face turned
+sad and rough. He asked:
+“Where are your wings?”
+“I don’t have wings anymore” she replied, lowering her head.
+“Where is your magic wand?”
+“I lost it” said Oriana.
+70
+“If you are Oriana, enchant the night.”
+“I can’t.”
+About to scream, the Poet told her,
+“You are not Oriana. Your face is like hers, but you lie because you have no wings
+and you can’t enchant the night. You are not Oriana. The world is disenchanted. Oriana
+lives in the forest with the trees, wind and flowers. There is no Oriana here. Leave.
+Hurry.”
+He kept speaking louder. People were starting to stare. Oriana covered her face
+with her hands and the Poet shouted:
+“Begone!”
+Oriana got up and, hiding her face, ran off the café. She heard the servants and
+the f our men laughing as she went by. She ran through the street and the laughs and
+mockery ran after her.
+Oriana went back to the forest.
+IX - The Abyss
+Halfway through a lot of walking, she saw a shadow coming from the city, walking
+towards her. It was a dark shadow, bent over itself, walking slowly with the help of a
+stick. Oriana realized it was the old woman. She thought:
+“The poor old woman! I never came back to help, she is almost blind and keeps
+walking this dangerous path next to the cliff. After today I will guide her every day like I
+used to.”
+She hurried her pace to reach her friend faster.
+Suddenly Oriana screamed. She saw the old woman take a wrong turn and start
+walking towards the abyss.
+“Oh!” said the fairy “She’s going to fall in the abyss!”
+She shouted:
+“Stop! Stop!”
+71
+And she started running.
+Oriana was really far from the old woman and the old woman was really close to
+the abyss. But she walked slowly, and Oriana ran fast.
+She ran and ran.
+And she would shout:
+“Stop! Stop!”
+But the old woman was deaf and poor sighted and, without seeing nor hearing,
+she would walk slowly.
+“If I had wings I would be there already!” thought Oriana.
+And she ran and ran.
+The old woman stopped to rest. She was one step from falling in the abyss.
+Oriana, ten steps away from her, thought:
+“I’ll get there in time!”
+But just as she held her hand out to grab her, the old woman took one step
+forward and fell in the abyss.
+Oriana forgot she had no wings and jumped into the abyss to save the old
+woman.
+She grabbed her by the legs and tried to fly, but she could not. That is when she
+remembered she had no wings.
+“Oh no!” she said.
+She could see the depths of the abyss underneath her like a mouth agape and
+ready to devour her.
+“Oh my, oh my!” shouted the old woman.
+They kept on falling.
+But suddenly, like a lightning bolt, there was the Fairy Queen. She reached out
+and touched Oriana with her magic wand.
+72
+In that same moment Oriana stopped falling and stood still, suspended in
+nothingness, holding the old woman.
+And the loud, straightforward and rigorous voice said:
+“Oriana, you have been true to your promise today. To save the old woman, you
+forgot about yourself and jumped in the abyss. You felt so strongly for your friend you
+forgot to be afraid. Because you are Oriana, the fairy whom I gave the plants, animals
+and men of the forest to. You are the one who watches over them, so they can live in
+peace. When you abandoned them, the animals ran for the hills, the flowers dried up
+and the men left to the city, where they got lost in the crossroads. But today you have
+been true to your promise. For that, I order that two wings sprout out of your shoulders
+once again.”
+As she said this, the Fairy Queen waved her right hand in the air.
+And new wings sprouted from Oriana’s shoulders.
+“Wings, wings, oh, my wings!” shouted Oriana, trembling with joy.
+And as she gave her a magic wand, the Fairy Queen told her:
+“Take this magic wand and don’t forget your promise ever again!”
+As soon as the Fairy Queen finished talking, she was gone like a lightning bolt.
+Oriana and the old woman flew back up to the path, then Oriana set her down
+and guided her into the forest.
+Out of her mind with fright, the old woman looked around her and said:
+“Oh, it seems like the fairies are back!”
+But Oriana was already gone, flying as fast as an arrow, straight to the hills.
+When she got there, she called for the deer, the wolf, the fox, the porcupine and
+the rabbits and asked them for the miller’s son.
+The animals saw how she was a fairy with wings and a magic wand and gave her
+the child.
+Oriana took him in her arms and flew very high, above the clouds, until she
+reached the city.
+73
+When she saw the street where the miller lived, she came down and knocked on
+the door. The door opened to show the miller’s wife, who screamed when she saw a
+fairy holding her son.
+“Here is the son you lost,” said Oriana.
+“Now,” said the miller’s wife, “I see you’re a fairy. Tomorrow we’ll all go back to
+the forest.”
+And Oriana went to the prison. She made the guards fall asleep with her magic
+wand, opened the cell and freed the woodcutter.
+The woodcutter, his wife and his son returned to the forest that same day.
+When the night came, Oriana walked into the café. The waiter was asleep,
+leaning against the bar; the four men talked with their backs to the room. In a table at
+the end of the café, pale and alone, was the Poet.
+Oriana walked across the café unseen. She stopped in front of the Poet and
+touched his hand softly.
+He looked up and saw her. He saw her wings and her magic wand. He saw she
+was floating, not letting her feet touch the ground.
+“It’s me,” she said.
+“Now I see you. Now I see you are a fairy. Thank you, Oriana. For coming back.”
+Oriana held his hand and they left the café without anyone seeing them. They
+walked through the city and its flashy crossroads, they walked through the squares,
+avenues and piers. And they left the city.
+They took the long path by the abyss to the forest.
+The full moon lit the hills and the fields.
+When they got to the forest, the Poet asked:
+“Oriana, can you enchant everything?”
+And Oriana rose her magic wand, and everything was enchanted.

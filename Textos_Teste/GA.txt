@@ -1,0 +1,97 @@
+Note: Information in this article was accurate at the time of original publication. We encourage you to visit the websites of the Centers for Disease Control and Prevention (CDC), World Health Organization (WHO), and your state and local government for the latest information on H5N1.
+
+Avian influenza A (H5N1), or bird flu, has killed millions of wild birds and caused sporadic outbreaks among poultry. In the past few months, there has been an ongoing multistate outbreak among cows in the United States. Three dairy workers have been infected with the virus, marking the first cow-to-human transmissions.
+
+While the first two dairy workers to be infected reported eye infections and recovered quickly, the most recent case, in a dairy worker in Michigan, was the first in which a person experienced “typical symptoms of acute respiratory illness associated with influenza virus infection,” including a cough, according to the Centers for Disease Control and Prevention (CDC).
+
+Meanwhile, in the wake of the COVID-19 pandemic, the thought of another virus with the potential to spread among humans is raising concern.
+
+The good news is that there have been no reports of person-to-person bird flu transmission, and H5N1 is not considered a major public health threat in the U.S. at this time. The CDC has categorized the risk to the general public as “low,” but continues to monitor the situation carefully, which includes watching for any spread of the virus to, or among humans in jurisdictions where the virus has been identified in either animals or people.
+
+“In the short term, there is very little threat,” says Yale Medicine infectious diseases specialist Scott Roberts, MD. “In the long term, in the coming years or decades, however, I’m much more concerned.” He gives two reasons: One is that there has been a mortality (or death) rate of about 50% in the almost 900 people around the world who have been infected with bird flu between 2003 and 2024.
+
+However, 50% may be an overestimate, Dr. Roberts says, adding that there may be cases where people have no symptoms, are only mildly symptomatic, or haven’t sought care for their symptoms. He also noted that if the virus did spread in humans, the percentage might be significantly lower if preventive approaches, including a vaccine, and treatments were made widely available.
+
+Another reason for concern is that bird flu is now being detected in new animal species. In addition to outbreaks in cows—a relatively new development for the bird flu virus—there have been sporadic infections in some wild mammals. “It’s natural to wonder if it’s only a matter of time before this virus is able to spread among humans,” Dr. Roberts says.
+
+Below, Dr. Roberts answers eight common questions people have about bird flu.
+
+1. What is H5N1 bird flu, and where did the new wave of infections start?
+"Avian influenza A (H5N1)," "bird flu," and "H5N1 bird flu" all refer to an illness caused by influenza type A viruses, which primarily affect birds. H5N1 bird flu was first identified in geese in China in 1996 and in people in Hong Kong the following year. Almost 25 years later, in 2020, a new variant of H5N1, referred to as Highly Pathogenic Avian Influenza (HPAI), was detected in wild birds in Europe; it was first seen in birds in the U.S. and Canada in late 2021, and has since been detected in a variety of wild bird species in all 50 states.
+
+(The term “highly pathogenic” relates to how the virus impacts birds, not necessarily humans. There is also a low pathogenic avian influenza [LPAI] that usually causes mild illness in birds and poultry; however, some LPAI strains can mutate into strains that can cause severe illness and even death in poultry.)
+
+In February 2022, the virus began causing sporadic outbreaks of HPAI H5N1 in backyard and commercial poultry flocks in the U.S., causing serious illness and death in infected chickens. The number of outbreaks has increased and spread over time—as of May 2024, the CDC reported poultry outbreaks in 48 states.
+
+In addition, there have been sporadic infections in mammals (including bears, bobcats, minks, mountain lions, raccoons, skunks, and others), according to the CDC. And now, as of early May, there have been outbreaks in dairy cattle in nine states.
+
+Altogether, there have been four human cases in the U.S. and none involved person-to-person spread—all were infected after exposure to animals presumed to have bird flu. The first case, reported in April 2022 in Colorado, involved a person who reported mild symptoms after being exposed to poultry also presumed to be infected, although this case may have been a contamination of the nasal passages with the virus as opposed to an actual infection, according to the CDC.
+
+The most recent infections were reported in dairy workers who had been exposed to cows presumed to have the virus. In the most recent case, at the end of May, the farm worker had respiratory symptoms, according to the Michigan health department; the person had no fever but developed a cough and experienced “eye discomfort’ with a watery discharge from the eye, according to a statement from the CDC. The farm worker was recovering with the help of antiviral drugs.
+
+The CDC reported the first cow-to-human transmission in April 2024 in Texas; that case was described in a letter to the editor published in The New England Journal of Medicine. In mid-May, another dairy worker in Michigan was infected. In both cases, the people who tested positive for bird flu only had symptoms of eye infections (conjunctivitis has been associated with previous human avian influenza A infections). Both cases were mild and both people have recovered.
+
+2. Why is there concern about bird flu infecting cows?
+Dairy cows are a “new and unexpected host” of the H5N1 virus, and the spread of the virus among cows is a sign that it could mutate in them, making it easier for it to spread to other animals or potentially humans, according to the CDC.
+
+The disease appears to be milder in cows, although this could make it more difficult to track, Dr. Roberts says. “The virus is also infecting other animals,” he adds. “To me, that sounds like it's mutating to adapt, evolve, and infect new species.”
+
+Many experts are concerned about the possibility of this virus infecting pigs at some point, because pigs can be infected with both human and animal flu viruses, adds Dr. Roberts. “Then, we have this sort of mixing pot, where you can get a genetic reassortment of different flu strains. That's really the big, long-term concern that could take years or decades—if it were to happen,” he says.
+
+3. Is anyone at risk for bird flu?
+While the risk of a bird flu infection is very low for most people in the U.S., “people who work with birds or poultry, own them, or have recreational exposure to them are at higher risk than other people,” Dr. Roberts says. “I would say that anyone who works on a farm in a state that has reported animal infections, where the farmer has identified illness in their animals, should monitor for flu-like symptoms and contact public health officials if any symptoms develop.”
+
+4. Can I get tested for bird flu?
+At this point, there is no publicly available H5N1 test, and commercial tests cannot distinguish human influenza A viruses (such as H1N1) from bird flu (H5N1). The CDC says tracking the specimens that test positive for influenza A can be helpful in monitoring for unusual increases in flu activity that may be an early sign of the spread of new influenza A viruses, including H5N1. Dedicated bird flu testing can only be performed at public health laboratories.
+
+Any test for bird flu would need to be sent out to public health departments, says Dr. Roberts. “If you are concerned, alert your doctor, and they will need to talk to the state public health department,” he says. “However, at this point, I don't think they would authorize a test unless somebody was a farm worker or was working in an area or on a site where there was known H5N1 infection, since the risk for the general public is so low.”
+
+5. The virus has been found in milk—should people worry about the food supply?
+Bird flu in the milk supply has been a major concern among consumers, but the Food & Drug Administration (FDA) has been sampling retail milk and other dairy products, such as cottage cheese and sour cream, as well as powdered milk formula and powdered milk products sold as toddler formula; it reports that although dead byproducts of the virus have been present, it found no live infectious virus, thanks to pasteurization, a food production process of heating liquids for short periods of time to kill harmful bacteria.
+
+However, the FDA advises people not to drink, manufacture, or sell raw cow milk and products, such as cheeses, ice cream, and yogurt, made with raw milk. (Raw, unpasteurized milk and milk products are sold legally in most states.) While neither of the two human infections was linked to raw milk, more than half of a resident population of domestic cats on a farm in Texas died after they were fed raw, unpasteurized colostrum (milk produced during the first few days after birth) from H5N1-infected cows, according to a CDC report.
+
+There also is no evidence that anyone in the U.S. has gotten bird flu after eating properly handled and cooked poultry products, but the CDC notes that uncooked poultry and poultry products (such as blood) may have caused a small number of H5N1 infections in people in Southeast Asia.
+
+Poultry and other animal foods should be safe to eat as long as they are prepared properly, according to the CDC. This includes cooking poultry and eggs to an internal temperature of 165°F, which can kill viruses, including H5N1. (Use a food thermometer to be sure.) The FDA provides more information on raw milk on its website.
+
+6. What are the symptoms of bird flu?
+They range from no symptoms to mild flu-like illness to severe illness that requires hospitalization. The dairy worker infected in the U.S. in April reported mild illness, with the main symptom being conjunctivitis (irritation or inflammation of the conjunctiva, a clear mucous membrane that protects the eye). Other common symptoms are consistent with influenza, according to the CDC:
+
+Cough
+Fatigue
+Fever
+Headaches
+Muscle or body aches
+Runny nose
+Shortness of breath
+7. Are there vaccines or treatments for bird flu if it were to spread in humans?
+There are currently no vaccines for bird flu, but the CDC reports that there has been preliminary work toward a targeted vaccine, in case one is needed. (The seasonal flu shot cannot prevent bird flu infection.)
+
+If anyone were to become infected with bird flu—or is suspected of having an infection—the CDC recommends treatment as soon as possible with antiviral drugs.
+
+There are several FDA-approved antiviral drugs for seasonal flu that can be used for bird flu, such as oseltamivir phosphate (available generically or under the brand name Tamiflu®) and baloxavir marboxil (Xofluza®). Both are oral prescription medications that should be taken as soon as possible, within 48 hours of experiencing symptoms.
+
+Antiviral drugs can also be given soon after a person has had unprotected exposure to an infected animal or sick or dead poultry, meaning they did not wear gloves, face masks, eye protection, or other protective gear, according to the CDC.
+
+8. What precautions can you take to avoid bird flu?
+Since bird flu isn’t spreading among humans, most people don’t need to worry about precautions, Dr. Roberts says. But people who are exposed to cows or poultry, especially in states where bird flu has been identified, should consider them, he says. So should hunters who handle wild birds and people who raise chickens at home.
+
+One problem is that experts are still learning how bird flu is transmitted. “We understand much less about H5N1 transmission than we do about COVID,” Dr. Roberts says. But most people infected with bird flu get it from unprotected contact with infected birds, according to the CDC. The agency adds that infection also can happen when people inhale the virus in droplets or dust from the infected animals, or touch a contaminated surface.
+
+The CDC has a list of recommended precautions, including:
+
+Avoid sick or dead birds. Check with your state or local government about their policy for reporting wild birds and other animals that look sick or are dead. Avoid wild birds even if they don’t look sick, since they can have an infection without symptoms.
+Don’t touch surfaces or materials that could be contaminated. That includes animal litter or feces, mucus, raw milk, or saliva.
+Avoid poultry farms and bird markets. If you must visit those places, wear a well-fitting face mask and don’t touch the animals.
+Use the following protective measures if you are unable to avoid contact with wild birds or sick or dead animals:
+Wear gloves and, after removing them, wash your hands properly.
+Wear an N95 respirator or a well-fitting mask.
+Use eye protection, such as goggles.
+It’s important to throw away your gloves and face mask after any exposure.
+
+Check the CDC website for further advice for specific situations and groups, including hunters and people who raise chickens in their backyards. It also offers special advice for people who work with animals on farms.
+
+For anyone who wants to keep up with the news about bird flu, the CDC is providing regular updates based on its flu surveillance systems.
+
+Information provided in Yale Medicine articles is for general informational purposes only. No content in the articles should ever be used as a substitute for medical advice from your doctor or other qualified clinician. Always seek the individual advice of your health care provider with any questions you have regarding a medical condition.

@@ -1,0 +1,46 @@
+In the spring of 2022, Helen C.* began experiencing a strange mental "fogginess." Simple words slipped from her grasp during conversations, her job became a challenge, and fatigue was a constant companion. She started losing weight and found it harder and harder to concentrate.
+
+Not long thereafter, Helen, with no prior history of mental health issues and a supportive family, ended up in a psychiatric hospital for severe depression, pronounced weight loss, significant weakness, and a sudden onset of anxiety based on a false belief that she had cancer. After an inpatient stay, she left with a prescription for antidepressants. The sudden downturn of her mental health puzzled those close to her. The only noteworthy events in her recent medical history? Two bouts of COVID-19.
+
+This scenario is not unique. Ebony Dix, MD, assistant professor of psychiatry at Yale School of Medicine (YSM), who oversaw the Inpatient COVID Psychiatry Unit at Yale New Haven Hospital in 2022, observed a similar pattern in some of her patients. Dr. Dix often found herself asking, "Could their new depression or anxiety be linked to COVID-19 and, if so, when did they have it?"
+
+Does COVID-19 raise the risk for depression and anxiety?
+14-Depression_2100x1440
+
+For Helen, whose condition was detailed in a case report published in Frontiers in Psychiatry, a combination of antidepressant medication and various non-drug therapies—including visual art, music, physical therapy, and psychotherapy—relieved her depressive symptoms. But how common is a story like hers?
+
+Research suggests that as many as 90% of individuals hospitalized with COVID-19 and 25% of non-hospitalized adults experience at least one brain or mind-related symptom, including fatigue, headache, sleep disturbances, depression, or anxiety, six months after the illness. Symptoms of depression, which have been shown to generally decrease as more time passes following COVID-19, can include a loss of interest in activities, feeling down or hopeless, difficulty sleeping, low energy, and trouble concentrating. Anxiety symptoms, which also have been found to ease as more time passes post-COVID-19, involve constant worrying, feeling nervous or on edge, irritability, and finding it difficult to relax. With a significant portion of patients experiencing these symptoms, the question arises: Is COVID-19 causing changes to the brain?
+
+Does COVID-19 cause inflammation in the brain?
+An article published in Neuron notes that SARS-CoV-2, the virus that causes COVID-19, may trigger inflammation in the brain through various potential pathways. For example, COVID-19 can induce severe inflammation in the body that may lead to the spillover of inflammatory molecules into the brain, causing damage from inflammation originating outside of the brain. The virus may also directly affect the brain, in particular causing damage to two types of cells crucial for brain activity and repair: neurons (the brain cells) and glial cells (the support cells). This damage may contribute to such symptoms as fatigue, brain fog, memory issues, as well as depression and anxiety. Other potential mechanisms are also being explored to explain COVID-19’s effect on the brain.
+
+Additional research has identified another piece of the puzzle concerning the development of depression and anxiety. Scientists comparing blood samples from hundreds of individuals both with and without Long COVID discovered that patients experiencing persistent Long COVID symptoms had low levels of serotonin. Often referred to as a “natural mood booster,” serotonin is a vital neurotransmitter that regulates mood, memory, and other brain functions. Notably, popular antidepressant medications like Prozac or Zoloft, known as selective serotonin reuptake inhibitors (SSRIs), aim to boost serotonin levels in the brain. This research suggests a potential link between serotonin and Long COVID-associated depression.
+
+COVID-19 can impair normal metabolism in the brain
+Scientists, using a brain-imaging technique called a PET scan, have discovered another oddity. In a study of 35 patients with Long COVID, researchers at the Aix-Marseille University, in Marseille, France, found that patients with persistent cognitive symptoms three weeks after infection, including pain, insomnia, and memory impairments, had a reduction in the level of glucose uptake (hypometabolism) in their brain. This impaired glucose metabolism, which fuels normal brain function, could specifically be linked to depressive symptoms, including insomnia.
+
+Another study conducted in France involved 143 patients with Long COVID at an average of 11 months after their COVID infection. The study showed that about half of patients had reduced glucose metabolism in the brain. This additional piece of evidence not only links impaired brain metabolism to neuropsychiatric symptoms, but also demonstrates the heterogeneity in the patient biology underlying Long COVID.
+
+How do we treat depression and anxiety related to Long COVID?
+As was the case for Helen, treating depression and anxiety often involves a combination of approaches. While there are various medications, like SSRIs, available to address symptoms, patients may also engage in a range of behavior changes and therapies. These include cognitive behavioral therapy (CBT), which can be done in person with a therapist or online through telehealth services. Patients may also explore mind-body approaches, such as meditation, yoga, or relaxation techniques, to relieve anxiety symptoms.
+
+The U.S. Department of Health and Human Services (HHS) has also recognized the toll that Long COVID can take on one’s mental health. In an advisory issued in June 2023, HHS warned that Long COVID can have "devastating effects on the mental health of those who experience it, as well as their families," stemming not only from the illness itself but also from “social isolation, financial insecurity, caregiver burnout, and grief.”
+
+The Substance Abuse and Mental Health Services Administration (SAMHSA) has also issued an advisory, which encourages doctors to look for psychiatric symptoms as well as physical symptoms to identify and diagnose Long COVID. The SAMHSA recommends an interdisciplinary treatment approach that may include physical medicine and rehabilitation, individual and group psychotherapy, and neurorehabilitation.
+
+Indeed, effectively dealing with Long COVID-related depression and anxiety often requires different tools from the healthcare toolkit. The most successful outcomes usually stem from a strong partnership between the patient and their care team. Dr. Dix emphasizes the importance of "collaboration between psychiatry and other medical disciplines" for impactful treatment. This comprehensive approach ensures that the whole person is cared for.
+
+*Not her real name.
+
+Brooks Leitner is an MD/PhD candidate at Yale School of Medicine.
+
+The last word from Lisa Sanders, MD:
+Depression and anxiety are two of the most common symptoms of Long COVID. While many may think it is reasonable to be depressed or anxious when you continue to feel bad weeks, months, or even years after an infection, research suggests that for some of these patients, the depression or anxiety isn’t caused by Long COVID but is, instead, part of it. As with so many of the symptoms of Long COVID, the emotional turmoil caused by the disease seems to respond to the same medical and therapeutic approach that has been used for others with these diseases.
+
+Perhaps a better understanding of what causes the depression and anxiety of Long COVID will provide us with other more targeted treatments. And perhaps that understanding will not only reveal something about SARS-CoV-2’s effect on the brain, but also about the physiology of depression and anxiety in the rest of us.
+
+Read other installments of Long COVID Dispatches here.
+
+If you’d like to share your experience with Long COVID for possible use in a future post (under a pseudonym), write to us at: LongCovidDispatches@yale.edu
+
+Information provided in Yale Medicine content is for general informational purposes only. It should never be used as a substitute for medical advice from your doctor or other qualified clinician. Always seek the individual advice of your health care provider with any questions you have regarding a medical condition.

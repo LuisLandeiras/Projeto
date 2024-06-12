@@ -1,4 +1,4 @@
-import spacy, random, csv, Tree, TCM, threading, RM, SA, GC, os
+import spacy, random, csv, Tree, TCM, threading, RM, SA, os
 import pandas as pd
 import numpy as np
 
@@ -19,16 +19,16 @@ def Amostras(Texto):
     
     Sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.split()) >= 4]
     
-    #Alterar maneira de pegar frases para samples possivelmente repetidas
+    #Lista onde é guardada 60 frases
     Frases = random.sample(Sentences,60)
-    
+        
     #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
     Samples = []
     for _ in range(100):
         Sample = random.sample(Palavras,10)
         Samples.append(Sample)
     
-    return Samples, Frases # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 10 frases de um texto
+    return Samples, Frases # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 60 frases de um texto
 
 def Resultados(Samples):
     ResultadosA = {}
@@ -124,12 +124,12 @@ def Csv_Csv(input_csv, output_csv):
     with open(input_csv, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
-            text = row['Text']
+            text = row['Average']
             filtered_texts.append(text)
 
     with open(output_csv, 'a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['Text'])
+        writer.writerow(['T'])
 
         for text in filtered_texts:
             writer.writerow([text])
@@ -185,10 +185,11 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['Smog'][0],
                 ResultadosA['Tree'][0],
                 ResultadosA['WordLength'][0],
-                3
+                0
             ])
     return
 
+#Filtra os textos com mais de 5000 palavras
 def CsvFilter(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -198,9 +199,10 @@ def CsvFilter(input_file, output_file):
             parts = line.strip().split(',')
             if len(parts) >= 7:
                 text = ','.join(parts[6:])
-                if len(text.split()) > 5000:
+                if len(text.split()) > 4000:
                     f_out.write(','.join(parts) + '\n')
 
+#Filtra os textos por idades
 def CsvTier(input_csv, output_csv):
     with open(input_csv, 'r', newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -225,7 +227,8 @@ def Csv_Ave(csv_file):
             count += 1
             
     return round(total/count,3)
-        
+
+#Copia uma diretoria de ficheiros txt para csv     
 def txt_to_csv(input_dir, output_file):
     # Open CSV file for writing
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
@@ -243,50 +246,42 @@ def txt_to_csv(input_dir, output_file):
 
 def Ave(File):
     df = pd.read_csv(File)
-    df_num = df.drop(columns=['Text','SentimentNeg','SentimentNeu','SentimentPos','Classification'])
+    df_num = df.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos'])
     df_num = df_num.apply(pd.to_numeric, errors='coerce')
     df['Average'] = df_num.mean(axis=1).round(2)
 
-    #print(((df['Average'] < 14.50 ) & (df['Average'] >= 13.50)).sum())
     conditions = [
         df['Average'] < 13,
         (df['Average'] >= 13) & (df['Average'] < 13.50),
-        (df['Average'] >= 13.50) & (df['Average'] < 14.50),
-        df['Average'] >= 14.50
+        (df['Average'] >= 13.50) & (df['Average'] < 14),
+        df['Average'] >= 14
     ]
     choices = [0, 1, 2, 3]
     
     df['Classification'] = np.select(conditions, choices)
-    df.to_csv('A.csv', index=False)
+    df.to_csv('B.csv', index=False)
 
+#Dropa uma coluna especifica
 def CSV():
-    # Read the CSV file into a DataFrame
-    df = pd.read_csv('A.csv')
-    
-    # Drop the specified column
+    df = pd.read_csv('B.csv')
     df = df.drop(columns=['Average'])
-    
-    # Save the updated DataFrame to a new CSV file
-    df.to_csv('B.csv', index=False)   
+    df.to_csv('DataV3.csv', index=False)   
 
-#T1: < 13 85
-#T2: 13 <= x < 13.50 54
-#T3: 13.50 <= x < 14.50 68
-#T4: >= 14.50 31
+def Count(File):
+    df = pd.read_csv(File)
 
-#Text,ARI,Coleman,Grade,LexicalDensity,LexicalDiversity,Reading,SentenceLength,SentimentNeg,SentimentNeu,SentimentPos,Smog,Tree,WordLength,Classification
-#Ave("Data.csv")
-#CSV()        
-#print("Tier1: ", Csv_Ave('Tier1Algo.csv'))
-#print("Tier2: ", Csv_Ave('Tier2Algo.csv'))
-#print("Tier3: ", Csv_Ave('Tier3Algo.csv'))
-#print("Tier4: ", Csv_Ave('Tier4Algo.csv'))
-#
-#CsvTier("Tier.csv", "Tier3.csv")
-#CsvFilter("blogtext.csv", "Tier.csv")
-#Txt_Csv("Textos/","teste.csv")
-#Csv_Csv("TBons.csv", "Texto.csv")
-#CsvAlgo("Tier4.csv", "Tier4Algo.csv")
+    t0_count = df[df['T'] < 13].shape[0]
+    t1_count = df[(df['T'] >= 13) & (df['T'] < 13.50)].shape[0]
+    t2_count = df[(df['T'] >= 13.50) & (df['T'] < 14)].shape[0]
+    t3_count = df[df['T'] >= 14].shape[0]
 
-#Tier1 = 13-22; Tier2 = 23-32; Tier3 = 33-45
-#txt_to_csv("Textos/", "Tier4.csv")
+    print(f"t0: {t0_count}, t1: {t1_count}, t2: {t2_count}, t3: {t3_count}")
+
+#CsvFilter("blogtext.csv", "Blogs.csv")
+#Csv_Csv("B.csv", "T1.csv")
+#CsvAlgo("TextosV4.csv", "TextosAlgoV4.csv")
+#Ave("TextosAlgoV3.csv")
+#CSV()
+
+#Count("T.csv")
+#print(Csv_Ave("DataV4.csv"))

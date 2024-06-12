@@ -1,0 +1,3 @@
+Heuristicas utilizadas:
+    -Idade dos escritores: Tier1 = 13-22; Tier2 = 23-32; Tier3 = 33-45
+    -Melhor tier foi definido por um grupo de textos com, supostamente, boa qualidade
