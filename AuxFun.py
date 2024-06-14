@@ -1,4 +1,4 @@
-import spacy, random, csv, Tree, TCM, threading, RM, SA, os
+import spacy, random, csv, Tree, TCM, threading, RM, SA_NLTK, os, SA_Spacy
 import pandas as pd
 import numpy as np
 
@@ -49,7 +49,7 @@ def Resultados(Samples):
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA.SentimentA(Samples[1])
+    def TSentimentA(): ResultadosA['Sentiment'] = SA_Spacy.SentimentA(Samples[1])
     
     #GC
     #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
@@ -92,7 +92,7 @@ def ResultadosC(Samples):
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAve(Samples)
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA.Sentiment(Samples)
+    def TSentimentA(): ResultadosA['Sentiment'] = SA_NLTK.Sentiment(Samples)
     
     #GC
     #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples)
@@ -124,7 +124,7 @@ def Csv_Csv(input_csv, output_csv):
     with open(input_csv, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
-            text = row['Average']
+            text = row['ClassificationS']
             filtered_texts.append(text)
 
     with open(output_csv, 'a', newline='', encoding='utf-8') as file:
@@ -159,10 +159,12 @@ def CsvAlgo(input_csv, output_csv):
             'SentimentNeg',
             'SentimentNeu',
             'SentimentPos',
+            'Compound',
             'Smog',
             'Tree',
             'WordLength',
-            'Classification'
+            'Classification',
+            'ClassificationS'
             ])
 
         for Texto in filtered_texts:
@@ -182,9 +184,11 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['Sentiment'][0],
                 ResultadosA['Sentiment'][1],
                 ResultadosA['Sentiment'][2],
+                ResultadosA['Sentiment'][3],
                 ResultadosA['Smog'][0],
                 ResultadosA['Tree'][0],
                 ResultadosA['WordLength'][0],
+                0,
                 0
             ])
     return
@@ -246,7 +250,10 @@ def txt_to_csv(input_dir, output_file):
 
 def Ave(File):
     df = pd.read_csv(File)
-    df_num = df.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos'])
+    
+    dfs_num = df.drop(columns=['Text','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength','Classification','ClassificationS'])
+    
+    df_num = df.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos','ClassificationS','Compound'])
     df_num = df_num.apply(pd.to_numeric, errors='coerce')
     df['Average'] = df_num.mean(axis=1).round(2)
 
@@ -258,14 +265,23 @@ def Ave(File):
     ]
     choices = [0, 1, 2, 3]
     
+    conditionss = [
+        (dfs_num['Compound'] < -0.2) & (dfs_num['SentimentNeg'] > dfs_num['SentimentPos']),
+        (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
+        (dfs_num['Compound'] > 0.2) & (dfs_num['SentimentPos'] > dfs_num['SentimentNeg'])
+    ]
+    #0: Negativo, 1:Neutro, 2:Positivo
+    choicess = [0, 1, 2]
+    
     df['Classification'] = np.select(conditions, choices)
+    df['ClassificationS'] = np.select(conditionss, choicess)
     df.to_csv('B.csv', index=False)
 
 #Dropa uma coluna especifica
 def CSV():
     df = pd.read_csv('B.csv')
     df = df.drop(columns=['Average'])
-    df.to_csv('DataV3.csv', index=False)   
+    df.to_csv('DataV4.csv', index=False)   
 
 def Count(File):
     df = pd.read_csv(File)
@@ -278,10 +294,27 @@ def Count(File):
     print(f"t0: {t0_count}, t1: {t1_count}, t2: {t2_count}, t3: {t3_count}")
 
 #CsvFilter("blogtext.csv", "Blogs.csv")
-#Csv_Csv("B.csv", "T1.csv")
-#CsvAlgo("TextosV4.csv", "TextosAlgoV4.csv")
-#Ave("TextosAlgoV3.csv")
+
+
+#CsvAlgo("TextosV3.csv", "TextosAlgoV4.csv")
+#Ave("TextosAlgoV4.csv")
 #CSV()
+#Csv_Csv("B.csv", "T1.csv")
 
 #Count("T.csv")
 #print(Csv_Ave("DataV4.csv"))
+
+#for files in os.listdir("Textos_Teste/"):
+#    file = File("Textos_Teste/" + files)
+#    amostra = Amostras(file)
+#    print("\n\n\n"+files)
+#    #print("Spacy:", SA_Spacy.Sentiment(file))
+#    print("Spacy A:", SA_Spacy.SentimentA(amostra))
+#    print("----------------------------------------")
+#    #print("NLTK:", SA_NLTK.Sentiment(file))
+#    print("NLTK A:", SA_NLTK.SentimentA(amostra))
+
+
+
+
+

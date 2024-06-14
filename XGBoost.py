@@ -10,10 +10,13 @@ import seaborn as sns
 def XGBoostTrain(data):
     warnings.filterwarnings('ignore', category=FutureWarning)
     
-    data = pd.read_csv("DataV3.csv")
+    data = pd.read_csv("DataV4.csv")
     
-    X = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos'])
-    y = data['Classification']
+    #X = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS'])
+    #y = data['Classification']
+    
+    X = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength'])
+    y = data['ClassificationS']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
 
@@ -23,7 +26,8 @@ def XGBoostTrain(data):
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
-    if(round(accuracy * 100,2) > 90): model.save_model('XGBModelV3.txt')
+    #if(round(accuracy * 100,2) > 90): model.save_model('XGBModelV4.txt')
+    if(round(accuracy * 100,2) > 90): model.save_model('XGBModelV4S.txt')
 
     print(round(accuracy * 100,2))
 
@@ -39,17 +43,19 @@ def preprocess_text(text):
         'LexicalDiversity': Resultado['LexicalDiversity'][0],
         'Reading': Resultado['Reading'][0],
         'SentenceLength': Resultado['SentenceLength'][0],
-        #'SentimentNeg': Resultado['Sentiment'][0],
-        #'SentimentNeu': Resultado['Sentiment'][1],
-        #'SentimentPos': Resultado['Sentiment'][2],
         'Smog': Resultado['Smog'][0],
         'Tree': Resultado['Tree'][0],
         'WordLength': Resultado['WordLength'][0],
-    }]), Resultado['Sentiment']
+    }]), pd.DataFrame([{
+        'SentimentNeg': Resultado['Sentiment'][0],
+        'SentimentNeu': Resultado['Sentiment'][1],
+        'SentimentPos': Resultado['Sentiment'][2],
+        'Compound': Resultado['Sentiment'][3],
+    }])
 
 def XGBoostPredict(Texto):
     model = xgb.XGBClassifier()
-    model.load_model('XGBModelV3.txt')
+    model.load_model('XGBModelV4.txt')
     
     #data = pd.read_csv("DataV3.csv")
     #feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos']).columns
@@ -65,28 +71,32 @@ def XGBoostPredict(Texto):
     #plt.title('Confusion Matrix')
     #plt.show()
     
-    TextoP, Sentiment = preprocess_text(Texto)
-    
-    SentLabels = ['SentimentNeg', 'SentimentNeu', 'SentimentPos']
-    SentIndex = Sentiment.index(max(Sentiment))
-    SentName = SentLabels[SentIndex]
-    
-    if SentName == 'SentimentNeu': SentName = "Neutro"
-    if SentName == 'SentimentPos': SentName = "Positivo"
-    if SentName == 'SentimentNeg': SentName = "Negativo"
-    
+    TextoP = preprocess_text(Texto)[0]
     prediction = model.predict(TextoP)
+
+    return prediction[0]
+
+
+def XGBoostPredictS(Texto):
+    model = xgb.XGBClassifier()
+    model.load_model('XGBModelV4S.txt')
     
-    return prediction[0], SentName
+    TextoP = preprocess_text(Texto)[1]
+    prediction = model.predict(TextoP)
 
-#AccuracyV2 95.83
-#Accuracy SentV2 91.67
+    return prediction[0]
 
-#AccuracyV3 92.68
+#AccuracyV2 95.83%
+#Accuracy SentV2 91.67%
 
-file = AuxFun.File("Textos_Teste/PF.txt")
-for _ in range(10):
-   print(XGBoostPredict(file))
+#AccuracyV3 92.68%
+
+#AccuracyV4 90.24%
+#AccuracyVS4 100%
+
+#file = AuxFun.File("Textos_Teste/Sad.txt")
+#for _ in range(10):
+#   print(XGBoostPredict(file))
 
 #for _ in range(100):
-#    XGBoostTrain("DataV3.csv")
+#    XGBoostTrain("DataV4.csv")

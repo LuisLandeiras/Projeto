@@ -13,4 +13,5 @@ def sub():
     Texto = result.get('text')
     
     Resultado = XGBoost.XGBoostPredict(Texto)
-    return render_template('index.html', Result=Resultado)
+    ResultadoS = XGBoost.XGBoostPredictS(Texto)
+    return render_template('index.html', Result=Resultado, ResultS=ResultadoS)

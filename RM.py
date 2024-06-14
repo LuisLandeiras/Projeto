@@ -1,19 +1,19 @@
 # Readability Metrics
 import spacy, syllapy, math, re, time
-from spacy_readability import Readability
+import textdescriptives as td
 
 nlp = spacy.load('en_core_web_sm')
-nlp.add_pipe(Readability())
+nlp.add_pipe('textdescriptives/readability')
 
-def Read(File): 
+def Read(File):
     t = time.process_time()
     doc = nlp(File)
-
-    fleschg = doc._.flesch_kincaid_grade_level
-    fleschr = doc._.flesch_kincaid_reading_ease
-    ari = doc._.automated_readability_index
-    coleman = doc._.coleman_liau_index
-    smog = doc._.smog
+    
+    ari = doc._.readability['automated_readability_index']
+    fleschg = doc._.readability['flesch_kincaid_grade']
+    fleschr = doc._.readability['flesch_reading_ease']
+    coleman = doc._.readability['coleman_liau_index']
+    smog = doc._.readability['smog']
     
     return round(fleschg,3), round(fleschr,3), round(ari,3), round(coleman,3), round(smog,3), time.process_time() - t
 
