@@ -1,4 +1,4 @@
-import spacy, random, csv, Tree, TCM, threading, RM, SA_NLTK, os, SA_Spacy
+import spacy, random, csv, Tree, TCM, threading, RM, SA_NLTK, os, SA_Spacy, SA_NLTK
 import pandas as pd
 import numpy as np
 
@@ -49,7 +49,7 @@ def Resultados(Samples):
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA_Spacy.SentimentA(Samples[1])
+    def TSentimentA(): ResultadosA['Sentiment'] = SA_NLTK.SentimentA(Samples[1])
     
     #GC
     #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
@@ -270,6 +270,12 @@ def Ave(File):
         (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
         (dfs_num['Compound'] > 0.2) & (dfs_num['SentimentPos'] > dfs_num['SentimentNeg'])
     ]
+    
+    #conditionss = [
+    #    (dfs_num['Compound'] < -0.2),
+    #    (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
+    #    (dfs_num['Compound'] > 0.2)
+    #]
     #0: Negativo, 1:Neutro, 2:Positivo
     choicess = [0, 1, 2]
     
@@ -281,7 +287,7 @@ def Ave(File):
 def CSV():
     df = pd.read_csv('B.csv')
     df = df.drop(columns=['Average'])
-    df.to_csv('DataV4.csv', index=False)   
+    df.to_csv('DataV4_2_NLTK.csv', index=False)   
 
 def Count(File):
     df = pd.read_csv(File)
@@ -293,19 +299,16 @@ def Count(File):
 
     print(f"t0: {t0_count}, t1: {t1_count}, t2: {t2_count}, t3: {t3_count}")
 
-#CsvFilter("blogtext.csv", "Blogs.csv")
-
-
 #CsvAlgo("TextosV3.csv", "TextosAlgoV4.csv")
 #Ave("TextosAlgoV4.csv")
 #CSV()
-#Csv_Csv("B.csv", "T1.csv")
 
+#Csv_Csv("B.csv", "T1.csv")
 #Count("T.csv")
 #print(Csv_Ave("DataV4.csv"))
 
-#for files in os.listdir("Textos_Teste/"):
-#    file = File("Textos_Teste/" + files)
+#for files in os.listdir("Textos/"):
+#    file = File("Textos/" + files)
 #    amostra = Amostras(file)
 #    print("\n\n\n"+files)
 #    #print("Spacy:", SA_Spacy.Sentiment(file))

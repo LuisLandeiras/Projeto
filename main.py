@@ -12,6 +12,6 @@ def sub():
     result = request.form
     Texto = result.get('text')
     
-    Resultado = XGBoost.XGBoostPredict(Texto)
-    ResultadoS = XGBoost.XGBoostPredictS(Texto)
+    Resultado = XGBoost.XGBoostPredict(Texto,'XGBModelV4_Spacy.txt')
+    ResultadoS = XGBoost.XGBoostPredictS(Texto,'XGBModelV4S_2_Spacy.txt')
     return render_template('index.html', Result=Resultado, ResultS=ResultadoS)

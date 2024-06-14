@@ -7,16 +7,17 @@ from xgboost import plot_importance
 import warnings,AuxFun
 import seaborn as sns
 
-def XGBoostTrain(data):
+def XGBoostTrain(FileIn, FileOut, Aux):
     warnings.filterwarnings('ignore', category=FutureWarning)
     
-    data = pd.read_csv("DataV4.csv")
+    data = pd.read_csv(FileIn)
     
-    #X = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS'])
-    #y = data['Classification']
-    
-    X = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength'])
-    y = data['ClassificationS']
+    if Aux == 'Texto':
+        X = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS'])
+        y = data['Classification']
+    elif Aux == 'Sentimento':
+        X = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength'])
+        y = data['ClassificationS']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
 
@@ -26,8 +27,10 @@ def XGBoostTrain(data):
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
-    #if(round(accuracy * 100,2) > 90): model.save_model('XGBModelV4.txt')
-    if(round(accuracy * 100,2) > 90): model.save_model('XGBModelV4S.txt')
+    if Aux == 'Texto':
+        if(round(accuracy * 100,2) > 90): model.save_model(FileOut)
+    elif Aux == 'Sentimento':
+        if(round(accuracy * 100,2) > 90): model.save_model(FileOut)
 
     print(round(accuracy * 100,2))
 
@@ -53,9 +56,9 @@ def preprocess_text(text):
         'Compound': Resultado['Sentiment'][3],
     }])
 
-def XGBoostPredict(Texto):
+def XGBoostPredict(Texto, Model):
     model = xgb.XGBClassifier()
-    model.load_model('XGBModelV4.txt')
+    model.load_model(Model)
     
     #data = pd.read_csv("DataV3.csv")
     #feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos']).columns
@@ -76,10 +79,9 @@ def XGBoostPredict(Texto):
 
     return prediction[0]
 
-
-def XGBoostPredictS(Texto):
+def XGBoostPredictS(Texto, Model):
     model = xgb.XGBClassifier()
-    model.load_model('XGBModelV4S.txt')
+    model.load_model(Model)
     
     TextoP = preprocess_text(Texto)[1]
     prediction = model.predict(TextoP)
@@ -91,12 +93,21 @@ def XGBoostPredictS(Texto):
 
 #AccuracyV3 92.68%
 
-#AccuracyV4 90.24%
-#AccuracyVS4 100%
+#AccuracyV4_Spacy 90.24%
+#AccuracyVS4_1_Spacy 100%
+#AccuracyVS4_2_Spacy 100%
 
-#file = AuxFun.File("Textos_Teste/Sad.txt")
-#for _ in range(10):
-#   print(XGBoostPredict(file))
+#AccuracyVS4_1_NLTK 100%
+#AccuracyVS4_2_NLTK 100%
+#AccuracyV4_NLTK 90.24%
+
+file = AuxFun.File("Textos_Teste/Anxiety.txt")
+for _ in range(10):
+   print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
+   print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
+   print("Spacy:",XGBoostPredict(file,'XGBModelV4_Spacy.txt'))
+   print("SpacyS:",XGBoostPredictS(file,'XGBModelV4S_2_Spacy.txt'))
+   print("--------------------------------")
 
 #for _ in range(100):
-#    XGBoostTrain("DataV4.csv")
+#    XGBoostTrain('DataV4_2_NLTK.csv','XGBModelV4_2_NLTK.txt','Sentimento')
