@@ -14,42 +14,34 @@ def File(file):
 
 def Amostras(Texto):
     doc = nlp(Texto)
-
-    Palavras = [token.text for token in doc if token.is_alpha] # Separa cada token, guardando só palavras 
     
     Sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.split()) >= 4]
     
-    #Lista onde é guardada 60 frases
+    # Lista onde é guardada 60 frases
     Frases = random.sample(Sentences,60)
-        
-    #Lista onde é guardada 100 repetições com amostras de 100 palavras da lista Palavras
-    Samples = []
-    for _ in range(100):
-        Sample = random.sample(Palavras,10)
-        Samples.append(Sample)
     
-    return Samples, Frases # [0] Escolhe de forma random 100 amostras de 100 palavras de uma lista tokenizada; [1] Escolhe de forma random 60 frases de um texto
+    return Frases # Escolhe de forma random 60 frases de um texto
 
 def Resultados(Samples):
     ResultadosA = {}
             
-    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples[1])
-    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples[1])
-    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples[1])
-    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples[1])
-    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples[1])
+    def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples)
+    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples)
+    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples)
+    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples)
+    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples)
     
     #TCM Amostras
-    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples[1])
-    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples[0])
-    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples[1])
-    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples[1])
+    def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples)
+    def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples)
+    def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples)
+    def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples)
     
     #Tree Amostras
-    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples[1])
+    def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples)
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA_NLTK.SentimentA(Samples[1])
+    def TSentimentA(): ResultadosA['Sentiment'] = SA_NLTK.SentimentA(Samples)
     
     #GC
     #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
@@ -92,7 +84,7 @@ def ResultadosC(Samples):
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAve(Samples)
     
     #SA Amostras
-    def TSentimentA(): ResultadosA['Sentiment'] = SA_NLTK.Sentiment(Samples)
+    def TSentimentA(): ResultadosA['Sentiment'] = SA_Spacy.Sentiment(Samples)
     
     #GC
     #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples)
@@ -307,15 +299,16 @@ def Count(File):
 #Count("T.csv")
 #print(Csv_Ave("DataV4.csv"))
 
-#for files in os.listdir("Textos/"):
-#    file = File("Textos/" + files)
-#    amostra = Amostras(file)
-#    print("\n\n\n"+files)
-#    #print("Spacy:", SA_Spacy.Sentiment(file))
-#    print("Spacy A:", SA_Spacy.SentimentA(amostra))
-#    print("----------------------------------------")
-#    #print("NLTK:", SA_NLTK.Sentiment(file))
-#    print("NLTK A:", SA_NLTK.SentimentA(amostra))
+for files in os.listdir("Textos/"):
+    file = File("Textos/" + files)
+    amostra = Amostras(file)
+    print("\n\n\n"+files)
+    print(Resultados(amostra))
+    #print("Spacy:", SA_Spacy.Sentiment(file))
+    #print("Spacy A:", SA_Spacy.SentimentA(amostra))
+    #print("----------------------------------------")
+    #print("NLTK:", SA_NLTK.Sentiment(file))
+    #print("NLTK A:", SA_NLTK.SentimentA(amostra))
 
 
 

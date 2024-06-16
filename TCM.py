@@ -61,9 +61,10 @@ def WordLengthA(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        WordLength = sum(len(Amostra) for Amostra in Sample)
-        Soma += WordLength
-    return round(Soma/1000,3), time.process_time() - t
+        Sentence = str(Sample).split()
+        WordLength = sum(len(Amostra) for Amostra in Sentence)
+        Soma += WordLength/len(Sentence)
+    return round(Soma/len(Samples),3), time.process_time() - t
 
 def SentenceLengthA(Samples):
     t = time.process_time()
