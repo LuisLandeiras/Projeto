@@ -14,4 +14,4 @@ def sub():
     
     Resultado = XGBoost.XGBoostPredict(Texto,'XGBModelV4_Spacy.txt')
     ResultadoS = XGBoost.XGBoostPredictS(Texto,'XGBModelV4S_2_Spacy.txt')
-    return render_template('index.html', Result=Resultado, ResultS=ResultadoS)
+    return render_template('index.html', Result=Resultado[0], ResultS=ResultadoS, Algo=Resultado[1])

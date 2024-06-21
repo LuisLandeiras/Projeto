@@ -60,12 +60,19 @@ def XGBoostPredict(Texto, Model):
     model = xgb.XGBClassifier()
     model.load_model(Model)
     
-    #data = pd.read_csv("DataV3.csv")
-    #feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos']).columns
-    #plot_importance(model, importance_type='gain', max_num_features=10)
-    #plt.gca().set_yticklabels(feature_names) 
-    #plt.show()
+    data = pd.read_csv("DataV4_2_Spacy.csv")
+    feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS']).columns
 
+    booster = model.get_booster()
+    importance = booster.get_score(importance_type='gain')
+    sorted_importance = sorted(importance.items(), key=lambda x: x[1], reverse=True)
+    sorted_features = [(feature_names[int(k[1:])], v) for k, v in sorted_importance]
+    
+    #plot_importance(model, importance_type='gain', max_num_features=10)
+    #plt.gca().set_yticklabels([feature_names[int(k[1:])] for k, v in sorted_importance[:10]]) 
+    #plt.show()
+    
+    
     #cm = confusion_matrix(y_test, y_pred)
     #plt.figure(figsize=(10, 6))
     #sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
@@ -77,11 +84,17 @@ def XGBoostPredict(Texto, Model):
     TextoP = preprocess_text(Texto)[0]
     prediction = model.predict(TextoP)
 
-    return prediction[0]
+    return prediction[0], sorted_features
 
 def XGBoostPredictS(Texto, Model):
     model = xgb.XGBClassifier()
     model.load_model(Model)
+    
+    #data = pd.read_csv("DataV4_2_Spacy.csv")
+    #feature_names = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength']).columns
+    #plot_importance(model, importance_type='gain', max_num_features=10)
+    #plt.gca().set_yticklabels(feature_names) 
+    #plt.show()
     
     TextoP = preprocess_text(Texto)[1]
     prediction = model.predict(TextoP)
@@ -101,12 +114,12 @@ def XGBoostPredictS(Texto, Model):
 #AccuracyVS4_2_NLTK 100%
 #AccuracyV4_NLTK 90.24%
 
-#file = AuxFun.File("Textos_Teste/Anxiety.txt")
+#file = AuxFun.File("Textos_Teste/Sad.txt")
 #for _ in range(10):
 #   print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
 #   print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
-#   print("Spacy:",XGBoostPredict(file,'XGBModelV4_Spacy.txt'))
-#   print("SpacyS:",XGBoostPredictS(file,'XGBModelV4S_2_Spacy.txt'))
+#print("Spacy:",XGBoostPredict(file,'XGBModelV4_Spacy.txt'))
+#print("SpacyS:",XGBoostPredictS(file,'XGBModelV4S_2_Spacy.txt'))
 #   print("--------------------------------")
 
 #for _ in range(100):
