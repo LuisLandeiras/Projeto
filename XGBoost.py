@@ -101,13 +101,13 @@ def XGBoostPredictS(Texto, Model):
 #AccuracyVS4_2_NLTK 100%
 #AccuracyV4_NLTK 90.24%
 
-file = AuxFun.File("Textos_Teste/Anxiety.txt")
-for _ in range(10):
-   print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
-   print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
-   print("Spacy:",XGBoostPredict(file,'XGBModelV4_Spacy.txt'))
-   print("SpacyS:",XGBoostPredictS(file,'XGBModelV4S_2_Spacy.txt'))
-   print("--------------------------------")
+#file = AuxFun.File("Textos_Teste/Anxiety.txt")
+#for _ in range(10):
+#   print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
+#   print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
+#   print("Spacy:",XGBoostPredict(file,'XGBModelV4_Spacy.txt'))
+#   print("SpacyS:",XGBoostPredictS(file,'XGBModelV4S_2_Spacy.txt'))
+#   print("--------------------------------")
 
 #for _ in range(100):
 #    XGBoostTrain('DataV4_2_NLTK.csv','XGBModelV4_2_NLTK.txt','Sentimento')

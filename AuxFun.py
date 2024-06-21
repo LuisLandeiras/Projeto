@@ -299,11 +299,11 @@ def Count(File):
 #Count("T.csv")
 #print(Csv_Ave("DataV4.csv"))
 
-for files in os.listdir("Textos/"):
-    file = File("Textos/" + files)
-    amostra = Amostras(file)
-    print("\n\n\n"+files)
-    print(Resultados(amostra))
+#for files in os.listdir("Textos/"):
+#    file = File("Textos/" + files)
+#    amostra = Amostras(file)
+#    print("\n\n\n"+files)
+#    print(Resultados(amostra))
     #print("Spacy:", SA_Spacy.Sentiment(file))
     #print("Spacy A:", SA_Spacy.SentimentA(amostra))
     #print("----------------------------------------")
