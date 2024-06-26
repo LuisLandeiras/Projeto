@@ -43,9 +43,6 @@ def Resultados(Samples):
     #SA Amostras
     def TSentimentA(): ResultadosA['Sentiment'] = SA_NLTK.SentimentA(Samples)
     
-    #GC
-    #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples[1])
-    
     # Create threads
     threads = [
         threading.Thread(target=TSentenceLengthA),
@@ -54,7 +51,6 @@ def Resultados(Samples):
         threading.Thread(target=TLexicalDiversityA),
         threading.Thread(target=TTreeA),
         threading.Thread(target=TSentimentA),
-        #threading.Thread(target=TGrammar),
         threading.Thread(target=TGradeA),
         threading.Thread(target=TSMOGA),
         threading.Thread(target=TColemanA),
@@ -142,8 +138,7 @@ def CsvAlgo(input_csv, output_csv):
             'Text',
             'ARI', 
             'Coleman', 
-            'Grade', 
-            #'Grammar', 
+            'Grade',  
             'LexicalDensity',
             'LexicalDiversity',
             'Reading',
@@ -168,7 +163,6 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['ARI'][0], 
                 ResultadosA['Coleman'][0], 
                 ResultadosA['Grade'][0], 
-                #ResultadosA['Grammar'][0], 
                 ResultadosA['LexicalDensity'][0],
                 ResultadosA['LexicalDiversity'][0],
                 ResultadosA['Reading'][0],
@@ -274,12 +268,11 @@ def Ave(File):
     df['Classification'] = np.select(conditions, choices)
     df['ClassificationS'] = np.select(conditionss, choicess)
     df.to_csv('B.csv', index=False)
-
-#Dropa uma coluna especifica
-def CSV():
+    
+    #Dropa uma coluna especifica
     df = pd.read_csv('B.csv')
     df = df.drop(columns=['Average'])
-    df.to_csv('DataV4_2_NLTK.csv', index=False)   
+    df.to_csv('DataV4_2_NLTK.csv', index=False) 
 
 def Count(File):
     df = pd.read_csv(File)
@@ -293,7 +286,6 @@ def Count(File):
 
 #CsvAlgo("TextosV3.csv", "TextosAlgoV4.csv")
 #Ave("TextosAlgoV4.csv")
-#CSV()
 
 #Csv_Csv("B.csv", "T1.csv")
 #Count("T.csv")

@@ -1,4 +1,4 @@
-# Readability Metricsmetricas 
+# Readability Metrics
 import spacy, syllapy, math, re, time
 import textdescriptives as td
 

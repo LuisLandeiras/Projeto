@@ -82,7 +82,7 @@
         <tr height="350px">
             <td class="textual">
                 <h2>Resultado de Qualidade Textual</h2>
-                <p></p>
+                <p>{{ Result }}</p>
             </td>
             <td rowspan="2" style="width:50%; vertical-align:top; text-align: center;">
                 <form action="{{ url_for('sub') }}" method="post">
@@ -93,22 +93,22 @@
             </td>
             <td class="textual">
                 <h2>Algoritmos Usados:</h2>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
-                <p><strong></p>
+                <p><strong>{{ Algo[0][0] }}</strong> com uma importância de: {{ Algo[0][1] }}</p>
+                <p><strong>{{ Algo[1][0] }}</strong> com uma importância de: {{ Algo[1][1] }}</p>
+                <p><strong>{{ Algo[2][0] }}</strong> com uma importância de: {{ Algo[2][1] }}</p>
+                <p><strong>{{ Algo[3][0] }}</strong> com uma importância de: {{ Algo[3][1] }}</p>
+                <p><strong>{{ Algo[4][0] }}</strong> com uma importância de: {{ Algo[4][1] }}</p>
+                <p><strong>{{ Algo[5][0] }}</strong> com uma importância de: {{ Algo[5][1] }}</p>
+                <p><strong>{{ Algo[6][0] }}</strong> com uma importância de: {{ Algo[6][1] }}</p>
+                <p><strong>{{ Algo[7][0] }}</strong> com uma importância de: {{ Algo[7][1] }}</p>
+                <p><strong>{{ Algo[8][0] }}</strong> com uma importância de: {{ Algo[8][1] }}</p>
+                <p><strong>{{ Algo[9][0] }}</strong> com uma importância de: {{ Algo[9][1] }}</p>
             </td>
         </tr>
         <tr height="350px">
             <td class="textual">
                 <h2>Resultado da Análise dos Sentimentos</h2>
-                <p></p>
+                <p>{{ ResultS }}</p>
             </td>
             <td class="textual">
                 <h2>Texto Exemplos</h2>
