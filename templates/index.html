@@ -39,16 +39,18 @@
         }
         p{
             margin: 1%;
+            margin-left: 2.5%;
             font-size: 15px;
-            text-align: center;
         }
         .textual{
             margin: auto;
             width:22.5%;
             vertical-align:top; 
-            text-align: center; 
             border: solid 2px black;
             border-radius: 50px;
+        }
+        .textual h2{
+            text-align: center;
         }
         .textos{
             margin: auto;
@@ -58,6 +60,13 @@
             height: 50px;
             background-color: black;
             color: white;
+        }
+        .textos:hover{
+            border: solid 2px black;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
         }
         #sub{
             font-size: 25px;
@@ -69,6 +78,13 @@
             height: 40px;
             background-color: black;
             color: white;
+        }
+        #sub:hover{
+            border: solid 2px black;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
         }
     </style>
 
@@ -82,7 +98,10 @@
         <tr height="350px">
             <td class="textual">
                 <h2>Resultado de Qualidade Textual</h2>
-                <p></p>
+                <p><strong>Muito Bom</strong>: Indica que o texto analisado terá um teor profissional, tendo uma estrutura textual complexa e bem estruturada, sendo a sua leitura mais complexa</p>
+                <p><strong>Bom</strong>: Indica que o texto analisado é bem estruturado e com uma complexidade bem desenvolvida, sendo a sua leitura de um nível mediano</p>
+                <p><strong>Mau</strong>: Indica que o texto analisado não tem um estrutura textual tão desenvolvida, sendo a sua leitura fácil</p>
+                <p><strong>Muito Mau</strong>: Indica que o texto analisado não tem uma grande complexidade e a sua estrutura textual é fraca, sendo a sua leitura extremamente fácil</p>
             </td>
             <td rowspan="2" style="width:50%; vertical-align:top; text-align: center;">
                 <form action="{{ url_for('sub') }}" method="post">
@@ -108,7 +127,9 @@
         <tr height="350px">
             <td class="textual">
                 <h2>Resultado da Análise dos Sentimentos</h2>
-                <p></p>
+                <p><strong>Positivo</strong>: Indica que o texto analisado contem sentimentos agradaveis, como alegria, prazer, entusiasmo entre outros.</p>
+                <p><strong>Neutro</strong>: Indica que o texto analisado não contem sentimentos relevantes, sendo provavelmente uma notícia, pesquisar ou artigo.</p>
+                <p><strong>Negativo</strong>: Indica que o texto analisado contem sentimentos desagradaveis, como tristeza, raiva, ansiedade, entre outros.</p>
             </td>
             <td class="textual">
                 <h2>Texto Exemplos</h2>
