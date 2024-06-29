@@ -104,15 +104,15 @@ def XGBoostPredictS(Texto, Model):
 
 #file = File("Textos_Teste/Sad.txt")
 #for _ in range(10):
-   #print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
-   #print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
-   #print("Spacy:",XGBoostPredict(file,'Treinos/XGBModelV5_2_Spacy.txt')[0])
-   #print("SpacyS:",XGBoostPredictS(file,'V4/XGBModelV4S_2_Spacy.txt'))
-   #print("--------------------------------")
+#   #print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
+#   #print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
+#   print("Spacy:",XGBoostPredict(file,'Treinos/XGBModelV5_Spacy.txt')[0])
+#   print("SpacyS:",XGBoostPredictS(file,'Treinos/XGBModelV5S_Spacy.txt'))
+#   print("--------------------------------")
 
 #Soma = 0
-#for _ in range(100):
-#    Texto = XGBoostTrain('DataV4_2_Spacy.csv','XGBModelV5S_2_Spacy.txt','Sentimento')
+#for _ in range(10):
+#    Texto = XGBoostTrain('DataV5_Spacy.csv','XGBModelV5S_Spacy.txt','Sentimento')
 #    print(Texto)
 #    Soma += Texto
 #print(round(Soma/100,2))

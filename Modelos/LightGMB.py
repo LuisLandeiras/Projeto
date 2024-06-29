@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings, Algos.AuxFun as AuxFun
-
+ 
 def LightGBMTrain(FileIn, FileOut, Aux):
     warnings.filterwarnings('ignore', category=FutureWarning)
     
@@ -80,17 +80,17 @@ def LightGBMPredictS(Texto, Model):
 
     return prediction[0].argmax()
 
-#file = AuxFun.File("Textos_Teste/Sad.txt")
+#file = File("Textos_Teste/Sad.txt")
 #for _ in range(10):
-    #print("NLTK:",LightGBMPredict(file,'XGBModelV4_NLTK.txt'))
-    #print("NLTKS:",LightGBMPredictS(file,'XGBModelV4S_2_NLTK.txt'))
-    #print("Spacy:",LightGBMPredict(file,'LightGMBV5_2_Spacy.txt'))
-    #print("SpacyS:",LightGBMPredictS(file,'LightGMBV5S_2_Spacy.txt'))
-    #print("--------------------------------")
+#    #print("NLTK:",LightGBMPredict(file,'XGBModelV4_NLTK.txt'))
+#    #print("NLTKS:",LightGBMPredictS(file,'XGBModelV4S_2_NLTK.txt'))
+#    print("Spacy:",LightGBMPredict(file,'Treinos/GMBModelV5_Spacy.txt'))
+#    print("SpacyS:",LightGBMPredictS(file,'Treinos/GMBModelV5S_Spacy.txt'))
+#    print("--------------------------------")
 
 #Soma = 0
 #for _ in range(100):
-#    Texto = LightGBMTrain('DataV4_2_Spacy.csv','LightGMBV5S_2_Spacy.txt','Sentimento')
+#    Texto = LightGBMTrain('DataV5_Spacy.csv','LightGMBV5S_Spacy.txt','Sentimento')
 #    print(Texto)
 #    Soma += Texto
 #print(round(Soma/100,2))
