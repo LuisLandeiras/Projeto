@@ -19,7 +19,7 @@ def XGBoostTrain(FileIn, FileOut, Aux):
         X = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength'])
         y = data['ClassificationS']
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
     model = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
     model.fit(X_train, y_train)
@@ -32,7 +32,7 @@ def XGBoostTrain(FileIn, FileOut, Aux):
     elif Aux == 'Sentimento':
         if(round(accuracy * 100,2) > 90): model.save_model(FileOut)
 
-    print(round(accuracy * 100,2))
+    return round(accuracy * 100,2)
 
 def preprocess_text(text):
     Amostra = AuxFun.Amostras(text)
@@ -122,5 +122,7 @@ def XGBoostPredictS(Texto, Model):
 #print("SpacyS:",XGBoostPredictS(file,'XGBModelV4S_2_Spacy.txt'))
 #   print("--------------------------------")
 
-#for _ in range(100):
-#    XGBoostTrain('DataV4_2_NLTK.csv','XGBModelV4_2_NLTK.txt','Sentimento')
+Soma = 0
+for _ in range(100):
+    Soma += XGBoostTrain('DataV4_2_Spacy.csv','XGBModelV4_2_Spacy.txt','Texto')
+print(round(Soma/100,2))
