@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, jsonify
-import XGBoost, AuxFun
+from flask import Flask, render_template, request
+import Modelos.XGBoost as XGBoost, Algos.AuxFun as AuxFun, Modelos.LightGMB as LightGMB
 
 app = Flask(__name__)
 
@@ -12,9 +12,12 @@ def sub():
     result = request.form
     Texto = result.get('text')
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'XGBModelV4_Spacy.txt')
-    ResultadoS = XGBoost.XGBoostPredictS(Texto,'XGBModelV4S_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
+    #Resultado = LightGMB.LightGBMPredict(Texto,'Treinos/GMBModelV5_2_Spacy.txt')
+    #ResultadoS = LightGMB.LightGBMPredictS(Texto,'Treinos/GMBModelV5S_2_Spacy.txt')
+       
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
     
     Res = ""
@@ -44,8 +47,8 @@ def texto1():
     result = request.form
     Texto = AuxFun.File(result.get('text1'))
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'XGBModelV4_Spacy.txt')
-    ResultadoS = XGBoost.XGBoostPredictS(Texto,'XGBModelV4S_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
     
@@ -76,8 +79,8 @@ def texto2():
     result = request.form
     Texto = AuxFun.File(result.get('text2'))
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'XGBModelV4_Spacy.txt')
-    ResultadoS = XGBoost.XGBoostPredictS(Texto,'XGBModelV4S_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
     
@@ -108,8 +111,8 @@ def texto3():
     result = request.form
     Texto = AuxFun.File(result.get('text3'))
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'XGBModelV4_Spacy.txt')
-    ResultadoS = XGBoost.XGBoostPredictS(Texto,'XGBModelV4S_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
     
@@ -133,4 +136,4 @@ def texto3():
         case 2:
             ResS = "Positivo"
     
-    return render_template('texto1.html', Result=Res, ResultS=ResS, Algo=ResRound, Text=Texto)
+    return render_template('texto3.html', Result=Res, ResultS=ResS, Algo=ResRound, Text=Texto)
