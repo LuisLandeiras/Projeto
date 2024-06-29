@@ -1,4 +1,5 @@
 import spacy, random, csv, Algos.Tree as Tree, Algos.TCM as TCM, threading, Algos.RM as RM, Algos.SA_NLTK as SA_NLTK, os, Algos.SA_Spacy as SA_Spacy, Algos.SA_NLTK as SA_NLTK
+#import spacy, random, csv, Tree, TCM, threading, RM, SA_NLTK, os, SA_Spacy, SA_NLTK
 import pandas as pd
 import numpy as np
 
@@ -251,17 +252,17 @@ def Ave(File):
     ]
     choices = [0, 1, 2, 3]
     
-    conditionss = [
-        (dfs_num['Compound'] < -0.2) & (dfs_num['SentimentNeg'] > dfs_num['SentimentPos']),
-        (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
-        (dfs_num['Compound'] > 0.2) & (dfs_num['SentimentPos'] > dfs_num['SentimentNeg'])
-    ]
-    
     #conditionss = [
-    #    (dfs_num['Compound'] < -0.2),
+    #    (dfs_num['Compound'] < -0.2) & (dfs_num['SentimentNeg'] > dfs_num['SentimentPos']),
     #    (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
-    #    (dfs_num['Compound'] > 0.2)
+    #    (dfs_num['Compound'] > 0.2) & (dfs_num['SentimentPos'] > dfs_num['SentimentNeg'])
     #]
+    
+    conditionss = [
+        (dfs_num['Compound'] < -0.2),
+        (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
+        (dfs_num['Compound'] > 0.2)
+    ]
     #0: Negativo, 1:Neutro, 2:Positivo
     choicess = [0, 1, 2]
     
@@ -301,8 +302,3 @@ def Count(File):
     #print("----------------------------------------")
     #print("NLTK:", SA_NLTK.Sentiment(file))
     #print("NLTK A:", SA_NLTK.SentimentA(amostra))
-
-
-
-
-
