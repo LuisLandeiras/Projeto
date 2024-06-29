@@ -12,7 +12,7 @@ def sub():
     result = request.form
     Texto = result.get('text')
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_Spacy.txt')
     ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     #Resultado = LightGMB.LightGBMPredict(Texto,'Treinos/GMBModelV5_2_Spacy.txt')
@@ -47,7 +47,7 @@ def texto1():
     result = request.form
     Texto = AuxFun.File(result.get('text1'))
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_Spacy.txt')
     ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
@@ -79,7 +79,7 @@ def texto2():
     result = request.form
     Texto = AuxFun.File(result.get('text2'))
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_Spacy.txt')
     ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
@@ -111,7 +111,7 @@ def texto3():
     result = request.form
     Texto = AuxFun.File(result.get('text3'))
     
-    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_2_Spacy.txt')
+    Resultado = XGBoost.XGBoostPredict(Texto,'Treinos/XGBModelV5_Spacy.txt')
     ResultadoS = XGBoost.XGBoostPredictS(Texto,'V4/XGBModelV4S_2_Spacy.txt')
     
     ResRound = [(x, round(y,3)) for x, y in Resultado[1]]
