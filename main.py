@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import Modelos.XGBoost as XGBoost, Algos.AuxFun as AuxFun, Modelos.LightGMB as LightGMB
+import Algos.XGBoost as XGBoost, Algos.AuxFun as AuxFun, Algos.LightGMB as LightGMB
 
 app = Flask(__name__)
 
