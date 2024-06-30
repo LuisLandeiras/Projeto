@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 from xgboost import plot_importance
 import warnings
-import Algos.AuxFun as AuxFun
+import AuxFun
 import seaborn as sns
 
 def XGBoostTrain(FileIn, FileOut, Aux):
@@ -110,9 +110,11 @@ def XGBoostPredictS(Texto, Model):
 #   print("SpacyS:",XGBoostPredictS(file,'Treinos/XGBModelV5S_Spacy.txt'))
 #   print("--------------------------------")
 
-#Soma = 0
-#for _ in range(10):
-#    Texto = XGBoostTrain('DataV5_Spacy.csv','XGBModelV5S_Spacy.txt','Sentimento')
-#    print(Texto)
-#    Soma += Texto
-#print(round(Soma/100,2))
+Soma = 0
+for _ in range(10):
+    for _ in range(100):
+        Texto = XGBoostTrain('DataV5_Spacy.csv','XGBModelV5S_Spacy.txt','Texto')
+        #print(Texto)
+        Soma += Texto
+    print(round(Soma/100,2))
+    Soma= 0

@@ -1,12 +1,12 @@
 import pandas as pd
-import lightgbm as lgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
-import warnings, Algos.AuxFun as AuxFun
- 
-def LightGBMTrain(FileIn, FileOut, Aux):
+from sklearn.tree import DecisionTreeClassifier
+import warnings, AuxFun
+
+def DecisionTreeTrain(FileIn, FileOut, Aux):
     warnings.filterwarnings('ignore', category=FutureWarning)
     
     data = pd.read_csv(FileIn)
@@ -20,16 +20,24 @@ def LightGBMTrain(FileIn, FileOut, Aux):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
-    model = lgb.LGBMClassifier(verbosity=-1)
+    model = DecisionTreeClassifier()
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
     if Aux == 'Texto':
-        if round(accuracy * 100, 2) > 83: model.booster_.save_model(FileOut)
+        if round(accuracy * 100, 2) > 90: 
+            # Salva o modelo
+            with open(FileOut, 'wb') as f:
+                import pickle
+                pickle.dump(model, f)
     elif Aux == 'Sentimento':
-        if round(accuracy * 100, 2) > 90: model.booster_.save_model(FileOut)
+        if round(accuracy * 100, 2) > 90: 
+            # Salva o modelo
+            with open(FileOut, 'wb') as f:
+                import pickle
+                pickle.dump(model, f)
 
     return round(accuracy * 100, 2)
 
@@ -55,42 +63,34 @@ def preprocess_text(text):
         'Compound': Resultado['Sentiment'][3],
     }])
 
-def LightGBMPredict(Texto, Model):
-    model = lgb.Booster(model_file=Model)
+def DecisionTreePredict(Texto, Model):
+    with open(Model, 'rb') as f:
+        import pickle
+        model = pickle.load(f)
     
-    data = pd.read_csv("DataV5_Spacy.csv")
+    data = pd.read_csv("DataV4_2_Spacy.csv")
     feature_names = data.drop(columns=['Text', 'Classification', 'SentimentNeg', 'SentimentNeu', 'SentimentPos', 'Compound', 'ClassificationS']).columns
 
-    importance = model.feature_importance(importance_type='gain')
-    sorted_indices = importance.argsort()[::-1]
-    sorted_features = [(feature_names[i], importance[i]) for i in sorted_indices[:10]]
-    
     TextoP = preprocess_text(Texto)[0]
-    TextoP = lgb.Dataset(TextoP, free_raw_data=False)
-    prediction = model.predict(TextoP.data, num_iteration=model.best_iteration)
+    prediction = model.predict(TextoP)
 
-    return prediction[0].argmax(), sorted_features
+    return prediction[0], feature_names
 
-def LightGBMPredictS(Texto, Model):
-    model = lgb.Booster(model_file=Model)
+def DecisionTreePredictS(Texto, Model):
+    with open(Model, 'rb') as f:
+        import pickle
+        model = pickle.load(f)
     
     TextoP = preprocess_text(Texto)[1]
-    TextoP = lgb.Dataset(TextoP, free_raw_data=False)
-    prediction = model.predict(TextoP.data, num_iteration=model.best_iteration)
+    prediction = model.predict(TextoP)
 
-    return prediction[0].argmax()
+    return prediction[0]
 
-#file = File("Textos_Teste/Sad.txt")
-#for _ in range(10):
-#    #print("NLTK:",LightGBMPredict(file,'XGBModelV4_NLTK.txt'))
-#    #print("NLTKS:",LightGBMPredictS(file,'XGBModelV4S_2_NLTK.txt'))
-#    print("Spacy:",LightGBMPredict(file,'Treinos/GMBModelV5_Spacy.txt'))
-#    print("SpacyS:",LightGBMPredictS(file,'Treinos/GMBModelV5S_Spacy.txt'))
-#    print("--------------------------------")
-
-#Soma = 0
-#for _ in range(100):
-#    Texto = LightGBMTrain('DataV5_Spacy.csv','LightGMBV5S_Spacy.txt','Sentimento')
-#    print(Texto)
-#    Soma += Texto
-#print(round(Soma/100,2))
+Soma = 0
+for _ in range(10):
+    for _ in range(100):
+        Texto = DecisionTreeTrain('DataV5_Spacy.csv','DecTreeV4_2_Spacy.txt','Texto')
+        #print(Texto)
+        Soma += Texto
+    print(round(Soma/100,2))
+    Soma= 0

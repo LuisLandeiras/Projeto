@@ -1,5 +1,5 @@
-import spacy, random, csv, Algos.Tree as Tree, Algos.TCM as TCM, threading, Algos.RM as RM, Algos.SA_NLTK as SA_NLTK, os, Algos.SA_Spacy as SA_Spacy, Algos.SA_NLTK as SA_NLTK
-#import spacy, random, csv, Tree, TCM, threading, RM, SA_NLTK, os, SA_Spacy, SA_NLTK
+#import spacy, random, csv, Algos.Tree as Tree, Algos.TCM as TCM, threading, Algos.RM as RM, Algos.SA_NLTK as SA_NLTK, os, Algos.SA_Spacy as SA_Spacy, Algos.SA_NLTK as SA_NLTK
+import spacy, random, csv, Tree, TCM, threading, RM, SA_NLTK, os, SA_Spacy, SA_NLTK
 import pandas as pd
 import numpy as np
 

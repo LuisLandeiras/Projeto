@@ -3,7 +3,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import LinearRegression
-import warnings, Algos.AuxFun as AuxFun
+import warnings, AuxFun
 
 def LinearRegressionTrain(FileIn, FileOut, Aux):
     warnings.filterwarnings('ignore', category=FutureWarning)
@@ -35,7 +35,7 @@ def LinearRegressionTrain(FileIn, FileOut, Aux):
             with open(FileOut, 'wb') as f:
                 pickle.dump(model, f)
 
-    print(f'Mean Squared Error: {mse}')
+    #print(f'Mean Squared Error: {mse}')
     return round(r2 * 100, 2)
 
 def preprocess_text(text):
@@ -82,8 +82,10 @@ def LinearRegressionPredictS(Texto, Model):
     return prediction[0]
 
 Soma = 0
-for _ in range(100):
-    Texto = LinearRegressionTrain('DataV4_2_Spacy.csv','LinearRegV4_2_Spacy.txt','Texto')
-    print(Texto)
-    Soma += Texto
-print(round(Soma/100,2))
+for _ in range(10):
+    for _ in range(100):
+        Texto = LinearRegressionTrain('DataV5_Spacy.csv','LinearRegV4_2_Spacy.txt','Texto')
+        #print(Texto)
+        Soma += Texto
+    print(round(Soma/100,2))
+    Soma= 0
