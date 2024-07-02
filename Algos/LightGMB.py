@@ -91,7 +91,7 @@ def LightGBMPredictS(Texto, Model):
 Soma = 0
 for _ in range(10):
     for _ in range(100):
-        Texto = LightGBMTrain('DataV5_Spacy.csv','LightGMBV5S_Spacy.txt','Texto')
+        Texto = LightGBMTrain('DataV7_Spacy.csv','LightGMBV5S_Spacy.txt','Texto')
         #print(Texto)
         Soma += Texto
     print(round(Soma/100,2))

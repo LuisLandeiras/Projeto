@@ -1,0 +1,15 @@
+AccuracyV2 95.83% Teste_Size = 0.1
+Accuracy SentV2 91.67% Teste_Size = 0.1
+
+AccuracyV3 92.68% Teste_Size = 0.1
+
+AccuracyV4_Spacy 90.24% Teste_Size = 0.1
+AccuracyVS4_1_Spacy 100%
+AccuracyVS4_2_Spacy 100%
+
+AccuracyVS4_1_NLTK 100%
+AccuracyVS4_2_NLTK 100%
+AccuracyV4_NLTK 90.24% Teste_Size = 0.1
+
+XGBModelV5_2_Spacy.txt = Accuracy 84.04% Teste_Size = 0.3
+LightGMBV5_2_Spacy.txt = Accuracy 86.07% Teste_Size = 0.3
