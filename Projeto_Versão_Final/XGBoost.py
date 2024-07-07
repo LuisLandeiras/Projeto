@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 from xgboost import plot_importance
 import warnings
-import AuxFun
+import AuxFun, os
 import seaborn as sns
 
 def XGBoostTrain(FileIn, FileOut, Aux):
@@ -69,7 +69,7 @@ def XGBoostPredict(Texto, Model):
     model = xgb.XGBClassifier()
     model.load_model(Model)
     
-    data = pd.read_csv("DataV8_Spacy.csv")
+    data = pd.read_csv("DataV9_Spacy.csv")
     feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS']).columns
 
     booster = model.get_booster()
@@ -90,7 +90,7 @@ def XGBoostPredictS(Texto, Model):
     model = xgb.XGBClassifier()
     model.load_model(Model)
     
-    #data = pd.read_csv("DataV4_2_Spacy.csv")
+    #data = pd.read_csv("DataV9_Spacy.csv")
     #feature_names = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength']).columns
     #plot_importance(model, importance_type='gain', max_num_features=10)
     #plt.gca().set_yticklabels(feature_names) 
@@ -101,13 +101,21 @@ def XGBoostPredictS(Texto, Model):
 
     return prediction[0]
 
-#file = File("Textos_Teste/Sad.txt")
+#file = AuxFun.File("Textos_Teste/Sad.txt")
 #for _ in range(10):
 #   #print("NLTK:",XGBoostPredict(file,'XGBModelV4_NLTK.txt'))
 #   #print("NLTKS:",XGBoostPredictS(file,'XGBModelV4S_2_NLTK.txt'))
-#   print("Spacy:",XGBoostPredict(file,'Treinos/XGBModelV5_Spacy.txt')[0])
-#   print("SpacyS:",XGBoostPredictS(file,'Treinos/XGBModelV5S_Spacy.txt'))
+#   #print("Spacy:",XGBoostPredict(file,'XGBModelV9.txt')[0])
+#   print("SpacyS:",XGBoostPredictS(file,'XGBModelV9S.txt'))
+#   #print(preprocess_text(file)[1])
 #   print("--------------------------------")
+
+for files in os.listdir("Textos_Teste/"):
+    file = AuxFun.File("Textos_Teste/" + files)
+    print("\n"+files)
+    for _ in range(10):
+        print("Spacy:",XGBoostPredictS(file,'XGBModelV9S.txt'))
+    print("----------------------------------------")
 
 #Soma = 0
 #for _ in range(10):
@@ -119,8 +127,8 @@ def XGBoostPredictS(Texto, Model):
 #    Soma= 0
 
 #Soma = 0
-#for _ in range(100):
-#    Texto = XGBoostTrain('DataV7_Spacy.csv','XGBModelV7.txt','Texto')
+#for _ in range(10):
+#    Texto = XGBoostTrain('DataV9_Spacy.csv','XGBModelV9S.txt','Sentimento')
 #    print(Texto)
 #    Soma += Texto
 #print("Average of the average: ",round(Soma/100,2))
