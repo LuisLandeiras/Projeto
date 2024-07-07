@@ -20,7 +20,7 @@ def WordLength(text):
     doc = nlp(text.lower())
     tokens = [token.text for token in doc if token.is_alpha]
     TotalChars = sum(len(token) for token in tokens)
-    WordL = TotalChars/len(tokens)
+    WordL = TotalChars / len(tokens)
     return round(WordL,3), time.process_time() - t
 
 def LexicalDensity(text): 

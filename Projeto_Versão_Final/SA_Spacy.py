@@ -8,7 +8,7 @@ def Sentiment(file):
     doc = nlp(file)
     Sent = doc._.polarity
 
-    return Sent
+    return Sent.negative, Sent.neutral, Sent.positive, Sent.compound
     
 def SentimentA(Samples):
     nlp = spacy.blank('en')
@@ -20,7 +20,7 @@ def SentimentA(Samples):
     neu = 0
     pos = 0
     compound = 0
-    
+
     for Sample in Samples:
         doc = nlp(str(Sample))
 
@@ -29,5 +29,5 @@ def SentimentA(Samples):
         neu += Sent.neutral
         pos += Sent.positive
         compound += Sent.compound
-        
+                
     return round(neg/len(Samples),3), round(neu/len(Samples),3), round(pos/len(Samples),3), round(compound/len(Samples),3), time.process_time() - t

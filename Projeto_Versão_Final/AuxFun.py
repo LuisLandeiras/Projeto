@@ -137,8 +137,8 @@ def CsvFilter(input_file, output_file):
 def Average(File):
     df = pd.read_csv(File)
 
-    columns = ['ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength']
-    # Calculate the average of each row
+    #columns = ['ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength']
+    columns = ['SentimentNeu']
     aaa = df[columns].mean(axis=1) 
     
     return aaa
@@ -148,64 +148,58 @@ def Heuristics(File):
     
     dfs_num = df.drop(columns=['Text','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength','Classification','ClassificationS'])
     
-    df_num = df.drop(columns=['Text','Classification','SentimentNeg','SentimentNeu','SentimentPos','ClassificationS','Compound'])
+    df_num = df.drop(columns=['Text','Classification','SentimentNeu','ClassificationS','Compound','SentimentPos','SentimentNeg'])
     df_num = df_num.apply(pd.to_numeric, errors='coerce')
     df['Average'] = df_num.mean(axis=1).round(2)
 
-    #conditions = [
-    #    df['Average'] < 12,
-    #    (df['Average'] >= 12) & (df['Average'] < 13),
-    #    (df['Average'] >= 13) & (df['Average'] < 14),
-    #    df['Average'] >= 14
-    #]
-    #choices = [0, 1, 2, 3]
-    
-    #Normalização
     conditions = [
-        df['Average'] < 0.25,
-        (df['Average'] >= 0.25) & (df['Average'] < 0.5),
-        (df['Average'] >= 0.5) & (df['Average'] < 0.75),
-        df['Average'] >= 0.75
+        df['Average'] < 12,
+        (df['Average'] >= 12) & (df['Average'] < 13),
+        (df['Average'] >= 13) & (df['Average'] < 14),
+        df['Average'] >= 14
     ]
     choices = [0, 1, 2, 3]
     
-    #conditionss = [
-    #    (dfs_num['Compound'] < -0.2) & (dfs_num['SentimentNeg'] > dfs_num['SentimentPos']),
-    #    (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
-    #    (dfs_num['Compound'] > 0.2) & (dfs_num['SentimentPos'] > dfs_num['SentimentNeg'])
+    #Normalização
+    #conditions = [
+    #    df['Average'] < 0.25,
+    #    (df['Average'] >= 0.25) & (df['Average'] < 0.5),
+    #    (df['Average'] >= 0.5) & (df['Average'] < 0.75),
+    #    df['Average'] >= 0.75
     #]
-    
+    #choices = [0, 1, 2, 3]
+        
     conditionss = [
-        (dfs_num['Compound'] < -0.2),
-        (dfs_num['Compound'] >= -0.2) & (dfs_num['Compound'] <= 0.2),
-        (dfs_num['Compound'] > 0.2)
-    ]
+        (dfs_num['Compound'] < -0.05),
+        (dfs_num['Compound'] >= -0.05) & (dfs_num['Compound'] <= 0.05),
+        (dfs_num['Compound'] > 0.05)
+    ]  
     #0: Negativo, 1:Neutro, 2:Positivo
     choicess = [0, 1, 2]
     
     df['Classification'] = np.select(conditions, choices)
     df['ClassificationS'] = np.select(conditionss, choicess)
-    df.to_csv('B6.csv', index=False)
+    df.to_csv('B9.csv', index=False)
     
     #Dropa uma coluna especifica
-    df = pd.read_csv('B6.csv')
+    df = pd.read_csv('B9.csv')
     df = df.drop(columns=['Average'])
-    df.to_csv('DataV6_Spacy.csv', index=False) 
+    df.to_csv('DataV9B_Spacy.csv', index=False) 
 
 def Count(File):
     df = pd.read_csv(File)
-
-    #t0_count = df[df['Average'] < 11].shape[0]
-    #t1_count = df[(df['Average'] >= 11) & (df['Average'] < 13.50)].shape[0]
-    #t2_count = df[(df['Average'] >= 13.50) & (df['Average'] < 15)].shape[0]
-    #t3_count = df[df['Average'] >= 15].shape[0]
     
-    t0_count = df[df['Average'] < 0.25].shape[0]
-    t1_count = df[(df['Average'] >= 0.25) & (df['Average'] < 0.50)].shape[0]
-    t2_count = df[(df['Average'] >= 0.50) & (df['Average'] < 0.75)].shape[0]
-    t3_count = df[df['Average'] >= 0.75].shape[0]
-
-    print(f"t0: {t0_count}, t1: {t1_count}, t2: {t2_count}, t3: {t3_count}")
+    t0_count = df[df['Classification'] == 0].shape[0]
+    t1_count = df[df['Classification'] == 1].shape[0]
+    t2_count = df[df['Classification'] == 2].shape[0]
+    t3_count = df[df['Classification'] == 3].shape[0]
+    
+    s0_count = df[df['ClassificationS'] == 0].shape[0]
+    s1_count = df[df['ClassificationS'] == 1].shape[0]
+    s2_count = df[df['ClassificationS'] == 2].shape[0]
+    
+    print(f"Sentimentos: Neg: {s0_count}, Neu: {s1_count}, Pos: {s2_count} ")
+    print(f"Estrutura: t0: {t0_count}, t1: {t1_count}, t2: {t2_count}, t3: {t3_count}")
 
 def CSV_Column(File, column, OutF):
     df = pd.read_csv(File)
@@ -248,28 +242,21 @@ def CsvTier(input_csv, output_csv):
         writer = csv.DictWriter(file, fieldnames=headers)
         writer.writeheader()
         writer.writerows(filtered_rows)
- 
+
 def ResultadosC(Samples):
     ResultadosA = {}
             
     def Read(): ResultadosA['Read'] = RM.Read(Samples)
      
-    #TCM Amostras
     def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLength(Samples)
     def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLength(Samples)
     def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensity(Samples)
     def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversity(Samples)
     
-    #Tree Amostras
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAve(Samples)
     
-    #SA Amostras
     def TSentimentA(): ResultadosA['Sentiment'] = SA_Spacy.Sentiment(Samples)
     
-    #GC
-    #def TGrammar(): ResultadosA['Grammar'] = GC.Grammar(Samples)
-    
-    # Create threads
     threads = [
         threading.Thread(target=TSentenceLengthA),
         threading.Thread(target=TWordLengthA),
@@ -277,37 +264,59 @@ def ResultadosC(Samples):
         threading.Thread(target=TLexicalDiversityA),
         threading.Thread(target=TTreeA),
         threading.Thread(target=TSentimentA),
-        #threading.Thread(target=TGrammar),
         threading.Thread(target=Read),
     ]
-    # Start threads
     for thread in threads: thread.daemon = True
     for thread in threads: thread.start()
         
-    # Wait for all threads to finish
     for thread in threads: thread.join()
 
     return ResultadosA
 
 #CSV_Column("DataV7_Spacy.csv", "WordLength", "Tree.txt") 
-#CsvAlgo("TextosV5.csv", "TextosAlgoV7.csv")
-#Heuristics("TextosAlgoV7.csv")
-#Count("B6.csv")
+#CsvAlgo("TextosV5.csv", "TextosAlgoV9B.csv")
+#Heuristics("TextosAlgoV9B.csv")
+#Count("DataV9B_Spacy.csv")
 
-#a = Average("TextosAlgoV6.csv")
+#a = Average("TextosAlgoV8.csv")
 #
 #for aa in a:
 #    print(aa)
 
-#Count("T.csv")
-
-#for files in os.listdir("Textos/"):
-#    file = File("Textos/" + files)
+#for files in os.listdir("Textos_Teste/"):
+#    file = File("Textos_Teste/" + files)
 #    amostra = Amostras(file)
-#    print("\n\n\n"+files)
-#    print(Resultados(amostra))
-    #print("Spacy:", SA_Spacy.Sentiment(file))
-    #print("Spacy A:", SA_Spacy.SentimentA(amostra))
-    #print("----------------------------------------")
-    #print("NLTK:", SA_NLTK.Sentiment(file))
-    #print("NLTK A:", SA_NLTK.SentimentA(amostra))
+#    print("\n"+files)
+#    #print(Resultados(amostra))
+#    print("Spacy:", SA_Spacy.Sentiment(file))
+#    print("Spacy A:", SA_Spacy.SentimentA(amostra))
+#    print("NLTK:", SA_NLTK.Sentiment(file))
+#    print("NLTK A:", SA_NLTK.SentimentA(amostra))
+#    print("----------------------------------------")
+
+#amostras = Amostras(File("Textos_Teste/Sad.txt"))
+#ResC = ResultadosC(File("Textos_Teste/Sad.txt"))
+#ResA = Resultados(amostras)
+#
+#print(ResA['Sentiment'][3])
+#print(ResC['Sentiment'][3])
+#
+#print("LexicalDensity: ", ((ResC['LexicalDensity'][1] - ResA['LexicalDensity'][1]) / ResC['LexicalDensity'][1]) * 100)
+#print("LexicalDiversity: ", ((ResC['LexicalDiversity'][1] - ResA['LexicalDiversity'][1]) / ResC['LexicalDiversity'][1]) * 100)
+#print("SentenceLength: ", ((ResC['SentenceLength'][0] - ResA['SentenceLength'][0]) / ResC['SentenceLength'][0]) * 100)
+#print("WordLength: ", ((ResC['WordLength'][0] - ResA['WordLength'][0]) / ResC['WordLength'][0]) * 100)
+#print("Coleman: ", ((ResC['Read'][3] - ResA['Coleman'][0]) / ResC['Read'][3]) * 100)
+#print("ARI: ", ((ResC['Read'][2] - ResA['ARI'][0]) / ResC['Read'][2]) * 100)
+#print("Smog: ", ((ResC['Read'][4] - ResA['Smog'][0]) / ResC['Read'][4]) * 100)
+#print("Reading: ", (((100 - ResC['Read'][1]) - ResA['Reading'][0]) / (100 - ResC['Read'][1])) * 100)
+#print("Grade: ", ((ResC['Read'][0] - ResA['Grade'][0]) / ResC['Read'][0]) * 100)
+#print("Tree: ", ((ResC['Tree'][0] - ResA['Tree'][0]) / ResC['Tree'][0]) * 100)
+#
+#print("SentNeg: ", ((ResC['Sentiment'][0] - ResA['Sentiment'][0]) / ResC['Sentiment'][0]) * 100)
+#print("SentNeu: ", ((ResC['Sentiment'][1] - ResA['Sentiment'][1]) / ResC['Sentiment'][1]) * 100)
+#print("SentPos: ", ((ResC['Sentiment'][2] - ResA['Sentiment'][2]) / ResC['Sentiment'][2]) * 100)
+#print("Compound: ", ((ResC['Sentiment'][3] - ResA['Sentiment'][3]) / ResC['Sentiment'][3]) * 100)
+
+
+
+    
