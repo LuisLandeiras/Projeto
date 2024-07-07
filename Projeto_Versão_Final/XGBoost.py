@@ -1,7 +1,7 @@
 import pandas as pd
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 from xgboost import plot_importance
 import warnings
@@ -27,6 +27,11 @@ def XGBoostTrain(FileIn, FileOut, Aux):
 
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
+    report = classification_report(y_test, y_pred, output_dict=True)
+    
+    precision = report['weighted avg']['precision']
+    recall = report['weighted avg']['recall']
+    f1 = report['weighted avg']['f1-score']
     
     if Aux == 'Texto':
         if round(accuracy * 100,2) > 98: model.save_model(FileOut)
@@ -41,7 +46,13 @@ def XGBoostTrain(FileIn, FileOut, Aux):
     #plt.title('Confusion Matrix')
     #plt.show()
     
-    return round(accuracy * 100,2)
+    #data = pd.read_csv("DataV9_Spacy.csv")
+    #feature_names = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS']).columns
+    #plot_importance(model, importance_type='gain', max_num_features=10)
+    #plt.gca() 
+    #plt.show()
+    
+    return round(accuracy * 100,2), round(precision * 100,2), round(recall * 100,2), round(f1 * 100,2)
 
 def preprocess_text(text):
     Amostra = AuxFun.Amostras(text)
@@ -90,12 +101,6 @@ def XGBoostPredictS(Texto, Model):
     model = xgb.XGBClassifier()
     model.load_model(Model)
     
-    #data = pd.read_csv("DataV9_Spacy.csv")
-    #feature_names = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength']).columns
-    #plot_importance(model, importance_type='gain', max_num_features=10)
-    #plt.gca().set_yticklabels(feature_names) 
-    #plt.show()
-    
     TextoP = preprocess_text(Texto)[1]
     prediction = model.predict(TextoP)
 
@@ -113,8 +118,9 @@ def XGBoostPredictS(Texto, Model):
 for files in os.listdir("Textos_Teste/"):
     file = AuxFun.File("Textos_Teste/" + files)
     print("\n"+files)
-    for _ in range(10):
+    for _ in range(5):
         print("Spacy:",XGBoostPredictS(file,'XGBModelV9S.txt'))
+        print("Spacy:",XGBoostPredict(file,'XGBModelV9.txt'))
     print("----------------------------------------")
 
 #Soma = 0
@@ -127,8 +133,17 @@ for files in os.listdir("Textos_Teste/"):
 #    Soma= 0
 
 #Soma = 0
+#Soma1 = 0
+#Soma2 = 0
+#Soma3 = 0
 #for _ in range(10):
-#    Texto = XGBoostTrain('DataV9_Spacy.csv','XGBModelV9S.txt','Sentimento')
-#    print(Texto)
-#    Soma += Texto
-#print("Average of the average: ",round(Soma/100,2))
+#    Texto = XGBoostTrain('DataV9_Spacy.csv','Teste.txt','Sentimento')
+#    Soma += Texto[0]
+#    Soma1 += Texto[1]
+#    Soma2 += Texto[2]
+#    Soma3 += Texto[3]
+#    
+#print("Accuracy: ",round(Soma/10,2))
+#print("Precision: ",round(Soma1/10,2))
+#print("Recall: ",round(Soma2/10,2))
+#print("F1: ",round(Soma3/10,2))
