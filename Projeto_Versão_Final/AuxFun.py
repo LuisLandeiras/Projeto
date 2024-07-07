@@ -152,22 +152,22 @@ def Heuristics(File):
     df_num = df_num.apply(pd.to_numeric, errors='coerce')
     df['Average'] = df_num.mean(axis=1).round(2)
 
-    conditions = [
-        df['Average'] < 12,
-        (df['Average'] >= 12) & (df['Average'] < 13),
-        (df['Average'] >= 13) & (df['Average'] < 14),
-        df['Average'] >= 14
-    ]
-    choices = [0, 1, 2, 3]
-    
-    #Normalização
     #conditions = [
-    #    df['Average'] < 0.25,
-    #    (df['Average'] >= 0.25) & (df['Average'] < 0.5),
-    #    (df['Average'] >= 0.5) & (df['Average'] < 0.75),
-    #    df['Average'] >= 0.75
+    #    df['Average'] < 9,
+    #    (df['Average'] >= 9) & (df['Average'] < 12),
+    #    (df['Average'] >= 12) & (df['Average'] < 14),
+    #    df['Average'] >= 14
     #]
     #choices = [0, 1, 2, 3]
+    
+    #Normalização
+    conditions = [
+        df['Average'] < 0.25,
+        (df['Average'] >= 0.25) & (df['Average'] < 0.5),
+        (df['Average'] >= 0.5) & (df['Average'] < 0.75),
+        df['Average'] >= 0.75
+    ]
+    choices = [0, 1, 2, 3]
         
     conditionss = [
         (dfs_num['Compound'] < -0.05),
@@ -273,7 +273,7 @@ def ResultadosC(Samples):
 
     return ResultadosA
 
-#CSV_Column("DataV7_Spacy.csv", "WordLength", "Tree.txt") 
+#CSV_Column("B9.csv", "Average", "c.txt") 
 #CsvAlgo("TextosV5.csv", "TextosAlgoV9B.csv")
 #Heuristics("TextosAlgoV9B.csv")
 #Count("DataV9B_Spacy.csv")
