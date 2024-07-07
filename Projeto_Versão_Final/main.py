@@ -12,7 +12,7 @@ def sub():
     result = request.form
     Texto = result.get('text')
     
-    Result = Resultados(Texto,'XGBModelV7.txt','XGBModelV4S_2_Spacy.txt')
+    Result = Resultados(Texto,'XGBModelV9.txt','XGBModelV9S.txt')
     
     return render_template('sub.html', Result=Result[0], ResultS=Result[1], Algo=Result[2], AlgoRes=Result[3])
 
@@ -21,7 +21,7 @@ def texto1():
     result = request.form
     Texto = AuxFun.File(result.get('text1'))
     
-    Result = Resultados(Texto,'XGBModelV7.txt','XGBModelV4S_2_Spacy.txt')
+    Result = Resultados(Texto,'XGBModelV9.txt','XGBModelV9S.txt')
     
     return render_template('texto1.html', Result=Result[0], ResultS=Result[1], Algo=Result[2], Text=Texto, AlgoRes=Result[3])
 
@@ -30,7 +30,7 @@ def texto2():
     result = request.form
     Texto = AuxFun.File(result.get('text2'))
     
-    Result = Resultados(Texto,'XGBModelV7.txt','XGBModelV4S_2_Spacy.txt')
+    Result = Resultados(Texto,'XGBModelV9.txt','XGBModelV9S.txt')
     
     return render_template('texto2.html', Result=Result[0], ResultS=Result[1], Algo=Result[2], Text=Texto, AlgoRes=Result[3])
 
@@ -39,7 +39,7 @@ def texto3():
     result = request.form
     Texto = AuxFun.File(result.get('text3'))
     
-    Result = Resultados(Texto,'XGBModelV7.txt','XGBModelV4S_2_Spacy.txt')
+    Result = Resultados(Texto,'XGBModelV9.txt','XGBModelV9S.txt')
     
     return render_template('texto3.html', Result=Result[0], ResultS=Result[1], Algo=Result[2], Text=Texto, AlgoRes=Result[3])
 
