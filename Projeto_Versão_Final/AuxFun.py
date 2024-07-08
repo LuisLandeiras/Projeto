@@ -273,49 +273,7 @@ def ResultadosC(Samples):
 
     return ResultadosA
 
-#CSV_Column("B9.csv", "Average", "c.txt") 
-#CsvAlgo("TextosV5.csv", "TextosAlgoV9B.csv")
-#Heuristics("TextosAlgoV9B.csv")
-#Count("DataV9B_Spacy.csv")
 
-#a = Average("TextosAlgoV8.csv")
-#
-#for aa in a:
-#    print(aa)
-
-#for files in os.listdir("Textos_Teste/"):
-#    file = File("Textos_Teste/" + files)
-#    amostra = Amostras(file)
-#    print("\n"+files)
-#    #print(Resultados(amostra))
-#    print("Spacy:", SA_Spacy.Sentiment(file))
-#    print("Spacy A:", SA_Spacy.SentimentA(amostra))
-#    print("NLTK:", SA_NLTK.Sentiment(file))
-#    print("NLTK A:", SA_NLTK.SentimentA(amostra))
-#    print("----------------------------------------")
-
-#amostras = Amostras(File("Textos_Teste/Sad.txt"))
-#ResC = ResultadosC(File("Textos_Teste/Sad.txt"))
-#ResA = Resultados(amostras)
-#
-#print(ResA['Sentiment'][3])
-#print(ResC['Sentiment'][3])
-#
-#print("LexicalDensity: ", ((ResC['LexicalDensity'][1] - ResA['LexicalDensity'][1]) / ResC['LexicalDensity'][1]) * 100)
-#print("LexicalDiversity: ", ((ResC['LexicalDiversity'][1] - ResA['LexicalDiversity'][1]) / ResC['LexicalDiversity'][1]) * 100)
-#print("SentenceLength: ", ((ResC['SentenceLength'][0] - ResA['SentenceLength'][0]) / ResC['SentenceLength'][0]) * 100)
-#print("WordLength: ", ((ResC['WordLength'][0] - ResA['WordLength'][0]) / ResC['WordLength'][0]) * 100)
-#print("Coleman: ", ((ResC['Read'][3] - ResA['Coleman'][0]) / ResC['Read'][3]) * 100)
-#print("ARI: ", ((ResC['Read'][2] - ResA['ARI'][0]) / ResC['Read'][2]) * 100)
-#print("Smog: ", ((ResC['Read'][4] - ResA['Smog'][0]) / ResC['Read'][4]) * 100)
-#print("Reading: ", (((100 - ResC['Read'][1]) - ResA['Reading'][0]) / (100 - ResC['Read'][1])) * 100)
-#print("Grade: ", ((ResC['Read'][0] - ResA['Grade'][0]) / ResC['Read'][0]) * 100)
-#print("Tree: ", ((ResC['Tree'][0] - ResA['Tree'][0]) / ResC['Tree'][0]) * 100)
-#
-#print("SentNeg: ", ((ResC['Sentiment'][0] - ResA['Sentiment'][0]) / ResC['Sentiment'][0]) * 100)
-#print("SentNeu: ", ((ResC['Sentiment'][1] - ResA['Sentiment'][1]) / ResC['Sentiment'][1]) * 100)
-#print("SentPos: ", ((ResC['Sentiment'][2] - ResA['Sentiment'][2]) / ResC['Sentiment'][2]) * 100)
-#print("Compound: ", ((ResC['Sentiment'][3] - ResA['Sentiment'][3]) / ResC['Sentiment'][3]) * 100)
 
 
 
