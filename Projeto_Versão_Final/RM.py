@@ -103,4 +103,25 @@ def ARIA(Samples):
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
 
-print(Read('Textos_Teste/Sad.txt')[6])
+def GFog(Samples):
+    t = time.process_time()
+    Soma = 0
+    for Sample in Samples:
+        Texto = str(Sample)
+
+        Words = len(Texto.split()) # Numero de Palavras
+
+        ComplexWords = sum(1 for word in Texto.split() if syllapy.count(word) >= 3) # Conta o numero de palavras com mais de 3 silabas
+        
+        Soma += 0.4 * (Words + (100 * (ComplexWords/Words))) 
+        
+    Normalizacao = Normalize(Soma/len(Samples),17,6)
+    
+    return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
+
+
+
+
+
+
+#print(Read('Textos_Teste/Sad.txt')[6])

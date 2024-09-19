@@ -42,3 +42,5 @@ Sensory Words: Evaluate the frequency of words that appeal to the senses (sight,
 Synesthetic Phrases: Identify any use of synesthetic descriptions (e.g., “warm colors” or “loud colors”), where the senses are mixed, often used in poetic or artistic texts.
 
 Retirar paragrafos seguidos e utilizar o artigo do orientador como justificação para uma analise logica
+
+BD usada para raridade das palavras: https://invokeit.wordpress.com/frequency-word-lists/
