@@ -8,6 +8,7 @@ nlp.add_pipe('textdescriptives/readability')
 def Normalize(Valor, Max, Min):
     return (Valor - Min) / (Max - Min)
 
+# gunning_fog, lix, rix / Retirar fleschr
 def Read(File):
     t = time.process_time()
     doc = nlp(File)
@@ -17,7 +18,7 @@ def Read(File):
     fleschr = doc._.readability['flesch_reading_ease']
     coleman = doc._.readability['coleman_liau_index']
     smog = doc._.readability['smog']
-    
+        
     return round(fleschg,3), round(fleschr,3), round(ari,3), round(coleman,3), round(smog,3), time.process_time() - t
 
 def SMOGA(Samples):
@@ -68,6 +69,7 @@ def FleschGradeA(Samples):
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
 
+#Retirar da versão final/Substituir por algoritmos novos
 def FleschReadingA(Samples):
     t = time.process_time()
     Soma = 0
@@ -100,3 +102,5 @@ def ARIA(Samples):
     Normalizacao = Normalize(Soma/len(Samples),14,0)
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
+
+print(Read('Textos_Teste/Sad.txt')[6])
