@@ -12,7 +12,7 @@ Emotion Detection: Go beyond general sentiment analysis to detect specific emoti
 Narrative Arc: For longer texts, you can track the emotional highs and lows across the entire text to evaluate its narrative structure. Tools like Sentiment Arc Analysis can show whether the text follows classical narrative structures like Freytag’s Pyramid.
 
 4. Semantic and Conceptual Measures
-Topic Coherence: Use Latent Dirichlet Allocation (LDA) or other topic modeling techniques to assess the coherence of themes in a text. High-quality texts usually maintain consistent thematic threads.
+Topic Coherence: Use Latent Dirichlet Allocation (LDA) or other topic modeling techniques to assess the coherence of themes in a text. High-quality texts usually maintain consistent thematic threads. X
 Conceptual Richness: Evaluate the number of distinct concepts or ideas introduced. Texts that offer a variety of unique ideas may be more intellectually stimulating.
 Metaphor and Symbolism Detection: Identify metaphorical language and symbolic patterns. Texts with deep metaphors and symbols are often perceived as more beautiful and thought-provoking.
 
