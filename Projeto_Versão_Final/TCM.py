@@ -1,5 +1,5 @@
 #Text Complexity Measures
-import spacy, time
+import spacy, time, syllapy
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -84,3 +84,21 @@ def SentenceLengthA(Samples):
     Normalizacao = Normalize(Soma/len(Samples),100,4)
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
+
+# Otimizar
+def SyllableAve(Samples):
+    t = time.process_time()
+    Soma = 0
+    for Sample in Samples:
+        Words = len(str(Sample).split())
+        Syllables = 0
+        doc = nlp(str(Sample).lower())
+        for token in doc:
+            if token.is_alpha:
+                Syllables += syllapy.count(token.text)
+        Soma += Syllables / Words
+    
+    Normalizacao = Normalize(Soma/len(Samples),35,5)
+    
+    return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
+     

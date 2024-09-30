@@ -10,6 +10,7 @@ model = GPT2LMHeadModel.from_pretrained(model_name)
 Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
 
 for Amostra in Amostras:
+    print(Amostra)
     inputs = tokenizer(Amostra, return_tensors="pt")
 
     # Get logits (unnormalized probabilities)
@@ -27,5 +28,4 @@ for Amostra in Amostras:
     for i, token_id in enumerate(input_ids):
         token = tokenizer.decode([token_id])  # Decode token ID to the corresponding word
         prob = probabilities[0, i, token_id].item()  # Get the probability for the token at position i
-        if token.isalpha():
-            print(f"Token: {token}, Probability: {prob}")
+        print(f"Token: {token}, Probability: {prob}")
