@@ -11,12 +11,11 @@ def Normalize(Valor, Max, Min):
 def CheckWord(input_csv, Word):
     Normalizacao = 0
     
-    with open(input_csv, 'r', encoding='utf-8') as file:
-            reader = csv.DictReader(file)
-            
-            for row in reader:
-                if Word in row['word']:
-                    Normalizacao = Normalize(int(row['number']), 6281002, 1)
+    df = pd.read_csv(input_csv)
+    
+    for index, row in df.iterrows():
+        if Word in row["word"]:
+            Normalizacao = Normalize(row['number'], 6281002, 1)
     
     return Normalizacao
 
@@ -31,4 +30,7 @@ def WordRarity(Amostras):
     
     return Soma, time.process_time() - t
 
-print(WordRarity(Amostras))
+#print(WordRarity(Amostras))
+
+
+print(CheckWord("BD_Words_Count.csv","the"))
