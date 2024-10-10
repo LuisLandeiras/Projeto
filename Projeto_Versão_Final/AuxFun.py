@@ -273,8 +273,21 @@ def ResultadosC(Samples):
 
     return ResultadosA
 
+def Add_CSV_Comma(input_csv, output_csv):
+    with open(input_csv, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
 
+    # Modify each line to add a comma after the first word
+    modified_lines = []
+    for line in lines:
+        parts = line.split(maxsplit=1)  # Split into first word and the rest of the line
+        if len(parts) == 2:  # If the line has more than one part
+            modified_line = parts[0] + ',' + parts[1]  # Add a comma after the first word
+        else:
+            modified_line = parts[0]  # Handle lines that might only have one word (edge case)
+        modified_lines.append(modified_line)
 
-
-
+    # Write the modified lines back to a new CSV file
+    with open(output_csv, 'w', encoding='utf-8') as file:
+        file.writelines(modified_lines)
     
