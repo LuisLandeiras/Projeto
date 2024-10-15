@@ -38,7 +38,7 @@ def WordRarity(Amostras, word_cache):
                 Soma += CheckWord(word_cache, token.text.lower())
     return Soma/Words, time.process_time() - t
 
-Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
+Amostras = AuxFun.Amostras(AuxFun.File("PF.txt"))
 word_cache = LoadBD("BD_Words_Count.csv")
 
 print(WordRarity(Amostras, word_cache))
