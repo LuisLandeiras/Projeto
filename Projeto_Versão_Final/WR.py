@@ -1,37 +1,44 @@
-import AuxFun, spacy, csv, time
+import spacy
 import pandas as pd
+import time, AuxFun
 
 nlp = spacy.load("en_core_web_sm")
-
-Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
 
 def Normalize(Valor, Max, Min):
     return (Valor - Min) / (Max - Min)
 
-def CheckWord(input_csv, Word):
-    Normalizacao = 0
+def LoadBD(csv_file):
+    df = pd.read_csv(csv_file)
+    word_cache = {}
     
-    with open(input_csv, 'r', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            if Word in row.values():
-                Normalizacao = Normalize(int(row['number']), 6281002, 1)
+    for _, row in df.iterrows():
+        word = row.get("word")
+        number = row.get("number")
+        
+        if isinstance(word, str) and pd.notna(number):
+            word_cache[word.lower()] = Normalize(float(number), 6281002, 1)
     
-    return Normalizacao
+    return word_cache
 
-def WordRarity(Amostras):
+def CheckWord(word_cache, word):
+    word = word.lower()
+    if word in word_cache:
+        return word_cache[word]
+    return 0
+
+def WordRarity(Amostras, word_cache):
     t = time.process_time()
     Soma = 0
     Words = 0
     for Amostra in Amostras:
         doc = nlp(Amostra)
-        Words += len(str(Amostras).split())
+        Words += len(str(Amostra).split())
         for token in doc:
             if token.is_alpha:
-                Soma += CheckWord("BD_Words_Count.csv",token.text.lower())
-    
+                Soma += CheckWord(word_cache, token.text.lower())
     return Soma/Words, time.process_time() - t
 
-print(WordRarity(Amostras))
+Amostras = AuxFun.Amostras(AuxFun.File("PF.txt"))
+word_cache = LoadBD("BD_Words_Count.csv")
 
-#print(CheckWord("BD_Words_Count.csv","the"))
+print(WordRarity(Amostras, word_cache))
