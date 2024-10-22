@@ -26,7 +26,7 @@ def CheckWord(word_cache, word):
         return word_cache[word]
     return 0
 
-def WordRarity(Amostras, word_cache):
+def WordRarity(Amostras, word_cache=LoadBD("BD_Words_Count.csv")):
     t = time.process_time()
     Soma = 0
     Words = 0
@@ -36,9 +36,11 @@ def WordRarity(Amostras, word_cache):
         for token in doc:
             if token.is_alpha:
                 Soma += CheckWord(word_cache, token.text.lower())
-    return Soma/Words, time.process_time() - t
+    return round(Soma/Words,3), time.process_time() - t
 
-Amostras = AuxFun.Amostras(AuxFun.File("PF.txt"))
+Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
+Amostras1 = AuxFun.Amostras(AuxFun.File("PF.txt"))
 word_cache = LoadBD("BD_Words_Count.csv")
 
 print(WordRarity(Amostras, word_cache))
+print(WordRarity(Amostras1, word_cache))
