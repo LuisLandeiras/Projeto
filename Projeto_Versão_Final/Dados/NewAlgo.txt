@@ -4,12 +4,12 @@ Alliteration, Assonance, and Consonance: Use a phonetic analysis tool to detect 
 Rhythm and Cadence: For longer texts, calculate sentence length variance and punctuation frequency (such as commas and semicolons). Writers often use rhythm for aesthetic impact, particularly in literary texts.
 
 2. Readability and Flow
-Readability Variability: While you've already included readability scores, analyze how readability changes across paragraphs or sentences. Texts with a mix of easy and challenging passages can feel more dynamic and engaging.
+Readability Variability: While you've already included readability scores, analyze how readability changes across paragraphs or sentences. Texts with a mix of easy and challenging passages can feel more dynamic and engaging. X
 Complex syntax (e.g., subordination, coordination) can contribute to textual beauty in sophisticated writing.
 
 3. Emotional Tone and Narrative Quality
-Emotion Detection: Go beyond general sentiment analysis to detect specific emotions like joy, sadness, anger, fear, etc. Emotional resonance often contributes to both the beauty and the quality of the text.
-Narrative Arc: For longer texts, you can track the emotional highs and lows across the entire text to evaluate its narrative structure. Tools like Sentiment Arc Analysis can show whether the text follows classical narrative structures like Freytag’s Pyramid.
+Emotion Detection: Go beyond general sentiment analysis to detect specific emotions like joy, sadness, anger, fear, etc. Emotional resonance often contributes to both the beauty and the quality of the text. X
+Narrative Arc: For longer texts, you can track the emotional highs and lows across the entire text to evaluate its narrative structure. Tools like Sentiment Arc Analysis can show whether the text follows classical narrative structures like Freytag’s Pyramid. X
 
 4. Semantic and Conceptual Measures
 Topic Coherence: Use Latent Dirichlet Allocation (LDA) or other topic modeling techniques to assess the coherence of themes in a text. High-quality texts usually maintain consistent thematic threads. X
@@ -26,7 +26,7 @@ Active vs. Passive Voice: Texts that use more active voice tend to feel more eng
 Use of Dialogue: Dialogue often enhances engagement in narrative texts. Measure the percentage of sentences that are dialogue-based to evaluate this dimension of style.
 
 7. Lexical Sophistication
-Word Rarity: Measure the rarity of words using a word frequency database. Texts that use rare or sophisticated vocabulary may be perceived as more beautiful or intellectual.
+Word Rarity: Measure the rarity of words using a word frequency database. Texts that use rare or sophisticated vocabulary may be perceived as more beautiful or intellectual. X
 Word Paintings: Some tools can detect rare combinations of words that evoke vivid mental images (e.g., "gleaming starlit sky"). These contribute to the beauty of a text.
 
 9. Structural and Thematic Balance

@@ -1,4 +1,4 @@
-import spacy, random, csv, Tree, TCM, threading, RM, os, SA_Spacy
+import spacy, random, csv, Tree, TCM, threading, RM, os, SA_Spacy, WR, TR, Emotions
 import pandas as pd
 import numpy as np
 
@@ -28,8 +28,10 @@ def Resultados(Samples):
     def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples)
     def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples)
     def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples)
-    def TReadingA(): ResultadosA['Reading'] = RM.FleschReadingA(Samples)
     def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples)
+    def TLix(): ResultadosA['Lix'] = RM.LixA(Samples)
+    def TRix(): ResultadosA['Rix'] = RM.RixA(Samples)
+    def TGFog(): ResultadosA['GFog'] = RM.GFogA(Samples)
     
     #TCM Amostras
     def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples)
@@ -43,6 +45,15 @@ def Resultados(Samples):
     #SA Amostras
     def TSentimentA(): ResultadosA['Sentiment'] = SA_Spacy.SentimentA(Samples)
     
+    #WR
+    def TWordRarity(): ResultadosA['WR'] = WR.WordRarity(Amostras=Samples)
+    
+    #TR
+    def TTR(): ResultadosA['TR'] = TR.TextTopic(Samples)
+    
+    #Emotions
+    def TEmotions(): ResultadosA['Emotions'] = Emotions.Emotions(Samples)
+    
     # Create threads
     threads = [
         threading.Thread(target=TSentenceLengthA),
@@ -54,7 +65,6 @@ def Resultados(Samples):
         threading.Thread(target=TGradeA),
         threading.Thread(target=TSMOGA),
         threading.Thread(target=TColemanA),
-        threading.Thread(target=TReadingA),
         threading.Thread(target=TARIA),
     ]
     # Start threads
@@ -84,7 +94,6 @@ def CsvAlgo(input_csv, output_csv):
             'Grade',  
             'LexicalDensity',
             'LexicalDiversity',
-            'Reading',
             'SentenceLength',
             'SentimentNeg',
             'SentimentNeu',
@@ -108,7 +117,6 @@ def CsvAlgo(input_csv, output_csv):
                 ResultadosA['Grade'][1], 
                 ResultadosA['LexicalDensity'][0],
                 ResultadosA['LexicalDiversity'][0],
-                ResultadosA['Reading'][1],
                 ResultadosA['SentenceLength'][1],
                 ResultadosA['Sentiment'][0],
                 ResultadosA['Sentiment'][1],
@@ -146,7 +154,7 @@ def Average(File):
 def Heuristics(File):
     df = pd.read_csv(File)
     
-    dfs_num = df.drop(columns=['Text','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength','Classification','ClassificationS'])
+    dfs_num = df.drop(columns=['Text','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','SentenceLength','Smog','Tree','WordLength','Classification','ClassificationS'])
     
     df_num = df.drop(columns=['Text','Classification','SentimentNeu','ClassificationS','Compound','SentimentPos','SentimentNeg'])
     df_num = df_num.apply(pd.to_numeric, errors='coerce')

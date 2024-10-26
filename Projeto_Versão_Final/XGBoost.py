@@ -17,7 +17,7 @@ def XGBoostTrain(FileIn, FileOut, Aux):
         X = data.drop(columns=['Text', 'Classification','SentimentNeg','SentimentNeu','SentimentPos','Compound','ClassificationS'])
         y = data['Classification']
     elif Aux == 'Sentimento':
-        X = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength'])
+        X = data.drop(columns=['Text', 'Classification','ClassificationS','ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','SentenceLength','Smog','Tree','WordLength'])
         y = data['ClassificationS']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
@@ -64,7 +64,6 @@ def preprocess_text(text):
         'Grade': Resultado['Grade'][1], 
         'LexicalDensity': Resultado['LexicalDensity'][0],
         'LexicalDiversity': Resultado['LexicalDiversity'][0],
-        'Reading': Resultado['Reading'][1],
         'SentenceLength': Resultado['SentenceLength'][1],
         'Smog': Resultado['Smog'][1],
         'Tree': Resultado['Tree'][1],
