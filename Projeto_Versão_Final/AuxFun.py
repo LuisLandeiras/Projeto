@@ -38,6 +38,7 @@ def Resultados(Samples):
     def TWordLengthA(): ResultadosA['WordLength'] = TCM.WordLengthA(Samples)
     def TLexicalDensityA(): ResultadosA['LexicalDensity'] = TCM.LexicalDensityA(Samples)
     def TLexicalDiversityA(): ResultadosA['LexicalDiversity'] = TCM.LexicalDiversityA(Samples)
+    def TSyllables(): ResultadosA['Syllables'] = TCM.SyllableAve(Samples)
     
     #Tree Amostras
     def TTreeA(): ResultadosA['Tree'] = Tree.DepthAveA(Samples)
@@ -66,6 +67,13 @@ def Resultados(Samples):
         threading.Thread(target=TSMOGA),
         threading.Thread(target=TColemanA),
         threading.Thread(target=TARIA),
+        threading.Thread(target=TLix),
+        threading.Thread(target=TRix),
+        threading.Thread(target=TGFog),
+        threading.Thread(target=TTR),
+        threading.Thread(target=TEmotions),
+        threading.Thread(target=TWordRarity),
+        threading.Thread(target=TSyllables),
     ]
     # Start threads
     for thread in threads: thread.start()
@@ -298,4 +306,9 @@ def Add_CSV_Comma(input_csv, output_csv):
     # Write the modified lines back to a new CSV file
     with open(output_csv, 'w', encoding='utf-8') as file:
         file.writelines(modified_lines)
-    
+
+
+Texto = File('Textos_Teste/Sad.txt')
+Amostra = Amostras(Texto)
+
+print(Resultados(Amostra))  

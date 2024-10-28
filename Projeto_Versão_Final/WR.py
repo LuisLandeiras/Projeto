@@ -1,6 +1,6 @@
 import spacy
 import pandas as pd
-import time, AuxFun
+import time
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -38,9 +38,3 @@ def WordRarity(Amostras, word_cache=LoadBD("BD_Words_Count.csv")):
                 Soma += CheckWord(word_cache, token.text.lower())
     return round(Soma/Words,3), time.process_time() - t
 
-Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
-Amostras1 = AuxFun.Amostras(AuxFun.File("PF.txt"))
-word_cache = LoadBD("BD_Words_Count.csv")
-
-print(WordRarity(Amostras, word_cache))
-print(WordRarity(Amostras1, word_cache))

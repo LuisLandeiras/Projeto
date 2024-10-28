@@ -111,9 +111,9 @@ def LixA(Samples):
         
         Words = len(Texto.split())
         
-        LongWords = [word for word in Words if len(word) > 6]
+        LongWords = sum(1 for word in Texto.split() if len(word) > 6)
         
-        Soma += (Words + LongWords * 100) / Words 
+        Soma += Words + (LongWords * 100) / Words 
 
     Normalizacao = Normalize(Soma/len(Samples), 56,0)
     
@@ -125,14 +125,12 @@ def RixA(Samples):
     for Sample in Samples:
         Texto = str(Sample)
         
-        Words = len(Texto.split())
+        Words = Texto.split()
         
-        LongWords = [word for word in Words if len(word) > 6]
+        LongWords = sum(1 for word in Words if len(word) > 6)
         
         Soma += LongWords
 
     Normalizacao = Normalize(Soma/len(Samples), 16,0)
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
-
-#print(Read('Textos_Teste/Sad.txt')[6])

@@ -1,4 +1,4 @@
-import spacy, AuxFun, time
+import spacy, time
 import gensim
 from gensim import corpora
 
@@ -22,9 +22,5 @@ def TextTopic(Amostras):
         TopicList.append(topic)
     
     return TopicList, time.process_time() - t
-
-Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
-
-print(TextTopic(Amostras))
 
 #Pensar como colocar para ser usado com teste

@@ -90,15 +90,15 @@ def SyllableAve(Samples):
     t = time.process_time()
     Soma = 0
     for Sample in Samples:
-        Words = len(str(Sample).split())
         Syllables = 0
+        Words = len(str(Sample).split())
         doc = nlp(str(Sample).lower())
         for token in doc:
             if token.is_alpha:
                 Syllables += syllapy.count(token.text)
         Soma += Syllables / Words
     
-    Normalizacao = Normalize(Soma/len(Samples),35,5)
+    Normalizacao = Normalize(Soma/len(Samples),30,5)
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
      

@@ -1,8 +1,9 @@
-import spacy, AuxFun, time
+import spacy, time, warnings
 from transformers import pipeline
 
 nlp = spacy.load("en_core_web_lg")
 
+warnings.filterwarnings("ignore", category=FutureWarning, module="transformers")
 emotion_classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base", top_k=3)
 
 DictEmotion = {
@@ -23,9 +24,5 @@ def Emotions(Amostras):
             if emotion['label'] in DictEmotion:
                 DictEmotion[emotion['label']] += round(emotion['score'],3)
     return DictEmotion, time.process_time() - t
-
-Amostras = AuxFun.Amostras(AuxFun.File("TNasa.txt"))
-
-print(Emotions(Amostras))
 
 #Pensar como colocar para ser usado com teste
