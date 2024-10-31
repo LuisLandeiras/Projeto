@@ -18,11 +18,17 @@ DictEmotion = {
 
 def Emotions(Amostras):
     t = time.process_time()
+    global DictEmotion
+    DictEmotion = {key: 0.0 for key in DictEmotion}
+
     for Amostra in Amostras:
         emotion_scores = emotion_classifier(Amostra)
         for emotion in emotion_scores[0]:
             if emotion['label'] in DictEmotion:
-                DictEmotion[emotion['label']] += round(emotion['score'],3)
-    return DictEmotion, time.process_time() - t
+                DictEmotion[emotion['label']] += round(emotion['score'], 3)
+    
+    top_three_emotions = sorted(DictEmotion.items(), key=lambda item: item[1], reverse=True)[:3]
+    return top_three_emotions, time.process_time() - t
+
 
 #Pensar como colocar para ser usado com teste

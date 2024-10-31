@@ -307,8 +307,9 @@ def Add_CSV_Comma(input_csv, output_csv):
     with open(output_csv, 'w', encoding='utf-8') as file:
         file.writelines(modified_lines)
 
-
-Texto = File('Textos_Teste/Sad.txt')
-Amostra = Amostras(Texto)
-
-print(Resultados(Amostra))  
+print("Texto Sad:\n", Resultados(Amostras(File('Textos_Teste/Sad.txt'))))  
+print("Texto TNasa:\n", Resultados(Amostras(File('Textos_Teste/TNasa.txt'))))  
+print("Texto Bible\n", Resultados(Amostras(File('Textos_Teste/Bible.txt')))) 
+print("Texto PF:\n", Resultados(Amostras(File('Textos_Teste/PF.txt')))) 
+print("Texto Anxiety:\n", Resultados(Amostras(File('Textos_Teste/Anxiety.txt')))) 
+print("Texto Happy:\n", Resultados(Amostras(File('Textos_Teste/Happy.txt')))) 

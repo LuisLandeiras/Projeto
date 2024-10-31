@@ -88,17 +88,17 @@ def SentenceLengthA(Samples):
 # Otimizar
 def SyllableAve(Samples):
     t = time.process_time()
-    Soma = 0
+    Syllables = 0
+    Words = 0
     for Sample in Samples:
-        Syllables = 0
-        Words = len(str(Sample).split())
-        doc = nlp(str(Sample).lower())
+        doc = nlp(str(Sample))
         for token in doc:
             if token.is_alpha:
                 Syllables += syllapy.count(token.text)
-        Soma += Syllables / Words
+                Words += 1
     
-    Normalizacao = Normalize(Soma/len(Samples),30,5)
+    Soma = Syllables/Words
+    Normalizacao = Normalize(Soma,2,1)
     
-    return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
+    return round(Soma,3), round(Normalizacao,3), time.process_time() - t
      
