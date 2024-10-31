@@ -8,7 +8,6 @@ nlp.add_pipe('textdescriptives/readability')
 def Normalize(Valor, Max, Min):
     return (Valor - Min) / (Max - Min)
 
-# Retirar fleschr
 def Read(File):
     t = time.process_time()
     doc = nlp(File)
@@ -22,6 +21,30 @@ def Read(File):
     rix = doc._.readability['rix']
         
     return round(fleschg,3), round(ari,3), round(coleman,3), round(smog,3), round(gfog,3), round(lix,3), round(rix,3), time.process_time() - t
+
+def ReadA(Samples):
+    t = time.process_time()
+    
+    ari,fleschg,coleman,smog,gfog,lix,rix = 0,0,0,0,0,0,0
+    
+    for Sample in Samples:
+        doc = nlp(Sample)
+
+        ari += doc._.readability['automated_readability_index']
+        fleschg += doc._.readability['flesch_kincaid_grade']
+        coleman += doc._.readability['coleman_liau_index']
+        gfog += doc._.readability['gunning_fog']
+        lix += doc._.readability['lix']
+        rix += doc._.readability['rix']
+    
+    NormalizacaoARI = Normalize(ari/len(Samples),14,0)
+    NormalizacaoGrade = Normalize(fleschg/len(Samples),18,0)
+    NormalizacaoColeman = Normalize(coleman/len(Samples),12,0)
+    NormalizacaoGFog = Normalize(gfog/len(Samples),17,6)
+    NormalizacaoLix = Normalize(lix/len(Samples),56,0)
+    NormalizacaoRix = Normalize(rix/len(Samples),16,0)
+    
+    return round(NormalizacaoGrade,3), round(NormalizacaoARI,3), round(NormalizacaoColeman,3), round(NormalizacaoGFog,3), round(NormalizacaoLix,3), round(NormalizacaoRix,3), time.process_time() - t
 
 def SMOGA(Samples):
     t = time.process_time()

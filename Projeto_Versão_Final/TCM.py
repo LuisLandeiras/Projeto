@@ -85,7 +85,6 @@ def SentenceLengthA(Samples):
     
     return round(Soma/len(Samples),3), round(Normalizacao,3), time.process_time() - t
 
-# Otimizar
 def SyllableAve(Samples):
     t = time.process_time()
     Syllables = 0

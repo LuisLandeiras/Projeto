@@ -24,14 +24,17 @@ def Amostras(Texto):
 
 def Resultados(Samples):
     ResultadosA = {}
-            
+      
+    #RM Amostras   
     def TSMOGA(): ResultadosA['Smog'] = RM.SMOGA(Samples)
-    def TColemanA(): ResultadosA['Coleman'] = RM.ColemanA(Samples)
-    def TGradeA(): ResultadosA['Grade'] = RM.FleschGradeA(Samples)
-    def TARIA(): ResultadosA['ARI'] = RM.ARIA(Samples)
-    def TLix(): ResultadosA['Lix'] = RM.LixA(Samples)
-    def TRix(): ResultadosA['Rix'] = RM.RixA(Samples)
-    def TGFog(): ResultadosA['GFog'] = RM.GFogA(Samples)
+    def TReadA():
+        Read = RM.ReadA(Samples) 
+        ResultadosA['Coleman'] = Read[2]
+        ResultadosA['Grade'] = Read[0]
+        ResultadosA['ARI'] = Read[1]
+        ResultadosA['Lix'] = Read[5]
+        ResultadosA['Rix'] = Read[6]
+        ResultadosA['GFog'] = Read[4]
     
     #TCM Amostras
     def TSentenceLengthA(): ResultadosA['SentenceLength'] = TCM.SentenceLengthA(Samples)
@@ -63,22 +66,15 @@ def Resultados(Samples):
         threading.Thread(target=TLexicalDiversityA),
         threading.Thread(target=TTreeA),
         threading.Thread(target=TSentimentA),
-        threading.Thread(target=TGradeA),
+        threading.Thread(target=TReadA),
         threading.Thread(target=TSMOGA),
-        threading.Thread(target=TColemanA),
-        threading.Thread(target=TARIA),
-        threading.Thread(target=TLix),
-        threading.Thread(target=TRix),
-        threading.Thread(target=TGFog),
         threading.Thread(target=TTR),
         threading.Thread(target=TEmotions),
         threading.Thread(target=TWordRarity),
         threading.Thread(target=TSyllables),
     ]
-    # Start threads
-    for thread in threads: thread.start()
-        
-    # Wait for all threads to finish
+
+    for thread in threads: thread.start()  
     for thread in threads: thread.join()
 
     return ResultadosA
@@ -307,9 +303,11 @@ def Add_CSV_Comma(input_csv, output_csv):
     with open(output_csv, 'w', encoding='utf-8') as file:
         file.writelines(modified_lines)
 
-print("Texto Sad:\n", Resultados(Amostras(File('Textos_Teste/Sad.txt'))))  
-print("Texto TNasa:\n", Resultados(Amostras(File('Textos_Teste/TNasa.txt'))))  
-print("Texto Bible\n", Resultados(Amostras(File('Textos_Teste/Bible.txt')))) 
-print("Texto PF:\n", Resultados(Amostras(File('Textos_Teste/PF.txt')))) 
-print("Texto Anxiety:\n", Resultados(Amostras(File('Textos_Teste/Anxiety.txt')))) 
-print("Texto Happy:\n", Resultados(Amostras(File('Textos_Teste/Happy.txt')))) 
+Amostra = Amostras(File('Textos_Teste/Sad.txt')) 
+
+print("Texto Sad:\n", Resultados(Amostra))  
+#print("Texto TNasa:\n", Resultados(Amostras(File('Textos_Teste/TNasa.txt'))))  
+#print("Texto Bible\n", Resultados(Amostras(File('Textos_Teste/Bible.txt')))) 
+#print("Texto PF:\n", Resultados(Amostras(File('Textos_Teste/PF.txt')))) 
+#print("Texto Anxiety:\n", Resultados(Amostras(File('Textos_Teste/Anxiety.txt')))) 
+#print("Texto Happy:\n", Resultados(Amostras(File('Textos_Teste/Happy.txt'))))
