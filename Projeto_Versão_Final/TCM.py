@@ -43,7 +43,7 @@ def LexicalDiversity(text): # Numero de palavras diferentes / Numero total de pa
 #--------------------------------------------------------
 
 #Funções com amostras
-def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de palavras
+def LexicalDensityA(Samples): # Numero de palavras lexicais / Numero total de palavras uyvu
     t = time.process_time()
     Soma = 0
     Count = 0
