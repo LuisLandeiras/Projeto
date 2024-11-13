@@ -1,85 +1,11 @@
-Coleman
-Muito Mau: [0,3] - [0, 0.25]
-Mau: [3,6] - [0.25, 0.54]
-Bom: [6,9] - [0.54, 0.81]
-MuitoBom: [9,11] - [0.81, 1]
-Média: 6,75
-Média: 0,56
+Complexidade
+Emocional/Beleza
 
-ARI
-Muito Mau: [0,5] - [0, 0.35]
-Mau: [5,8] - [0.35, 0.57]
-Bom: [8,13] - [0.57, 0.85]
-MuitoBom: [13,14] - [0.85, 1]
-Média: 8,25
-Média: 0.55
+SLP Jurafsky embenddings and vector semantics (NIvel de topicos diferentes)
 
-Grade
-Muito Mau: [0,6] - [0, 0.33]
-Mau: [6,10] - [0.33, 0.55]
-Bom: [10,14] - [0.55, 0.77]
-MuitoBom: [14,18] - [0.77, 1]
-Média: 8,36
-Média: 0,46
+Divisões:
+    Texto nivel literario - Complexo(LVL1)/Simples(LVL2) - Beleza(LVL Hight)
+    Noticias(LVL4) - Beleza(LVL Medium)
+    Textos Juridicos(LVL3) - Beleza(LVL Low)
+    Textos Comuns - Complexo(LVL5)/Simples(LVL6)
 
-Reading
-Muito Mau: [0,30] - [0, 0.3]
-Mau: [30,50] [0.3, 0.5]
-Bom: [50,70] - [0.5, 0.7]
-MuitoBom: [70,100] - [0.7, 1]
-Média: 30,9
-Média: 0.30
-
-Smog
-Muito Mau: [0,3] - [0, 0.25]
-Mau: [3,6] - [0.25, 0.54]
-Bom: [6,9] - [0.54, 0.81]
-MuitoBom: [9,11] - [0.81, 1]
-Média: 9.28
-Média: 0.77
-
-Lexical diversity
-Muito Mau: [0.0,0.2]
-Mau: [0.2,0.4]
-Bom: [0.4,0.6]
-MuitoBom: [0.6,1]
-Média: 0,52
-Média: 0.52
-
-Lexical density
-Muito Mau: [0.0,0.2]
-Mau: [0.2,0.4]
-Bom: [0.4,0.6]
-MuitoBom: [0.6,1]
-Média: 0,56
-Média: 0.56
-
-WordLength
-Muito Mau: [3,4] - [0, 0.66]
-Mau: [4,4.5] - [0.66, 0.75]
-Bom: [4.5,5] - [0.75, 0.83]
-MuitoBom: [5,6] - [0.83, 1]
-Média: 4.58
-Média: 0.4
-
-SentenceLength
-Muito Mau: [0,12] - [0, 0.12]
-Mau: [12,20] - [0.12, 0.2]
-Bom: [20,40] - [0.2, 0.4]
-MuitoBom: [40,100] - [0.4, 1]
-Média: 19.05
-Média: 0.15
-
-Tree
-Muito Mau: [1,10] - [0, 0.33]
-Mau: [10,15] -[0.33, 0.5]
-Bom: [15,25] - [0.5, 0.83]
-Muito Bom: [25,30] - [0.83, 1]
-Média: 13,73
-Média: 0.43
-
-Média Total:
-Muito Mau: [0, 0.299]
-Mau: [0.299, 0.5]
-Bom: [0.5, 0.72]
-Muito Bom: [0.72, 1]

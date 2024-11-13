@@ -163,14 +163,6 @@ def Heuristics(File):
     df_num = df.drop(columns=['Text','Classification','SentimentNeu','ClassificationS','Compound','SentimentPos','SentimentNeg'])
     df_num = df_num.apply(pd.to_numeric, errors='coerce')
     df['Average'] = df_num.mean(axis=1).round(2)
-
-    #conditions = [
-    #    df['Average'] < 9,
-    #    (df['Average'] >= 9) & (df['Average'] < 12),
-    #    (df['Average'] >= 12) & (df['Average'] < 14),
-    #    df['Average'] >= 14
-    #]
-    #choices = [0, 1, 2, 3]
     
     #Normalização
     conditions = [
