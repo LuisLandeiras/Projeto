@@ -42,7 +42,7 @@ def texto3():
     Result = Resultados(Texto,'XGBModelV9.txt','XGBModelV9S.txt')
     
     return render_template('texto3.html', Result=Result[0], ResultS=Result[1], Algo=Result[2], Text=Texto, AlgoRes=Result[3])
-#fdxf
+
 def Resultados(Texto, Modelo, ModeloS):
 
     Resultado = XGBoost.XGBoostPredict(Texto,Modelo)
