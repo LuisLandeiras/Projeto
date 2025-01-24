@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import matplotlib.pyplot as plt
 from xgboost import plot_importance
 import warnings
-import AuxFun, os
+import Projeto_Versão_Final.AuxFun as AuxFun, os
 import seaborn as sns
 
 def XGBoostTrain(FileIn, FileOut, Aux):

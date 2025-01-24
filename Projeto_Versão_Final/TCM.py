@@ -1,4 +1,3 @@
-#Text Complexity Measures
 import spacy, time, syllapy
 
 nlp = spacy.load('en_core_web_sm')
@@ -100,4 +99,3 @@ def SyllableAve(Samples):
     Normalizacao = Normalize(Soma,2,1)
     
     return round(Soma,3), round(Normalizacao,3), time.process_time() - t
-     

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import XGBoost, AuxFun
+import XGBoost, Projeto_Versão_Final.AuxFun as AuxFun
 
 app = Flask(__name__)
 

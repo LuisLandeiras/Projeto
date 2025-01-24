@@ -133,28 +133,6 @@ def CsvAlgo(input_csv, output_csv):
                 0
             ])
 
-#Filtra os textos com mais de 5000 palavras
-def CsvFilter(input_file, output_file):
-    with open(input_file, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-
-    with open(output_file, 'w', encoding='utf-8') as f_out:
-        for line in lines:
-            parts = line.strip().split(',')
-            if len(parts) >= 7:
-                text = ','.join(parts[6:])
-                if len(text.split()) > 4000:
-                    f_out.write(','.join(parts) + '\n')
-
-def Average(File):
-    df = pd.read_csv(File)
-
-    #columns = ['ARI','Coleman','Grade','LexicalDensity','LexicalDiversity','Reading','SentenceLength','Smog','Tree','WordLength']
-    columns = ['SentimentNeu']
-    aaa = df[columns].mean(axis=1) 
-    
-    return aaa
-
 def Heuristics(File):
     df = pd.read_csv(File)
     
@@ -190,35 +168,6 @@ def Heuristics(File):
     df = df.drop(columns=['Average'])
     df.to_csv('DataV9B_Spacy.csv', index=False) 
 
-def Count(File):
-    df = pd.read_csv(File)
-    
-    t0_count = df[df['Classification'] == 0].shape[0]
-    t1_count = df[df['Classification'] == 1].shape[0]
-    t2_count = df[df['Classification'] == 2].shape[0]
-    t3_count = df[df['Classification'] == 3].shape[0]
-    
-    s0_count = df[df['ClassificationS'] == 0].shape[0]
-    s1_count = df[df['ClassificationS'] == 1].shape[0]
-    s2_count = df[df['ClassificationS'] == 2].shape[0]
-    
-    print(f"Sentimentos: Neg: {s0_count}, Neu: {s1_count}, Pos: {s2_count} ")
-    print(f"Estrutura: t0: {t0_count}, t1: {t1_count}, t2: {t2_count}, t3: {t3_count}")
-
-def CSV_Column(File, column, OutF):
-    df = pd.read_csv(File)
-
-    if column in df.columns:
-        column_data = df[column]
-    
-    column_data.to_csv(OutF, index=False, header=False)
-    
-    with open(OutF, 'r') as file:
-        values = file.readlines()
-        values = [float(value.strip()) for value in values]
-        average = sum(values) / len(values)
-        print(average)
-
 #Copia uma diretoria de ficheiros txt para csv     
 def txt_to_csv(input_dir, output_file):
     # Open CSV file for writing
@@ -234,18 +183,6 @@ def txt_to_csv(input_dir, output_file):
                 with open(file_path, 'r', encoding='utf-8') as txtfile:
                     content = txtfile.read().replace('\n', ' ')  # Replace newlines with space
                     writer.writerow([content])
-
-#Filtra os textos por idades
-def CsvTier(input_csv, output_csv):
-    with open(input_csv, 'r', newline='', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        headers = reader.fieldnames
-        filtered_rows = [row for row in reader if 33 <= int(row['age']) <= 45]
-
-    with open(output_csv, 'w', newline='', encoding='utf-8') as file:
-        writer = csv.DictWriter(file, fieldnames=headers)
-        writer.writeheader()
-        writer.writerows(filtered_rows)
 
 def ResultadosC(Samples):
     ResultadosA = {}
@@ -277,29 +214,20 @@ def ResultadosC(Samples):
 
     return ResultadosA
 
-def Add_CSV_Comma(input_csv, output_csv):
-    with open(input_csv, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
+def CSV_Column(input_file, column_name, output_file, word_limit=5000):
+    try:
+        df = pd.read_csv(input_file, encoding='utf-8')
+        
+        def has_more_than_word_limit(text, limit):
+            if isinstance(text, str):
+                return len(text.split()) > limit
+            return False
 
-    # Modify each line to add a comma after the first word
-    modified_lines = []
-    for line in lines:
-        parts = line.split(maxsplit=1)  # Split into first word and the rest of the line
-        if len(parts) == 2:  # If the line has more than one part
-            modified_line = parts[0] + ',' + parts[1]  # Add a comma after the first word
-        else:
-            modified_line = parts[0]  # Handle lines that might only have one word (edge case)
-        modified_lines.append(modified_line)
+        if column_name in df.columns:
+            df_filtered = df[df[column_name].apply(lambda x: has_more_than_word_limit(x, word_limit))]
+            df_filtered.to_csv(output_file, index=False)  
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
-    # Write the modified lines back to a new CSV file
-    with open(output_csv, 'w', encoding='utf-8') as file:
-        file.writelines(modified_lines)
-
-Amostra = Amostras(File('Textos_Teste/Sad.txt')) 
-
-print("Texto Sad:\n", Resultados(Amostra))  
-#print("Texto TNasa:\n", Resultados(Amostras(File('Textos_Teste/TNasa.txt'))))  
-#print("Texto Bible\n", Resultados(Amostras(File('Textos_Teste/Bible.txt')))) 
-#print("Texto PF:\n", Resultados(Amostras(File('Textos_Teste/PF.txt')))) 
-#print("Texto Anxiety:\n", Resultados(Amostras(File('Textos_Teste/Anxiety.txt')))) 
-#print("Texto Happy:\n", Resultados(Amostras(File('Textos_Teste/Happy.txt'))))
+#CSV_Column("Articles.csv", "Article", "ArticlesFiltred.csv")
+#txt_to_csv("D:/GitHub Repository/Projeto/Projeto_Versão_Final/Samples/ComunTexts/Simple(LVL6)","NovelTextSimple.csv")

@@ -1,0 +1,12 @@
+Complexidade
+Emocional/Beleza
+
+SLP Jurafsky embenddings and vector semantics (NIvel de topicos diferentes)
+
+Divisões:
+    Texto nivel literario - Complexo(LVL1)/Simples(LVL2) - Beleza(LVL Hight)
+    Noticias(LVL4) - Beleza(LVL Medium)
+    Textos Juridicos(LVL3) - Beleza(LVL Low)
+    Textos Comuns - Complexo(LVL5)/Simples(LVL6)
+
+Concorrente XGBoost = LightGMB

@@ -1,6 +1,0 @@
-Heuristicas utilizadas:
-    -Foi feita a media de todos os algoritmos utlizados exceto a parte sentimental
-    T1: < 13 85
-    T2: 13 <= x < 13.50 54
-    T3: 13.50 <= x < 14.50 68
-    T4: >= 14.50 31
